@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>imagine-os portfolio</title>
+<meta name="description" content="Self-updating catalogue of every repository in the imagine-os GitHub organization: status, stack, deploys, screenshots and builder notes.">
+<meta name="color-scheme" content="dark light">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230c0e14'/%3E%3Ccircle cx='16' cy='16' r='7' fill='none' stroke='%23a394ff' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='2.5' fill='%23a394ff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<script>
+  // Apply a stored theme choice before first paint (system preference otherwise).
+  try { var t = localStorage.getItem('portfolio-theme'); if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body data-repo="claude-tag-portfolio" data-org="imagine-os">
+
+<header class="masthead">
+  <div class="mast-left">
+    <h1><span class="org">imagine-os</span> <span class="thin">/</span> portfolio</h1>
+    <p class="sub">
+      <span id="sub-org">Every repository in the imagine-os organization</span>
+      <span class="dot">·</span>
+      <span id="gen-time" title="">loading data…</span>
+      <span id="fixture-flag" class="pill cat" hidden>sample data</span>
+    </p>
+    <div class="actions">
+      <button class="btn" id="btn-refresh" type="button" title="Fetch fresher repo metadata straight from the GitHub API (unauthenticated, 60 requests/hour)">
+        <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13.5 8a5.5 5.5 0 1 1-1.6-3.9M13.5 2.5v3h-3"/></svg>
+        Refresh from GitHub now
+      </button>
+      <button class="btn ghost" id="btn-theme" type="button" aria-label="Toggle light and dark theme" title="Toggle theme">
+        <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="8" cy="8" r="3.2"/><path d="M8 1.5v1.6M8 12.9v1.6M1.5 8h1.6M12.9 8h1.6M3.4 3.4l1.1 1.1M11.5 11.5l1.1 1.1M3.4 12.6l1.1-1.1M11.5 4.5l1.1-1.1" stroke-linecap="round"/></svg>
+        <span id="theme-label">Theme</span>
+      </button>
+      <a class="btn ghost" id="lnk-org" href="https://github.com/imagine-os" target="_blank" rel="noopener">Org on GitHub</a>
+    </div>
+  </div>
+  <div class="tiles" id="tiles" aria-label="Projects by status"></div>
+</header>
+
+<nav class="controls" id="controls" aria-label="Search, filter and sort">
+  <div class="row">
+    <label class="search">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3" stroke-linecap="round"/></svg>
+      <input id="q" type="search" placeholder="Search name, description, stack, tags, notes" autocomplete="off" spellcheck="false" aria-label="Search projects">
+      <kbd aria-hidden="true">/</kbd>
+    </label>
+    <label class="select">Sort
+      <select id="sort" aria-label="Sort projects">
+        <option value="pushed">Last pushed</option>
+        <option value="created-desc">Created · newest</option>
+        <option value="created-asc">Created · oldest</option>
+        <option value="name">Name A–Z</option>
+        <option value="commits">Commit count</option>
+        <option value="status">Status</option>
+      </select>
+    </label>
+    <div class="seg" role="group" aria-label="View" id="viewseg">
+      <button type="button" data-view="cards" aria-pressed="true"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="1.5" width="5.5" height="5.5" rx="1"/><rect x="9" y="1.5" width="5.5" height="5.5" rx="1"/><rect x="1.5" y="9" width="5.5" height="5.5" rx="1"/><rect x="9" y="9" width="5.5" height="5.5" rx="1"/></svg><span>Cards</span></button>
+      <button type="button" data-view="table" aria-pressed="false"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1"/><path d="M1.5 6.5h13M1.5 10h13M6 6.5v7"/></svg><span>Table</span></button>
+      <button type="button" data-view="timeline" aria-pressed="false"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 1.5v13" stroke-linecap="round"/><circle cx="4" cy="4.5" r="1.6" fill="currentColor" stroke="none"/><circle cx="4" cy="11.5" r="1.6" fill="currentColor" stroke="none"/><path d="M7 4.5h7M7 11.5h7" stroke-linecap="round"/></svg><span>Timeline</span></button>
+    </div>
+  </div>
+  <div class="row chips" id="chips"></div>
+</nav>
+
+<p class="results-line" id="results-line"></p>
+
+<main class="view" id="view" aria-live="polite"></main>
+
+<footer class="site-foot">
+  <span>Updated automatically every 6 hours by GitHub Actions</span>
+  <span>·</span>
+  <a id="lnk-data" href="data/projects.json">data/projects.json</a>
+  <span>·</span>
+  <a id="lnk-overrides" href="data/overrides.json">overrides</a>
+  <span>·</span>
+  <a id="lnk-portfolio-repo" href="#" target="_blank" rel="noopener">portfolio repo</a>
+</footer>
+
+<dialog class="modal" id="modal" aria-labelledby="modal-title"></dialog>
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "name": "imagine-os-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Self-updating portfolio catalogue for the imagine-os GitHub organization (static site, GitHub Pages).",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "data": "node scripts/build-data.mjs",
+    "shots": "node scripts/screenshot.mjs",
+    "check": "node scripts/check-live.mjs",
+    "serve": "python3 -m http.server 8765 --bind 127.0.0.1"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}

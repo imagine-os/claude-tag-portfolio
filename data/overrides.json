@@ -1,0 +1,86 @@
+{
+  "_help": "Hand-maintained per-repo overrides. Keys are repo names. Any field set here wins over what scripts/build-data.mjs derives. Supported: display_name, category, status, tags, notes, hidden, featured, source_channel, links (partial: live, demo, sales, docs). Keys starting with an underscore are ignored.",
+  "OS-Folder-Structure": {
+    "display_name": "NovaOS Explorer",
+    "category": "Design exploration",
+    "source_channel": "#operating-system-folder-structure",
+    "notes": "Started life as placeholder repo empty2; renamed by Justin. Pages: gh-pages branch."
+  },
+  "circle-shell": {
+    "display_name": "Circle Shell (Circle.so rebuild)",
+    "category": "Prototype / Shell rebuild",
+    "source_channel": "#rebuild-circle",
+    "notes": "Was empty8. WARNING: a second branch (claude/exciting-gauss-fnw1v2) builds HOY OS and force-publishes gh-pages on every push, so the live URL currently shows HOY OS, not the Circle shell. Fix: delete that branch or move HOY OS to the hoy repo, then re-run the pages workflow."
+  },
+  "dorum-lifestyle": {
+    "category": "Product",
+    "source_channel": "#dorum-lifestyle",
+    "notes": "39-file marketing site; main + gh-pages via Actions workflow."
+  },
+  "empty6": {
+    "category": "Placeholder",
+    "notes": "Only truly empty repo left. Claimed for the Google Drive profile page (#google-drive thread) — Justin was asked to upload index.html himself because the page holds personal data.",
+    "hidden": false
+  },
+  "empty7": {
+    "display_name": "Graph Gallery",
+    "category": "Design exploration",
+    "source_channel": "#build-website",
+    "notes": "15 graph-visualisation demos (D3, Cytoscape, ECharts, G6, force-graph). Still named empty7; Pages not enabled yet (needs Settings → Pages, main/root) and could be renamed graph-gallery."
+  },
+  "empty10": {
+    "display_name": "HOY OS (in placeholder repo)",
+    "category": "Product",
+    "notes": "Full HOY OS operations system pushed into placeholder empty10 on 2026-09-17 with a pages.yml that force-pushes gh-pages. Duplicates/overlaps the hoy repo — decide which is canonical, rename or archive this one."
+  },
+  "file-manager-designs": {
+    "category": "Design exploration",
+    "notes": "Was empty-3; renamed by Justin on 2026-09-16."
+  },
+  "gamma-audit": {
+    "display_name": "Gamma Workspace Audit",
+    "category": "Audit / Report",
+    "source_channel": "#gamma",
+    "notes": "Was empty5; renamed by Justin 2026-09-17. Live on Pages."
+  },
+  "hoy": {
+    "display_name": "HOY OS",
+    "category": "Product",
+    "featured": true,
+    "notes": "Vite + React + Supabase ops system for HOY Human Club (Bogotá). Canonical HOY repo."
+  },
+  "linear-builder": {
+    "display_name": "Linear Builder (PaperOS plan)",
+    "category": "Tooling",
+    "notes": "Created by Justin 2026-09-17. PaperOS planning repo plus ~100 Python scripts that drive Linear; site/ is a static plan viewer published via workflow."
+  },
+  "paperos": {
+    "display_name": "PaperOS",
+    "category": "Product",
+    "featured": true,
+    "notes": "Flagship. Next.js static export with basePath /paperos; tldraw + Yjs + Liveblocks. Oldest repo (first commit 2025-06-14)."
+  },
+  "rebuild-slack-shell": {
+    "display_name": "Slack Shell rebuild",
+    "category": "Prototype / Shell rebuild",
+    "source_channel": "#rebuild-slack"
+  },
+  "slack-game-engine": {
+    "display_name": "Slack Game Engine",
+    "category": "Game",
+    "source_channel": "#game-engine",
+    "notes": "Created by Justin by hand 2026-09-16. Vite + TypeScript, CodeMirror editor, PeerJS multiplayer."
+  },
+  "vercel-audit": {
+    "display_name": "Vercel Access Audit",
+    "category": "Audit / Report",
+    "source_channel": "#vercel",
+    "notes": "Was empty9; renamed by Justin. Live on Pages (gh-pages, root)."
+  },
+  "webflow-audit": {
+    "display_name": "Webflow Portfolio Audit",
+    "category": "Audit / Report",
+    "source_channel": "#webflow",
+    "notes": "Was empty-4. README says served from main root; Pages not confirmed."
+  }
+}
