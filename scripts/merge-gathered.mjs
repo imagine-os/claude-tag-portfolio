@@ -12,7 +12,7 @@ import { readFile, writeFile, mkdir, copyFile, readdir } from 'node:fs/promises'
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { finalizeProject, normalizeStack, guessPagesUrl } from './build-data.mjs';
+import { finalizeProject, normalizeStack, guessPagesUrl, findOverride, classifyLinks, fallbackDescription } from './build-data.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const args = parseArgs(process.argv.slice(2));
@@ -35,7 +35,7 @@ const overrides = existsSync(path.join(ROOT, 'data', 'overrides.json')) ? JSON.p
 const previous = existsSync(OUT) ? JSON.parse(await readFile(OUT, 'utf8')) : null;
 const prevByName = new Map((previous?.projects || []).filter(p => !previous?.fixture).map(p => [p.name, p]));
 
-// copy screenshots (all PNGs, including extra renders like circle-shell--gh-pages.png)
+// copy screenshots (all PNGs)
 if (args.screenshots) {
   const src = path.resolve(args.screenshots);
   await mkdir(path.join(SCREENSHOT_DIR, 'thumbs'), { recursive: true });
@@ -73,11 +73,11 @@ for (const g of gathered.projects) {
   if (p.screenshot && existsSync(path.join(SCREENSHOT_DIR, `${p.name}.png`))) {
     p.screenshot_source = 'local-render';
     p.screenshot_note = g.screenshot_note || 'Local render of the repository files';
-    const extra = path.join(SCREENSHOT_DIR, `${p.name}--gh-pages.png`);
-    if (existsSync(extra) && !p.screenshot_note.includes(`${p.name}--gh-pages.png`)) p.screenshot_note += ` Second render of the gh-pages branch kept at screenshots/${p.name}--gh-pages.png.`;
   } else { p.screenshot = null; p.screenshot_source = 'none'; }
-  finalizeProject(p, prevByName.get(p.name), overrides[p.name], { screenshotDir: SCREENSHOT_DIR });
-  if (confirmed && p.status !== 'live' && !overrides[p.name]?.status) p.status = 'live';
+  fallbackDescription(p);
+  classifyLinks(p);
+  finalizeProject(p, prevByName.get(p.name), findOverride(overrides, p), { screenshotDir: SCREENSHOT_DIR });
+  if (confirmed && p.status !== 'live' && !findOverride(overrides, p)?.status) p.status = 'live';
   projects.push(p);
 }
 projects.sort((a, b) => (Date.parse(b.pushed_at) || 0) - (Date.parse(a.pushed_at) || 0));

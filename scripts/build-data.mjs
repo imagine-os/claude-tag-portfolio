@@ -1,22 +1,24 @@
 #!/usr/bin/env node
 // Builds data/projects.json from the GitHub REST API. Node 20+, ESM, zero npm deps.
 //
+//   node scripts/build-data.mjs [--self owner/repo] [--recompute] [--help]
+//
 // Env:
 //   PORTFOLIO_TOKEN | GITHUB_TOKEN   optional bearer token (PORTFOLIO_TOKEN wins; needed for private repos and 5000 req/h)
 //   PORTFOLIO_ORG                    default "imagine-os"
 //   PORTFOLIO_USERS                  optional comma list of extra users whose repos to include
 //   PORTFOLIO_EXTRA_REPOS            optional comma list of owner/repo to include
+//   GITHUB_REPOSITORY                the portfolio repo itself, excluded from the catalogue (or --self owner/repo)
 //   PORTFOLIO_SKIP_LIVE=1            skip HTTP live checks (faster local runs)
 //   PORTFOLIO_SKIP_TODOS=1           skip the tarball TODO scan
 //
-// Any per-repo failure is recorded under `errors` and the previous entry from data/projects.json is kept,
-// so a flaky run never loses data.
+// --recompute re-derives description fallback, links, stack, placeholder flag, status, category and overrides from the
+// existing data/projects.json without any API call, so the derivation can be tested offline.
 //
-// `node scripts/build-data.mjs --help` prints this usage. The derivation helpers (deriveCategory, deriveStatus,
-// normalizeStack, applyOverrides, finalizeProject, guessPagesUrl) are exported so scripts/merge-gathered.mjs
-// can build the same dataset from locally gathered data without touching the API.
+// Any per-repo failure is recorded under `errors` and the previous entry from data/projects.json is kept,
+// so a flaky run never loses data. The derivation helpers are exported for scripts/merge-gathered.mjs.
 
-import { readFile, writeFile, mkdir, access } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, access, rename, unlink } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -28,9 +30,11 @@ const DATA_FILE = path.join(ROOT, 'data', 'projects.json');
 const OVERRIDES_FILE = path.join(ROOT, 'data', 'overrides.json');
 const SCREENSHOT_DIR = path.join(ROOT, 'screenshots');
 
+const ARGS = parseArgs(process.argv.slice(2));
 const ORG = process.env.PORTFOLIO_ORG || 'imagine-os';
 const USERS = (process.env.PORTFOLIO_USERS || '').split(',').map(s => s.trim()).filter(Boolean);
 const EXTRA = (process.env.PORTFOLIO_EXTRA_REPOS || '').split(',').map(s => s.trim()).filter(Boolean);
+const SELF = String(ARGS.self || process.env.GITHUB_REPOSITORY || 'imagine-os/claude-tag-portfolio').toLowerCase();
 const TOKEN = process.env.PORTFOLIO_TOKEN || process.env.GITHUB_TOKEN || '';
 const SKIP_LIVE = process.env.PORTFOLIO_SKIP_LIVE === '1';
 const SKIP_TODOS = process.env.PORTFOLIO_SKIP_TODOS === '1';
@@ -38,7 +42,9 @@ const API = 'https://api.github.com';
 
 const STATUSES = ['live', 'deployed-unverified', 'built-not-deployed', 'in-progress', 'placeholder', 'archived'];
 const CATEGORIES = ['Product', 'Prototype / Shell rebuild', 'Audit / Report', 'Tooling', 'Game', 'Design exploration', 'Placeholder', 'Other'];
-const ENTRY_CANDIDATES = ['index.html', 'public/index.html', 'site/index.html', 'dist/index.html', 'docs/index.html', 'app/index.html', 'src/index.html', 'www/index.html'];
+const ENTRY_CANDIDATES = ['index.html', 'dist/index.html', 'out/index.html', 'build/index.html', 'site/index.html', 'public/index.html', 'docs/index.html', 'app/index.html', 'src/index.html', 'www/index.html'];
+const TRIVIAL_FILE = /^(readme(\.[a-z]+)?|\.gitignore|\.gitattributes|licen[sc]e(\.[a-z]+)?|\.nojekyll)$/i;
+const OTHER_CAP = 25;
 
 // ---------------------------------------------------------------- GitHub client
 let rateWaited = false;
@@ -95,7 +101,11 @@ async function paginate(pathname) {
 // ---------------------------------------------------------------- repo discovery
 async function discoverRepos() {
   const repos = new Map();
-  const add = r => { if (r && !repos.has(r.full_name)) repos.set(r.full_name, r); };
+  const add = r => {
+    if (!r) return;
+    if (String(r.full_name).toLowerCase() === SELF) return;   // never catalogue the portfolio itself
+    if (!repos.has(r.full_name)) repos.set(r.full_name, r);
+  };
   try {
     let list;
     try { list = await paginate(`/orgs/${ORG}/repos?type=all&sort=pushed`); }
@@ -121,7 +131,7 @@ async function discoverRepos() {
 }
 
 // ---------------------------------------------------------------- enrichment
-async function enrich(repo) {
+async function enrich(repo, prev) {
   const o = repo.owner.login, r = repo.name, base = `/repos/${o}/${r}`;
   const p = {
     name: r, full_name: repo.full_name, html_url: repo.html_url, description: repo.description || null,
@@ -130,14 +140,16 @@ async function enrich(repo) {
     created_at: repo.created_at, updated_at: repo.updated_at, pushed_at: repo.pushed_at,
     last_commit: { sha: null, date: null, message: null, author: null }, commit_count: 0, contributors: [],
     language: repo.language || null, languages: {}, stack: [], size_kb: repo.size || 0,
-    entry_point: null, builds_with: null,
-    links: { repo: repo.html_url, live: null, demo: null, sales: null, docs: null, other: [] }, readme_links: [],
+    entry_point: null, builds_with: null, deps: [], root_files: [],
+    links: { repo: repo.html_url, live: null, demo: null, sales: null, docs: null, other: [] }, other_count: 0, readme_links: [],
     is_placeholder: false, topics: repo.topics || [], open_issues: repo.open_issues_count ?? null, stargazers: repo.stargazers_count ?? null,
     archived: repo.archived ?? null, has_readme: false, has_license: !!repo.license, has_ci: false, workflow_files: [], open_todos: 0,
     pages: { has_pages: typeof repo.has_pages === 'boolean' ? repo.has_pages : null, url: null, live: null, http_status: null, checked_at: null },
     screenshot: null, screenshot_source: 'none', screenshot_note: '',
     category: 'Other', status: 'in-progress', tags: [], notes: '', display_name: r, featured: false, hidden: false, source_channel: null,
   };
+  // GitHub reports size 0 for freshly pushed repos until its stats job runs; keep the last known size.
+  if (!p.size_kb && prev?.size_kb > 0) p.size_kb = prev.size_kb;
   const warn = [];
 
   // Pages (403 -> null: needs a token with pages scope; 404 -> not enabled)
@@ -145,7 +157,6 @@ async function enrich(repo) {
     const { status, json } = await gh(`${base}/pages`, { allow: [403, 404] });
     if (status === 200) { p.pages.has_pages = true; p.pages.url = json.html_url || null; }
     else if (status === 404) { p.pages.has_pages = p.pages.has_pages === true ? true : false; }
-    else if (p.pages.has_pages === null) p.pages.has_pages = null;
   } catch (err) { warn.push(`pages: ${err.message}`); }
 
   // Languages
@@ -176,6 +187,13 @@ async function enrich(repo) {
     if (status === 200 && Array.isArray(json)) p.contributors = json.map(c => c.login).filter(Boolean);
   } catch (err) { warn.push(`contributors: ${err.message}`); }
 
+  // Root tree: placeholder test, LICENSE probe, build-script probe (one request instead of several)
+  try {
+    const { status, json } = await gh(`${base}/contents/`, { allow: [404] });
+    if (status === 200 && Array.isArray(json)) p.root_files = json.map(f => f.name);
+  } catch (err) { warn.push(`tree: ${err.message}`); }
+  if (!p.has_license && p.root_files.some(f => /^licen[sc]e/i.test(f))) p.has_license = true;
+
   // README
   let readmeText = '';
   try {
@@ -186,14 +204,16 @@ async function enrich(repo) {
       Object.assign(p, parseReadme(readmeText));
     }
   } catch (err) { warn.push(`readme: ${err.message}`); }
+  fallbackDescription(p);
 
-  // Workflows
+  // Workflows (full paths)
   try {
     const { status, json } = await gh(`${base}/contents/.github/workflows`, { allow: [404] });
     if (status === 200 && Array.isArray(json)) {
-      p.workflow_files = json.filter(f => /\.ya?ml$/i.test(f.name)).map(f => f.name);
+      const yml = json.filter(f => /\.ya?ml$/i.test(f.name));
+      p.workflow_files = yml.map(f => f.path);
       p.has_ci = p.workflow_files.length > 0;
-      for (const f of json.filter(f => /\.ya?ml$/i.test(f.name)).slice(0, 8)) {
+      for (const f of yml.slice(0, 8)) {
         try {
           const { json: file } = await gh(`${base}/contents/${encodeURI(f.path)}`);
           const text = file?.content ? Buffer.from(file.content, 'base64').toString('utf8') : '';
@@ -203,35 +223,34 @@ async function enrich(repo) {
     }
   } catch (err) { warn.push(`workflows: ${err.message}`); }
 
-  // Entry point candidates
+  // Entry point candidates (root ones answered by the tree listing; nested ones probed)
   for (const cand of ENTRY_CANDIDATES) {
+    if (!cand.includes('/')) { if (p.root_files.includes(cand)) { p.entry_point = cand; break; } continue; }
+    if (!p.root_files.includes(cand.split('/')[0])) continue;
     try {
       const { status } = await gh(`${base}/contents/${cand}`, { allow: [404] });
       if (status === 200) { p.entry_point = cand; break; }
     } catch (err) { warn.push(`entry ${cand}: ${err.message}`); break; }
   }
 
-  // package.json -> build command + stack hints
+  // package.json -> build command + dependency list for the stack
   let pkg = null;
-  try {
-    const { status, json } = await gh(`${base}/contents/package.json`, { allow: [404] });
-    if (status === 200 && json?.content) { try { pkg = JSON.parse(Buffer.from(json.content, 'base64').toString('utf8')); } catch { warn.push('package.json: invalid JSON'); } }
-  } catch (err) { warn.push(`package.json: ${err.message}`); }
+  if (p.root_files.includes('package.json')) {
+    try {
+      const { status, json } = await gh(`${base}/contents/package.json`, { allow: [404] });
+      if (status === 200 && json?.content) { try { pkg = JSON.parse(Buffer.from(json.content, 'base64').toString('utf8')); } catch { warn.push('package.json: invalid JSON'); } }
+    } catch (err) { warn.push(`package.json: ${err.message}`); }
+  }
   if (pkg) {
-    const scripts = pkg.scripts || {};
-    if (scripts.build) p.builds_with = 'npm run build';
-    else if (scripts.export) p.builds_with = 'npm run export';
-    else if (scripts.dev || scripts.start) p.builds_with = null;
+    p.deps = Object.keys({ ...(pkg.dependencies || {}), ...(pkg.devDependencies || {}) }).sort();
+    p.builds_with = buildCommand(pkg.scripts || {});
   }
   if (!p.builds_with) {
     for (const [file, cmd] of [['build-single.js', 'node build-single.js'], ['build.js', 'node build.js'], ['build.mjs', 'node build.mjs'], ['Makefile', 'make'], ['build.sh', 'sh build.sh']]) {
-      try {
-        const { status } = await gh(`${base}/contents/${file}`, { allow: [404] });
-        if (status === 200) { p.builds_with = cmd; break; }
-      } catch { break; }
+      if (p.root_files.includes(file)) { p.builds_with = cmd; break; }
     }
   }
-  p.stack = deriveStack(p, pkg, readmeText);
+  p.stack = deriveStack(p);
 
   // TODO / FIXME count from the tarball (one request, redirects to codeload which is not rate limited)
   if (!SKIP_TODOS && p.commit_count > 0 && (p.size_kb || 0) < 60_000) {
@@ -241,16 +260,12 @@ async function enrich(repo) {
 
   // Links
   const home = (repo.homepage || '').trim();
-  const guessPages = guessPagesUrl(o, r);
   if (p.pages.url) p.links.live = p.pages.url;
-  else if (p.pages.has_pages || p.has_gh_pages_branch || p.has_pages_workflow) p.links.live = guessPages;
+  else if (p.pages.has_pages || p.has_gh_pages_branch || p.has_pages_workflow) p.links.live = guessPagesUrl(o, r);
   else if (/github\.io/i.test(home)) p.links.live = home;
   if (home && !/github\.io/i.test(home)) p.links.sales = home;
   if (!p.pages.url && p.links.live) p.pages.url = p.links.live;
-  for (const l of p.readme_links) {
-    if (!p.links.demo && /demo|playground|try it|play/i.test(l.text) && /^https?:/.test(l.url) && !/github\.com/.test(l.url)) p.links.demo = l.url;
-    if (!p.links.docs && /docs|documentation|manual|guide/i.test(l.text) && /^https?:/.test(l.url) && !/github\.com\/.*\/(blob|tree)\//.test(l.url)) p.links.docs = l.url;
-  }
+  classifyLinks(p);
 
   // Live check
   if (p.links.live && !SKIP_LIVE) {
@@ -259,15 +274,15 @@ async function enrich(repo) {
     if (!res.live && res.error) warn.push(`live: ${res.error}`);
   }
 
-  // Placeholder detection
-  p.is_placeholder = /^empty\d*$/i.test(r) || p.size_kb === 0 || (p.commit_count <= 1 && !p.has_readme && !p.entry_point && !Object.keys(p.languages).length);
+  p.is_placeholder = derivePlaceholder(p);
 
   if (warn.length) errors.push({ scope: `repo:${p.full_name}`, error: warn.join('; ') });
   return p;
 }
 
-function parseReadme(md) {
-  const out = { readme_title: null, readme_excerpt: '', readme_links: [] };
+// ---------------------------------------------------------------- README parsing
+export function parseReadme(md) {
+  const out = { readme_title: null, readme_excerpt: '', readme_lead: '', readme_links: [] };
   const lines = md.split(/\r?\n/);
   const paras = [];
   let cur = [], inCode = false;
@@ -282,51 +297,117 @@ function parseReadme(md) {
     cur.push(line.trim());
   }
   if (cur.length) paras.push(cur.join(' '));
-  const text = paras.map(stripMd).filter(t => t.length > 20).slice(0, 3).join(' ');
+  const prose = paras.map(stripMd).filter(t => t.length > 20 && !/^(https?:\/\/|[-*] )/.test(t));
+  out.readme_lead = prose[0] || '';
+  const text = prose.slice(0, 3).join(' ');
   out.readme_excerpt = text.length > 600 ? text.slice(0, 597).replace(/\s+\S*$/, '') + '…' : text;
   const seen = new Set();
-  for (const m of md.matchAll(/\[([^\]]{1,80})\]\((https?:\/\/[^)\s]+)\)/g)) {
-    if (seen.has(m[2])) continue; seen.add(m[2]);
-    out.readme_links.push({ text: stripMd(m[1]), url: m[2] });
-    if (out.readme_links.length >= 30) break;
+  for (const m of md.matchAll(/\[([^\]]{1,120})\]\((https?:\/\/[^)\s]+)\)/g)) {
+    const url = cleanUrl(m[2]); if (!url || seen.has(url)) continue; seen.add(url);
+    out.readme_links.push({ text: cleanLinkText(m[1]) || url, url });
+    if (out.readme_links.length >= 400) break;
   }
-  for (const m of md.matchAll(/(?<![("\]])\bhttps?:\/\/[^\s)<>"']+/g)) {
-    const u = m[0].replace(/[.,;:]+$/, '');
-    if (seen.has(u) || out.readme_links.length >= 30) continue; seen.add(u);
-    out.readme_links.push({ text: u.replace(/^https?:\/\//, '').slice(0, 60), url: u });
+  for (const m of md.matchAll(/(?<![("\]])\bhttps?:\/\/[^\s)<>"'\]]+/g)) {
+    const url = cleanUrl(m[0]);
+    if (!url || seen.has(url) || out.readme_links.length >= 400) continue; seen.add(url);
+    out.readme_links.push({ text: url.replace(/^https?:\/\//, '').slice(0, 60), url });
   }
   return out;
 }
 function stripMd(s) {
   return s.replace(/!\[[^\]]*\]\([^)]*\)/g, '').replace(/\[([^\]]*)\]\([^)]*\)/g, '$1').replace(/[`*_>#]/g, '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
 }
+/** Strip markdown artefacts glued to a URL (trailing backtick, **, punctuation) and reject placeholders. */
+export function cleanUrl(u) {
+  let url = String(u || '').trim().replace(/[`*_'"]+$/g, '').replace(/[.,;:!?)]+$/g, '').replace(/\*\*$/, '').replace(/`$/, '');
+  if (!/^https?:\/\/[^/\s]+\.[a-z]{2,}(?::\d+)?(\/|$)/i.test(url)) return null;   // needs a real hostname with a TLD
+  if (/^https?:\/\/(localhost|127\.0\.0\.1|example\.(com|org|net)|your-[a-z-]+|<)/i.test(url)) return null;
+  return url;
+}
+export function cleanLinkText(t) {
+  return String(t || '').replace(/[`*_]+/g, '').replace(/\s+/g, ' ').trim().slice(0, 100);
+}
+/** GitHub description is null for most repos; use the README lead paragraph instead. */
+export function fallbackDescription(p) {
+  if (p.description && p.description.trim()) return p;
+  const src = p.readme_lead || p.readme_excerpt || '';
+  if (!src) return p;
+  let d = src.replace(/\s+\d+\.\s.*$/, m => m.length > 40 ? m : '').trim();   // drop a trailing numbered-list stub glued to the lead paragraph
+  if (d.length > 280) {
+    const cut = d.slice(0, 280);
+    let end = -1;
+    for (const m of cut.matchAll(/[^\d\s][.;!?](?=\s)/g)) end = m.index + 1;   // sentence end not preceded by a bare number ("1.")
+    d = end > 80 ? cut.slice(0, end + 1) : cut.replace(/\s+\S*$/, '') + '…';
+  }
+  p.description = d.replace(/\s+\d+\.$/, '').replace(/…\.$/, '…');
+  return p;
+}
 
-function deriveStack(p, pkg, readme) {
+// ---------------------------------------------------------------- links
+/** Sort readme_links into demo / docs / sales / other. `other` is external, deduped, capped at OTHER_CAP with other_count. */
+export function classifyLinks(p) {
+  p.links = { repo: p.html_url, live: null, demo: null, sales: null, docs: null, other: [], ...(p.links || {}) };
+  const own = new RegExp(`^https?://(www\\.)?github\\.com/${escapeRe(p.full_name || '')}(/|$)`, 'i');
+  const live = (p.links.live || '').replace(/\/$/, '');
+  const other = [], seen = new Set();
+  for (const l of p.readme_links || []) {
+    const url = cleanUrl(l.url); if (!url) continue;
+    const text = cleanLinkText(l.text);
+    const isGithub = /^https?:\/\/(www\.)?github\.com\//i.test(url);
+    const isLive = live && url.replace(/\/$/, '').startsWith(live);
+    if (!p.links.demo && !isGithub && !isLive && /\b(demo|playground|try it|live demo|play now|play it)\b/i.test(text)) { p.links.demo = url; continue; }
+    if (!p.links.docs && !own.test(url) && /\b(docs|documentation|manual|handbook|guide)\b/i.test(text) && !/github\.com\/.*\/(blob|tree)\//.test(url)) { p.links.docs = url; continue; }
+    if (!p.links.sales && !isGithub && !isLive && /\b(website|marketing site|landing page|sales|pricing|buy)\b/i.test(text)) { p.links.sales = url; continue; }
+    if (isGithub || isLive) continue;
+    if (seen.has(url)) continue; seen.add(url);
+    other.push(url);
+  }
+  p.other_count = other.length;
+  p.links.other = other.slice(0, OTHER_CAP);
+  return p;
+}
+const escapeRe = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+// ---------------------------------------------------------------- stack
+const DEP_LABELS = [
+  ['next', 'Next.js'], ['react', 'React'], ['react-dom', null], ['vue', 'Vue'], ['svelte', 'Svelte'], ['@sveltejs/kit', 'Svelte'], ['astro', 'Astro'],
+  ['vite', 'Vite'], ['tailwindcss', 'Tailwind'], ['typescript', 'TypeScript'], ['three', 'Three.js'], ['d3', 'D3'], ['tldraw', 'tldraw'], ['@tldraw/', 'tldraw'],
+  ['yjs', 'Yjs'], ['y-', 'Yjs'], ['@liveblocks/', 'Liveblocks'], ['codemirror', 'CodeMirror'], ['@codemirror/', 'CodeMirror'], ['peerjs', 'PeerJS'],
+  ['vitest', 'Vitest'], ['jest', 'Jest'], ['playwright', 'Playwright'], ['@playwright/test', 'Playwright'], ['@supabase/', 'Supabase'], ['supabase', 'Supabase'],
+  ['@dnd-kit/', 'dnd-kit'], ['react-router', 'React Router'], ['react-router-dom', 'React Router'], ['express', 'Express'], ['fastify', 'Fastify'], ['hono', 'Hono'],
+  ['zustand', 'Zustand'], ['jotai', 'Jotai'], ['redux', 'Redux'], ['@reduxjs/toolkit', 'Redux'], ['@tanstack/react-query', 'React Query'], ['framer-motion', 'Framer Motion'],
+  ['electron', 'Electron'], ['socket.io', 'Socket.IO'], ['ws', 'WebSockets'], ['prisma', 'Prisma'], ['@prisma/client', 'Prisma'], ['drizzle-orm', 'Drizzle'], ['firebase', 'Firebase'],
+  ['cytoscape', 'Cytoscape'], ['echarts', 'ECharts'], ['@antv/g6', 'AntV G6'], ['force-graph', 'force-graph'], ['3d-force-graph', '3d-force-graph'], ['sigma', 'Sigma'],
+  ['pixi.js', 'PixiJS'], ['phaser', 'Phaser'], ['@babylonjs/', 'Babylon.js'], ['eslint', 'ESLint'], ['sass', 'Sass'], ['mapbox-gl', 'Mapbox'], ['leaflet', 'Leaflet'],
+  ['openai', 'OpenAI API'], ['@anthropic-ai/sdk', 'Anthropic API'], ['stripe', 'Stripe'], ['@modelcontextprotocol/', 'MCP'],
+];
+export function deriveStack(p) {
   const s = new Set();
-  const deps = { ...(pkg?.dependencies || {}), ...(pkg?.devDependencies || {}) };
-  const has = n => n in deps;
-  if (has('next')) s.add('Next.js'); else if (has('react')) s.add('React');
-  if (has('vue')) s.add('Vue'); if (has('svelte') || has('@sveltejs/kit')) s.add('Svelte'); if (has('astro')) s.add('Astro');
-  if (has('vite')) s.add('Vite'); if (has('tailwindcss')) s.add('Tailwind'); if (has('typescript')) s.add('TypeScript');
-  if (has('@supabase/supabase-js') || /supabase/i.test(readme)) s.add('Supabase');
-  if (has('playwright') || has('@playwright/test')) s.add('Playwright'); if (has('vitest') || has('jest')) s.add('Tests');
-  if (has('express') || has('fastify') || has('hono')) s.add('Node server');
-  if (has('electron')) s.add('Electron'); if (has('three')) s.add('Three.js'); if (has('d3')) s.add('D3');
-  const langs = Object.entries(p.languages).sort((a, b) => b[1] - a[1]).map(([k]) => k);
+  const deps = p.deps || [];
+  for (const d of deps) {
+    for (const [key, label] of DEP_LABELS) {
+      if (label === null) continue;
+      const hit = key.endsWith('/') || key.endsWith('-') ? d.startsWith(key) : d === key;
+      if (hit) s.add(label);
+    }
+  }
+  const langs = Object.entries(p.languages || {}).sort((a, b) => b[1] - a[1]).map(([k]) => k);
+  const text = `${p.description || ''} ${p.readme_excerpt || ''}`;
+  const framework = ['Next.js', 'React', 'Vue', 'Svelte', 'Astro', 'Vite'].some(f => s.has(f));
   if (!s.has('TypeScript') && langs.includes('TypeScript')) s.add('TypeScript');
-  if (!pkg && langs.includes('JavaScript') && langs.includes('HTML')) s.add('Vanilla JS');
+  if (!deps.length && langs.includes('JavaScript') && langs.includes('HTML')) s.add('Vanilla JS');
   if (langs.includes('Python')) s.add('Python');
-  if (langs.includes('HTML') && !s.has('Next.js') && !s.has('React') && !s.has('Vue') && !s.has('Svelte') && !s.has('Astro')) s.add(pkg ? 'HTML' : 'Static HTML');
+  if (langs.includes('HTML') && !framework) s.add('Static HTML');
   if (langs.includes('CSS') || langs.includes('SCSS')) s.add('CSS');
   if (langs.includes('Shell')) s.add('Shell');
-  if (p.pages.has_pages || p.has_gh_pages_branch || p.has_pages_workflow) s.add('GitHub Pages');
-  if (/vercel/i.test(p.links.sales || '') || /vercel\.app/i.test(readme)) s.add('Vercel');
-  if (/webflow/i.test(readme) && /webflow/i.test(p.name)) s.add('Webflow');
+  if (langs.includes('PLpgSQL') || langs.includes('SQL') || /supabase/i.test(text)) s.add('Supabase');
+  if (p.pages?.has_pages || p.has_gh_pages_branch || p.has_pages_workflow) s.add('GitHub Pages');
+  if (/vercel\.app/i.test(text) || /vercel/i.test(p.links?.sales || '')) s.add('Vercel');
   return normalizeStack([...s]);
 }
 
 // Canonical stack labels shared by the API build and the gathered-data merge.
-const STACK_ALIAS = { 'vanilla html': 'Static HTML', 'static html': 'Static HTML', 'html': 'Static HTML', 'vanilla js': 'Vanilla JS', 'vanilla javascript': 'Vanilla JS', 'nextjs': 'Next.js', 'next': 'Next.js', 'github pages': 'GitHub Pages', 'gh-pages': 'GitHub Pages', 'typescript': 'TypeScript', 'tailwindcss': 'Tailwind', 'python': 'Python', 'nodejs': 'Node' };
+const STACK_ALIAS = { 'vanilla html': 'Static HTML', 'static html': 'Static HTML', 'html': 'Static HTML', 'vanilla js': 'Vanilla JS', 'vanilla javascript': 'Vanilla JS', 'nextjs': 'Next.js', 'next': 'Next.js', 'github pages': 'GitHub Pages', 'gh-pages': 'GitHub Pages', 'typescript': 'TypeScript', 'tailwindcss': 'Tailwind', 'python': 'Python', 'nodejs': 'Node', 'tests': 'Vitest' };
 const STACK_DROP = new Set(['google fonts', 'importmap', 'es modules', 'node']);
 export function normalizeStack(list) {
   const out = [];
@@ -337,16 +418,22 @@ export function normalizeStack(list) {
     const v = STACK_ALIAS[key] || String(raw).trim();
     if (!out.includes(v)) out.push(v);
   }
-  // Static HTML is implied when a framework is present
   if (out.some(v => ['React', 'Next.js', 'Vue', 'Svelte', 'Astro', 'Vite'].includes(v))) { const i = out.indexOf('Static HTML'); if (i >= 0) out.splice(i, 1); }
-  return out.slice(0, 10);
+  return out.slice(0, 12);
+}
+
+export function buildCommand(scripts) {
+  if (scripts['build:static']) return 'npm run build:static';
+  if (scripts.build) return 'npm run build';
+  if (scripts.export) return 'npm run export';
+  return null;
 }
 
 export function guessPagesUrl(owner, repo) {
   return repo.toLowerCase() === `${owner}.github.io`.toLowerCase() ? `https://${owner}.github.io/` : `https://${owner}.github.io/${repo}/`;
 }
 
-// Count TODO/FIXME/HACK/XXX markers across text files inside the repo tarball. Zero deps: gunzip + minimal tar reader.
+// ---------------------------------------------------------------- TODO scan
 async function countTodos(tarPath) {
   const headers = { 'User-Agent': 'imagine-os-portfolio-bot/1.0', Accept: 'application/vnd.github+json' };
   if (TOKEN) headers.Authorization = `Bearer ${TOKEN}`;
@@ -383,14 +470,21 @@ async function countTodos(tarPath) {
 }
 const cstr = (b, s, l) => b.subarray(s, s + l).toString('utf8').replace(/\0.*$/s, '');
 
-// ---------------------------------------------------------------- derive + overrides
+// ---------------------------------------------------------------- derivation
+/** Never size-based: GitHub reports size 0 for fresh repos. Empty history, or a lone commit holding only README/.gitignore/LICENSE. */
+export function derivePlaceholder(p) {
+  if (!p.commit_count) return true;
+  if (p.entry_point || p.has_ci || p.commit_count > 1) return false;
+  if (Array.isArray(p.root_files) && p.root_files.length) return p.root_files.every(f => TRIVIAL_FILE.test(f));
+  return !Object.keys(p.languages || {}).length;   // tree unknown (older data): no code detected
+}
 export function deriveCategory(p) {
   const n = p.name.toLowerCase(), d = `${p.description || ''} ${p.readme_title || ''} ${(p.topics || []).join(' ')}`.toLowerCase();
-  if (p.is_placeholder || /^empty\d*$/.test(n)) return 'Placeholder';
+  if (p.is_placeholder) return 'Placeholder';   // the emptyN name only hints; a real project in a placeholder-named repo is not a placeholder
   if (/-audit$|audit|report/.test(n) || /\baudit\b|\breport\b/.test(d)) return 'Audit / Report';
   if (/shell|rebuild|recreation|clone/.test(n) || /pixel-faithful|recreation of|rebuild of|shell/.test(d)) return 'Prototype / Shell rebuild';
   if (/game|engine|play/.test(n) || /\bgame\b/.test(d)) return 'Game';
-  if (/design|mock|explor|concept/.test(n) || /design exploration|mockups?|concepts?/.test(d)) return 'Design exploration';
+  if (/design|mock|explor|concept|gallery/.test(n) || /design exploration|mockups?|concepts?/.test(d)) return 'Design exploration';
   if (/tool|cli|script|builder|generator|bot|structure|template|starter/.test(n) || /\bcli\b|command[- ]line|tooling|internal tool|scaffold/.test(d)) return 'Tooling';
   return 'Product';
 }
@@ -402,11 +496,20 @@ export function deriveStatus(p) {
   if (p.entry_point || p.builds_with) return 'built-not-deployed';
   return 'in-progress';
 }
+/** overrides[name], or the entry for the name this repo was renamed from, or an entry that declares renamed_from = this name. */
+export function findOverride(overrides, p) {
+  if (!overrides) return null;
+  if (overrides[p.name]) return overrides[p.name];
+  if (p.renamed_from && overrides[p.renamed_from]) return overrides[p.renamed_from];
+  for (const [k, v] of Object.entries(overrides)) if (!k.startsWith('_') && v && v.renamed_from === p.name) return v;
+  return null;
+}
 export function applyOverrides(p, o) {
   if (!o || typeof o !== 'object') return p;
   const out = { ...p };
   for (const [k, v] of Object.entries(o)) {
     if (k.startsWith('_')) continue;
+    if (k === 'renamed_from') { if (!out.renamed_from && v !== p.name) out.renamed_from = v; continue; }
     if (k === 'links' && v && typeof v === 'object') out.links = { ...p.links, ...v };
     else out[k] = v;
   }
@@ -414,57 +517,13 @@ export function applyOverrides(p, o) {
   if (out.category && !CATEGORIES.includes(out.category)) console.warn(`! override for ${p.name}: category "${out.category}" is not one of the standard categories`);
   return out;
 }
-
-// ---------------------------------------------------------------- main
-async function main() {
-  const started = Date.now();
-  console.log(`build-data: org=${ORG}${USERS.length ? ' users=' + USERS.join(',') : ''}${EXTRA.length ? ' extra=' + EXTRA.join(',') : ''} token=${TOKEN ? 'yes' : 'no'}`);
-  const previous = await readJson(DATA_FILE, null);
-  const prevByName = new Map((previous?.projects || []).map(p => [p.name, p]));
-  const overrides = await readJson(OVERRIDES_FILE, {});
-
-  const repos = await discoverRepos();
-  console.log(`found ${repos.length} repos`);
-
-  const projects = [];
-  for (const repo of repos) {
-    process.stdout.write(`  ${repo.full_name} … `);
-    let p;
-    try {
-      p = await enrich(repo);
-      console.log(`ok (${p.commit_count} commits${p.links.live ? ', live=' + (p.pages.live ? 'yes' : 'no') : ''})`);
-    } catch (err) {
-      const prev = prevByName.get(repo.name);
-      errors.push({ scope: `repo:${repo.full_name}`, error: err.message, kept_previous: !!prev });
-      console.log(`FAILED: ${err.message}${prev ? ' (kept previous data)' : ''}`);
-      p = prev ? { ...prev } : null;
-      if (!p) continue;
-      p.pushed_at = repo.pushed_at || p.pushed_at; p.updated_at = repo.updated_at || p.updated_at; p.description = repo.description ?? p.description;
-    }
-    finalizeProject(p, prevByName.get(p.name), overrides[p.name], { screenshotDir: SCREENSHOT_DIR });
-    projects.push(p);
-  }
-  // Repos we could not list this run but had before: keep them (never lose data on a flaky run).
-  if (!apiReachable && previous?.projects) {
-    for (const prev of previous.projects) if (!projects.some(p => p.name === prev.name)) { finalizeProject(prev, prev, overrides[prev.name], { screenshotDir: SCREENSHOT_DIR }); projects.push(prev); }
-  }
-
-  projects.sort((a, b) => (Date.parse(b.pushed_at) || 0) - (Date.parse(a.pushed_at) || 0));
-  const out = { generated_at: new Date().toISOString(), org: ORG, api_reachable: apiReachable, sources: { org: ORG, users: USERS, extra_repos: EXTRA }, errors, projects };
-  await mkdir(path.dirname(DATA_FILE), { recursive: true });
-  await writeFile(DATA_FILE, JSON.stringify(out, null, 2) + '\n');
-  printSummary(projects);
-  console.log(`\nwrote ${path.relative(ROOT, DATA_FILE)} · ${projects.length} projects · ${errors.length} warnings · ${((Date.now() - started) / 1000).toFixed(1)}s`);
-  if (!apiReachable && !projects.length) process.exitCode = 1;
-}
-
-/** Derive category/status, resolve the screenshot on disk, then apply overrides. Shared with merge-gathered.mjs. */
+/** Derive placeholder/category/status, resolve the screenshot on disk, then apply overrides. Shared with merge-gathered.mjs. */
 export function finalizeProject(p, prev, override, { screenshotDir = SCREENSHOT_DIR } = {}) {
   p.stack = normalizeStack(p.stack);
+  p.is_placeholder = derivePlaceholder(p);
   p.category = deriveCategory(p);
   p.status = deriveStatus(p);
   p.display_name = p.display_name || p.name;
-  // screenshots: keep what is on disk
   const file = path.join(screenshotDir, `${p.name}.png`);
   if (existsSync(file)) {
     p.screenshot = `screenshots/${p.name}.png`;
@@ -479,29 +538,147 @@ export function finalizeProject(p, prev, override, { screenshotDir = SCREENSHOT_
   return p;
 }
 
-const USAGE = `usage: node scripts/build-data.mjs [--help]
+/** A repo whose last commit sha matches a previous entry under another name was renamed: carry the screenshots over. */
+async function detectRename(p, previousProjects, currentNames) {
+  if (!p.last_commit?.sha) return;
+  const old = previousProjects.find(q => q.name !== p.name && q.last_commit?.sha === p.last_commit.sha && !currentNames.has(q.name));
+  if (!old) return;
+  p.renamed_from = old.renamed_from && old.renamed_from !== p.name ? old.renamed_from : old.name;
+  for (const sub of ['', 'thumbs/']) {
+    const from = path.join(SCREENSHOT_DIR, sub, `${old.name}.png`), to = path.join(SCREENSHOT_DIR, sub, `${p.name}.png`);
+    if (!existsSync(from)) continue;
+    try { if (existsSync(to)) await unlink(from); else await rename(from, to); } catch (err) { errors.push({ scope: `repo:${p.full_name}`, error: `screenshot rename: ${err.message}` }); }
+  }
+  if (!p.screenshot_source || p.screenshot_source === 'none') { p.screenshot_source = old.screenshot_source; p.screenshot_note = old.screenshot_note; }
+  console.log(`  (renamed from ${old.name})`);
+}
 
-Queries the GitHub REST API for every repo in $PORTFOLIO_ORG (default imagine-os), enriches each one,
-merges data/overrides.json and writes data/projects.json.
+// ---------------------------------------------------------------- main
+async function main() {
+  const started = Date.now();
+  console.log(`build-data: org=${ORG}${USERS.length ? ' users=' + USERS.join(',') : ''}${EXTRA.length ? ' extra=' + EXTRA.join(',') : ''} self=${SELF} token=${TOKEN ? 'yes' : 'no'}`);
+  const previous = await readJson(DATA_FILE, null);
+  const prevProjects = (previous?.projects || []);
+  const prevByName = new Map(prevProjects.map(p => [p.name, p]));
+  const overrides = await readJson(OVERRIDES_FILE, {});
 
-env: PORTFOLIO_TOKEN | GITHUB_TOKEN, PORTFOLIO_ORG, PORTFOLIO_USERS, PORTFOLIO_EXTRA_REPOS,
-     PORTFOLIO_SKIP_LIVE=1, PORTFOLIO_SKIP_TODOS=1
-see also: node scripts/merge-gathered.mjs --from <gathered.json>   (offline first-run path)`;
+  const repos = await discoverRepos();
+  const currentNames = new Set(repos.map(r => r.name));
+  console.log(`found ${repos.length} repos`);
 
+  const projects = [];
+  for (const repo of repos) {
+    process.stdout.write(`  ${repo.full_name} … `);
+    let p;
+    const prev = prevByName.get(repo.name) || prevProjects.find(q => q.last_commit?.sha && !currentNames.has(q.name) && q.html_url && q.html_url.split('/').pop().toLowerCase() === repo.name.toLowerCase());
+    try {
+      p = await enrich(repo, prev);
+      console.log(`ok (${p.commit_count} commits${p.links.live ? ', live=' + (p.pages.live ? 'yes' : 'no') : ''})`);
+    } catch (err) {
+      errors.push({ scope: `repo:${repo.full_name}`, error: err.message, kept_previous: !!prev });
+      console.log(`FAILED: ${err.message}${prev ? ' (kept previous data)' : ''}`);
+      p = prev ? { ...prev } : null;
+      if (!p) continue;
+      p.name = repo.name; p.full_name = repo.full_name; p.html_url = repo.html_url;
+      p.pushed_at = repo.pushed_at || p.pushed_at; p.updated_at = repo.updated_at || p.updated_at; p.description = repo.description ?? p.description;
+    }
+    if (prevByName.has(repo.name) && prevByName.get(repo.name).renamed_from) p.renamed_from = prevByName.get(repo.name).renamed_from;
+    await detectRename(p, prevProjects, currentNames);
+    finalizeProject(p, prevByName.get(p.name) || prevByName.get(p.renamed_from), findOverride(overrides, p), { screenshotDir: SCREENSHOT_DIR });
+    projects.push(p);
+  }
+  // Repos we could not list this run but had before: keep them (never lose data on a flaky run).
+  if (!apiReachable && prevProjects.length) {
+    for (const prev of prevProjects) {
+      if (String(prev.full_name).toLowerCase() === SELF || projects.some(p => p.name === prev.name)) continue;
+      finalizeProject(prev, prev, findOverride(overrides, prev), { screenshotDir: SCREENSHOT_DIR }); projects.push(prev);
+    }
+  }
+
+  await writeData({ generated_at: new Date().toISOString(), org: ORG, api_reachable: apiReachable, sources: { org: ORG, users: USERS, extra_repos: EXTRA, excluded: [SELF] }, errors, projects });
+  console.log(`\nwrote ${path.relative(ROOT, DATA_FILE)} · ${projects.length} projects · ${errors.length} warnings · ${((Date.now() - started) / 1000).toFixed(1)}s`);
+  if (!apiReachable && !projects.length) process.exitCode = 1;
+}
+
+/** Offline: re-derive everything derivable from the stored fields, drop the portfolio repo, re-apply overrides. */
+async function recompute() {
+  const data = await readJson(DATA_FILE, null);
+  if (!data) { console.error(`no ${path.relative(ROOT, DATA_FILE)} to recompute`); process.exit(1); }
+  const overrides = await readJson(OVERRIDES_FILE, {});
+  const before = Object.fromEntries((data.projects || []).map(p => [p.name, `${p.status}/${p.category}/${p.is_placeholder}`]));
+  const projects = [];
+  for (const raw of data.projects || []) {
+    if (String(raw.full_name).toLowerCase() === SELF) { console.log(`  - ${raw.name}: excluded (portfolio repo itself)`); continue; }
+    const p = { ...raw };
+    p.readme_lead = p.readme_lead || '';
+    fallbackDescription(p);
+    // older runs stored raw markdown-glued URLs; clean them the way parseReadme now does
+    const seenUrl = new Set();
+    p.readme_links = (p.readme_links || []).map(l => ({ text: cleanLinkText(l.text), url: cleanUrl(l.url) })).filter(l => l.url && !seenUrl.has(l.url) && seenUrl.add(l.url)).map(l => ({ text: l.text || l.url, url: l.url }));
+    classifyLinks(p);
+    if (p.workflow_files) p.workflow_files = p.workflow_files.map(f => f.includes('/') ? f : `.github/workflows/${f}`);
+    if (p.deps?.length || Object.keys(p.languages || {}).length) {
+      const derived = deriveStack(p);
+      p.stack = p.deps?.length ? derived : normalizeStack([...(p.stack || []), ...derived]);
+    }
+    if (!p.builds_with && p.deps) p.builds_with = null;
+    finalizeProject(p, raw, findOverride(overrides, p), { screenshotDir: SCREENSHOT_DIR });
+    projects.push(p);
+  }
+  data.projects = projects;
+  data.recomputed_at = new Date().toISOString();
+  if (data.sources) data.sources.excluded = [SELF];
+  await writeData(data);
+  console.log('\nchanges:');
+  for (const p of projects) { const after = `${p.status}/${p.category}/${p.is_placeholder}`; if (before[p.name] !== after) console.log(`  ${p.name}: ${before[p.name]} -> ${after}`); }
+  console.log(`\nrecomputed ${projects.length} projects (dropped ${(data.projects || []).length === projects.length ? 0 : 1})`);
+}
+
+async function writeData(out) {
+  out.projects.sort((a, b) => (Date.parse(b.pushed_at) || 0) - (Date.parse(a.pushed_at) || 0));
+  await mkdir(path.dirname(DATA_FILE), { recursive: true });
+  await writeFile(DATA_FILE, JSON.stringify(out, null, 2) + '\n');
+  printSummary(out.projects);
+}
 function printSummary(projects) {
-  const cols = [['name', 26], ['status', 22], ['category', 26], ['commits', 8], ['pushed', 11], ['live', 5], ['todos', 6]];
+  const cols = [['name', 24], ['status', 22], ['category', 26], ['commits', 8], ['pushed', 11], ['live', 5], ['todos', 6], ['other', 6]];
   const row = vals => vals.map((v, i) => String(v ?? '').slice(0, cols[i][1]).padEnd(cols[i][1])).join(' ');
   console.log('\n' + row(cols.map(c => c[0])));
   console.log(row(cols.map(c => '-'.repeat(c[1]))));
-  for (const p of projects) console.log(row([p.name, p.status, p.category, p.commit_count, (p.pushed_at || '').slice(0, 10), p.pages?.live === true ? 'yes' : p.links?.live ? 'no' : '-', p.open_todos]));
+  for (const p of projects) console.log(row([p.name, p.status, p.category, p.commit_count, (p.pushed_at || '').slice(0, 10), p.pages?.live === true ? 'yes' : p.links?.live ? 'no' : '-', p.open_todos, p.other_count ?? (p.links?.other || []).length]));
+  const counts = {};
+  for (const p of projects) counts[p.status] = (counts[p.status] || 0) + 1;
+  console.log('\nstatus counts:', JSON.stringify(counts));
 }
 
 async function readJson(file, fallback) {
   try { await access(file); return JSON.parse(await readFile(file, 'utf8')); } catch { return fallback; }
 }
 const sleep = ms => new Promise(r => setTimeout(r, ms));
+function parseArgs(argv) {
+  const o = {};
+  for (let i = 0; i < argv.length; i++) {
+    const a = argv[i];
+    if (a === '--help' || a === '-h') o.help = true;
+    else if (a.startsWith('--')) { const k = a.slice(2); const v = argv[i + 1] && !argv[i + 1].startsWith('--') ? argv[++i] : true; o[k] = v; }
+  }
+  return o;
+}
+
+const USAGE = `usage: node scripts/build-data.mjs [--self owner/repo] [--recompute] [--help]
+
+Queries the GitHub REST API for every repo in $PORTFOLIO_ORG (default imagine-os), enriches each one,
+merges data/overrides.json and writes data/projects.json. The portfolio repo itself (--self, or
+$GITHUB_REPOSITORY, default imagine-os/claude-tag-portfolio) is excluded.
+
+  --recompute   re-derive description/links/stack/placeholder/status/category/overrides from the existing
+                data/projects.json with no API calls (offline test of the derivation)
+
+env: PORTFOLIO_TOKEN | GITHUB_TOKEN, PORTFOLIO_ORG, PORTFOLIO_USERS, PORTFOLIO_EXTRA_REPOS,
+     PORTFOLIO_SKIP_LIVE=1, PORTFOLIO_SKIP_TODOS=1
+see also: node scripts/merge-gathered.mjs --from <gathered.json>   (offline first-run path)`;
 
 if (import.meta.url === `file://${process.argv[1]}`) {
-  if (process.argv.includes('--help') || process.argv.includes('-h')) { console.log(USAGE); process.exit(0); }
-  main().catch(err => { console.error(err); process.exit(1); });
+  if (ARGS.help) { console.log(USAGE); process.exit(0); }
+  (ARGS.recompute ? recompute() : main()).catch(err => { console.error(err); process.exit(1); });
 }

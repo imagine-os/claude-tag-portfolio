@@ -183,7 +183,7 @@
       if (state.sales && !p.links.sales) return false;
       if (state.demo && !p.links.demo) return false;
       if (q) {
-        const hay = [p.name, p.display_name, p.description, p.readme_title, p.readme_excerpt, p.notes, p.category, p.status, p.source_channel, ...p.stack, ...p.tags, ...(p.topics || [])].filter(Boolean).join(' ').toLowerCase();
+        const hay = [p.name, p.display_name, p.renamed_from, p.description, p.readme_title, p.readme_excerpt, p.notes, p.category, p.status, p.source_channel, ...p.stack, ...p.tags, ...(p.topics || [])].filter(Boolean).join(' ').toLowerCase();
         if (!hay.includes(q)) return false;
       }
       return true;
@@ -327,7 +327,7 @@
           ${p._changed ? '<span class="pill changed" title="pushed_at is newer than the last data build">changed since last build</span>' : ''}
           ${p._new ? '<span class="pill changed" title="Repo exists on GitHub but is not in data/projects.json yet">new since last build</span>' : ''}
         </div>
-        <p class="desc ${p.description ? '' : 'empty'}">${esc(p.description || (p.status === 'placeholder' ? 'Empty repository — no description, no files yet.' : 'No description on GitHub.'))}</p>
+        <p class="desc ${blurb(p) ? '' : 'empty'}">${esc(blurb(p) || (p.status === 'placeholder' ? 'Empty repository — no description, no files yet.' : 'No description on GitHub or README.'))}</p>
         ${p.stack.length ? `<div class="stack">${p.stack.slice(0, 6).map(s => `<span>${esc(s)}</span>`).join('')}${p.stack.length > 6 ? `<span>+${p.stack.length - 6}</span>` : ''}</div>` : ''}
         <div class="meta">
           <span title="${abs(p.created_at)}">created <b>${rel(p.created_at)}</b></span>
@@ -511,8 +511,8 @@
           <div class="block" style="gap:16px">
             <div class="block">
               <h4>Description</h4>
-              <p class="excerpt">${esc(p.description || 'No description on GitHub.')}</p>
-              ${p.readme_excerpt && p.readme_excerpt !== p.description ? `<h4 style="margin-top:8px">README${p.readme_title ? ` · ${esc(p.readme_title)}` : ''}</h4><p class="excerpt">${esc(p.readme_excerpt)}</p>` : ''}
+              <p class="excerpt">${esc(blurb(p) || 'No description on GitHub or README.')}</p>
+              ${p.readme_excerpt && p.readme_excerpt !== blurb(p) ? `<h4 style="margin-top:8px">README${p.readme_title ? ` · ${esc(p.readme_title)}` : ''}</h4><p class="excerpt">${esc(p.readme_excerpt)}</p>` : ''}
             </div>
             ${p.notes ? `<div class="block"><h4>Builder notes (from overrides)</h4><div class="notes">${esc(p.notes)}</div></div>` : ''}
             <div class="block">
@@ -537,6 +537,7 @@
             <div class="block">
               <h4>Repository</h4>
               <dl class="kv">
+                ${p.renamed_from ? `<dt>Renamed</dt><dd>from <span class="mono">${esc(p.renamed_from)}</span></dd>` : ''}
                 <dt>Created</dt><dd title="${abs(p.created_at)}">${abs(p.created_at)} <span style="color:var(--text-3)">(${rel(p.created_at)})</span></dd>
                 <dt>Pushed</dt><dd title="${abs(p.pushed_at)}">${abs(p.pushed_at)} <span style="color:var(--text-3)">(${rel(p.pushed_at)})</span></dd>
                 <dt>Commits</dt><dd class="num">${fmtInt(p.commit_count)}</dd>
@@ -706,6 +707,8 @@
     el.toasts.appendChild(t);
     setTimeout(() => { t.style.opacity = '0'; t.style.transition = 'opacity .3s'; setTimeout(() => t.remove(), 320); }, 6000);
   }
+  // description, else the README lead paragraph (GitHub descriptions are null for most repos)
+  function blurb(p) { const d = (p.description || '').trim(); if (d) return d; const ex = (p.readme_excerpt || '').trim(); if (!ex) return ''; const cut = ex.length > 220 ? ex.slice(0, 220) : ex; const end = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('; ')); return ex.length > 220 ? (end > 60 ? cut.slice(0, end + 1) : cut.replace(/\s+\S*$/, '') + '…') : ex; }
   function esc(s) { return String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c])); }
   function rel(iso) {
     const t = ts(iso); if (!t) return 'unknown';

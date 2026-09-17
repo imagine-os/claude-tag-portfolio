@@ -23,7 +23,7 @@ Live: `https://imagine-os.github.io/claude-tag-portfolio/`  ·  Repo: `imagine-o
 | **Deployed · unverified** | A Pages branch, workflow or Pages setting exists but the live check failed or was not run |
 | **Built · not deployed** | Has an `index.html` or build script but no Pages signal at all — enable Pages |
 | **In progress** | No deploy signal yet |
-| **Placeholder** | Empty repository (`emptyN`, zero size, or a single commit with nothing in it). Hidden by default |
+| **Placeholder** | Empty repository: no commits, or a lone commit holding only README/.gitignore/LICENSE. Never judged by name or by GitHub's size field (a real project can live in an `emptyN` repo). Hidden by default |
 | **Archived** | Archived on GitHub |
 
 Categories are derived from the name / description / topics (`-audit` → Audit / Report, `shell` or `rebuild` → Prototype / Shell rebuild, `game` → Game, `designs` → Design exploration, `emptyN` → Placeholder, otherwise Product) and can be overridden.
@@ -65,7 +65,7 @@ scripts/merge-gathered.mjs first-run path: turns a locally gathered JSON (git cl
 }
 ```
 
-Supported keys: `display_name`, `category`, `status`, `tags`, `notes`, `hidden`, `featured`, `source_channel`, and `links` (partial: `live`, `demo`, `sales`, `docs`). Keys beginning with `_` are ignored. Edit the file directly on GitHub (the detail panel has a shortcut); the push triggers a rebuild and redeploy within a couple of minutes.
+Supported keys: `display_name`, `category`, `status`, `tags`, `notes`, `hidden`, `featured`, `source_channel`, `links` (partial: `live`, `demo`, `sales`, `docs`) and `renamed_from` (the repo's previous name, so an override keyed either way keeps applying after a rename; the build also detects renames by matching the last commit sha and carries screenshots over). Keys beginning with `_` are ignored. Edit the file directly on GitHub (the detail panel has a shortcut); the push triggers a rebuild and redeploy within a couple of minutes.
 
 ## How it updates
 
@@ -108,7 +108,7 @@ npm run shots                          # -> screenshots/*.png
 npm run serve                          # http://127.0.0.1:8765/
 ```
 
-Useful env flags for `npm run data`: `PORTFOLIO_SKIP_LIVE=1` (no HTTP checks), `PORTFOLIO_SKIP_TODOS=1` (no tarball scan). For `npm run shots`: `PORTFOLIO_SHOT_ONLY=hoy,paperos`, `PORTFOLIO_SHOT_CONCURRENCY=2`, `PORTFOLIO_CHROMIUM_PATH=/path/to/chrome`.
+Useful env flags for `npm run data`: `PORTFOLIO_SKIP_LIVE=1` (no HTTP checks), `PORTFOLIO_SKIP_TODOS=1` (no tarball scan). `node scripts/build-data.mjs --recompute` re-derives status, category, stack, placeholder flag and overrides from the existing `data/projects.json` without any API call (handy to test a rule or an override offline); `--self owner/repo` names the portfolio repo to exclude (default `$GITHUB_REPOSITORY` or `imagine-os/claude-tag-portfolio`). For `npm run shots`: `PORTFOLIO_SHOT_ONLY=hoy,paperos`, `PORTFOLIO_SHOT_CONCURRENCY=2`, `PORTFOLIO_CHROMIUM_PATH=/path/to/chrome`.
 
 ## Notes
 

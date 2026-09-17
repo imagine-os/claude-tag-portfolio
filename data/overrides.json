@@ -22,11 +22,12 @@
     "notes": "Only truly empty repo left. Claimed for the Google Drive profile page (#google-drive thread) — Justin was asked to upload index.html himself because the page holds personal data.",
     "hidden": false
   },
-  "empty7": {
+  "graph-gallery": {
     "display_name": "Graph Gallery",
     "category": "Design exploration",
     "source_channel": "#build-website",
-    "notes": "15 graph-visualisation demos (D3, Cytoscape, ECharts, G6, force-graph). Still named empty7; Pages not enabled yet (needs Settings → Pages, main/root) and could be renamed graph-gallery."
+    "renamed_from": "empty7",
+    "notes": "Renamed from empty7 by Justin on 2026-09-17; live on Pages."
   },
   "empty10": {
     "display_name": "HOY OS (in placeholder repo)",
