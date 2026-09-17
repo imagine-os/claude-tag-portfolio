@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T13:34:57.160Z",
+  "generated_at": "2026-09-17T13:49:47.416Z",
   "org": "imagine-os",
   "api_reachable": true,
   "sources": {
@@ -12,142 +12,6 @@
   },
   "errors": [],
   "projects": [
-    {
-      "name": "empty15",
-      "full_name": "imagine-os/empty15",
-      "html_url": "https://github.com/imagine-os/empty15",
-      "description": null,
-      "readme_title": null,
-      "readme_excerpt": "",
-      "default_branch": "main",
-      "branches": [],
-      "has_gh_pages_branch": false,
-      "has_pages_workflow": false,
-      "created_at": "2026-09-17T13:19:30Z",
-      "updated_at": "2026-09-17T13:19:31Z",
-      "pushed_at": "2026-09-17T13:19:31Z",
-      "last_commit": {
-        "sha": null,
-        "date": null,
-        "message": null,
-        "author": null
-      },
-      "commit_count": 0,
-      "contributors": [],
-      "language": null,
-      "languages": {},
-      "stack": [],
-      "size_kb": 0,
-      "entry_point": null,
-      "builds_with": null,
-      "links": {
-        "repo": "https://github.com/imagine-os/empty15",
-        "live": null,
-        "demo": null,
-        "sales": null,
-        "docs": null,
-        "other": []
-      },
-      "readme_links": [],
-      "is_placeholder": true,
-      "topics": [],
-      "open_issues": 0,
-      "stargazers": 0,
-      "archived": false,
-      "has_readme": false,
-      "has_license": false,
-      "has_ci": false,
-      "workflow_files": [],
-      "open_todos": 0,
-      "pages": {
-        "has_pages": false,
-        "url": null,
-        "live": null,
-        "http_status": null,
-        "checked_at": null
-      },
-      "screenshot": null,
-      "screenshot_source": "none",
-      "screenshot_note": "No live URL; nothing to capture",
-      "category": "Placeholder",
-      "status": "placeholder",
-      "tags": [],
-      "notes": "",
-      "display_name": "empty15",
-      "featured": false,
-      "hidden": false,
-      "source_channel": null,
-      "readme_lead": "",
-      "other_count": 0
-    },
-    {
-      "name": "empty14",
-      "full_name": "imagine-os/empty14",
-      "html_url": "https://github.com/imagine-os/empty14",
-      "description": null,
-      "readme_title": null,
-      "readme_excerpt": "",
-      "default_branch": "main",
-      "branches": [],
-      "has_gh_pages_branch": false,
-      "has_pages_workflow": false,
-      "created_at": "2026-09-17T13:18:58Z",
-      "updated_at": "2026-09-17T13:19:16Z",
-      "pushed_at": "2026-09-17T13:18:59Z",
-      "last_commit": {
-        "sha": null,
-        "date": null,
-        "message": null,
-        "author": null
-      },
-      "commit_count": 0,
-      "contributors": [],
-      "language": null,
-      "languages": {},
-      "stack": [],
-      "size_kb": 0,
-      "entry_point": null,
-      "builds_with": null,
-      "links": {
-        "repo": "https://github.com/imagine-os/empty14",
-        "live": null,
-        "demo": null,
-        "sales": null,
-        "docs": null,
-        "other": []
-      },
-      "readme_links": [],
-      "is_placeholder": true,
-      "topics": [],
-      "open_issues": 0,
-      "stargazers": 0,
-      "archived": false,
-      "has_readme": false,
-      "has_license": false,
-      "has_ci": false,
-      "workflow_files": [],
-      "open_todos": 0,
-      "pages": {
-        "has_pages": false,
-        "url": null,
-        "live": null,
-        "http_status": null,
-        "checked_at": null
-      },
-      "screenshot": null,
-      "screenshot_source": "none",
-      "screenshot_note": "No live URL; nothing to capture",
-      "category": "Placeholder",
-      "status": "placeholder",
-      "tags": [],
-      "notes": "",
-      "display_name": "empty14",
-      "featured": false,
-      "hidden": false,
-      "source_channel": null,
-      "readme_lead": "",
-      "other_count": 0
-    },
     {
       "name": "linear-builder",
       "full_name": "imagine-os/linear-builder",
@@ -163,15 +27,15 @@
       "has_gh_pages_branch": true,
       "has_pages_workflow": true,
       "created_at": "2026-09-17T12:49:15Z",
-      "updated_at": "2026-09-17T13:18:53Z",
-      "pushed_at": "2026-09-17T13:18:49Z",
+      "updated_at": "2026-09-17T13:45:38Z",
+      "pushed_at": "2026-09-17T13:45:32Z",
       "last_commit": {
-        "sha": "b91cae6ce6b49c2f8647c993a8aba22bce83c048",
-        "date": "2026-09-17T13:18:46Z",
-        "message": "Update CLAUDE.md and docs for created pending issues",
+        "sha": "4f7cff07142a32648d2fb5aa3576d5ef01c2e4d9",
+        "date": "2026-09-17T13:45:28Z",
+        "message": "Add suggested model and effort per issue, plus the cost and duration estimate",
         "author": "Claude"
       },
-      "commit_count": 3,
+      "commit_count": 4,
       "contributors": [
         "claude"
       ],
@@ -190,6 +54,18 @@
       "size_kb": 0,
       "entry_point": "site/index.html",
       "builds_with": null,
+      "deps": [],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        "CLAUDE.md",
+        "README.md",
+        "docs",
+        "plan",
+        "site",
+        "specs",
+        "tools"
+      ],
       "links": {
         "repo": "https://github.com/imagine-os/linear-builder",
         "live": "https://imagine-os.github.io/linear-builder/",
@@ -202,6 +78,7 @@
           "https://claude.ai/artifact/M8PdehTznioG49QJUnkWTU"
         ]
       },
+      "other_count": 3,
       "readme_links": [
         {
           "text": "PAP-91",
@@ -233,11 +110,11 @@
         "url": "https://imagine-os.github.io/linear-builder/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:33:54.613Z"
+        "checked_at": "2026-09-17T13:49:03.476Z"
       },
       "screenshot": "screenshots/linear-builder.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-09-17 13:34 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-09-17 13:49 UTC",
       "category": "Tooling",
       "status": "live",
       "tags": [],
@@ -246,8 +123,249 @@
       "featured": false,
       "hidden": false,
       "source_channel": null,
-      "readme_lead": "",
-      "other_count": 3
+      "readme_lead": "PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience, business modules and a documented ten-minute path from a one-paragraph idea to a deployed app. It is built by parallel Claude Code sessions that pick issues from a Linear queue (team PAP) under nine agent characters, with Justin Massion (imagine-os) as the only human in the loop. This repository is the plan: every issue spec, the platform documents, the schedule, the pending backlog, the blueprint page and the scripts that put all of it into Linear."
+    },
+    {
+      "name": "graph-gallery",
+      "full_name": "imagine-os/graph-gallery",
+      "html_url": "https://github.com/imagine-os/graph-gallery",
+      "description": "Twenty-two live demos of graph visualization libraries in three groups, each group rendering one shared dataset with the same type colours and the same basic interactions, so the libraries can be compared on equal footing and we can pick the ones worth leading with.",
+      "readme_title": "Graph Gallery",
+      "readme_excerpt": "Twenty-two live demos of graph visualization libraries in three groups, each group rendering one shared dataset with the same type colours and the same basic interactions, so the libraries can be compared on equal footing and we can pick the ones worth leading with. 1. Network views (9 demos): a fictional film-studio catalog (85 nodes, 361 links: studios, films, people, genres and awards) as a force-directed network. 2. Structured views (6 demos + the featured executive view): a fictional company org tree (189 nodes: company, departments, projects and typed leaves) drawn so that every…",
+      "default_branch": "main",
+      "branches": [
+        "main"
+      ],
+      "has_gh_pages_branch": false,
+      "has_pages_workflow": false,
+      "created_at": "2026-09-16T22:42:12Z",
+      "updated_at": "2026-09-17T13:36:45Z",
+      "pushed_at": "2026-09-17T13:36:41Z",
+      "last_commit": {
+        "sha": "53e0b87b8ebd4daa7fe7d6a2ea58b900198e535f",
+        "date": "2026-09-17T13:19:02Z",
+        "message": "Add object views (six demos with icons, thumbnails and 3D models) and the business-model sunburst",
+        "author": "Claude"
+      },
+      "commit_count": 4,
+      "contributors": [
+        "claude"
+      ],
+      "language": "HTML",
+      "languages": {
+        "HTML": 65470,
+        "Python": 42957,
+        "JavaScript": 14757,
+        "CSS": 4206
+      },
+      "stack": [
+        "Vanilla JS",
+        "Python",
+        "Static HTML",
+        "CSS",
+        "GitHub Pages"
+      ],
+      "size_kb": 6893,
+      "entry_point": "index.html",
+      "builds_with": null,
+      "deps": [],
+      "root_files": [
+        ".nojekyll",
+        "README.md",
+        "demos",
+        "index.html",
+        "plan-objects.md",
+        "plan-structured.md",
+        "plan.md",
+        "research.md",
+        "screenshots",
+        "shared"
+      ],
+      "links": {
+        "repo": "https://github.com/imagine-os/graph-gallery",
+        "live": "https://imagine-os.github.io/graph-gallery/",
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": [
+          "https://imagine-os.github.io/empty7/"
+        ]
+      },
+      "other_count": 1,
+      "readme_links": [
+        {
+          "text": "imagine-os.github.io/empty7/",
+          "url": "https://imagine-os.github.io/empty7/"
+        }
+      ],
+      "is_placeholder": false,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": true,
+      "has_license": false,
+      "has_ci": false,
+      "workflow_files": [],
+      "open_todos": 0,
+      "pages": {
+        "has_pages": true,
+        "url": "https://imagine-os.github.io/graph-gallery/",
+        "live": true,
+        "http_status": 200,
+        "checked_at": "2026-09-17T13:49:06.259Z"
+      },
+      "screenshot": "screenshots/graph-gallery.png",
+      "screenshot_source": "live",
+      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-09-17 13:49 UTC",
+      "category": "Design exploration",
+      "status": "live",
+      "tags": [],
+      "notes": "Renamed from empty7 by Justin on 2026-09-17; live on Pages.",
+      "display_name": "Graph Gallery",
+      "featured": false,
+      "hidden": false,
+      "source_channel": "#build-website",
+      "readme_lead": "Twenty-two live demos of graph visualization libraries in three groups, each group rendering one shared dataset with the same type colours and the same basic interactions, so the libraries can be compared on equal footing and we can pick the ones worth leading with.",
+      "renamed_from": "empty7"
+    },
+    {
+      "name": "empty15",
+      "full_name": "imagine-os/empty15",
+      "html_url": "https://github.com/imagine-os/empty15",
+      "description": null,
+      "readme_title": null,
+      "readme_excerpt": "",
+      "default_branch": "main",
+      "branches": [],
+      "has_gh_pages_branch": false,
+      "has_pages_workflow": false,
+      "created_at": "2026-09-17T13:19:30Z",
+      "updated_at": "2026-09-17T13:19:31Z",
+      "pushed_at": "2026-09-17T13:19:31Z",
+      "last_commit": {
+        "sha": null,
+        "date": null,
+        "message": null,
+        "author": null
+      },
+      "commit_count": 0,
+      "contributors": [],
+      "language": null,
+      "languages": {},
+      "stack": [],
+      "size_kb": 0,
+      "entry_point": null,
+      "builds_with": null,
+      "deps": [],
+      "root_files": [],
+      "links": {
+        "repo": "https://github.com/imagine-os/empty15",
+        "live": null,
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": []
+      },
+      "other_count": 0,
+      "readme_links": [],
+      "is_placeholder": true,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": false,
+      "has_license": false,
+      "has_ci": false,
+      "workflow_files": [],
+      "open_todos": 0,
+      "pages": {
+        "has_pages": false,
+        "url": null,
+        "live": null,
+        "http_status": null,
+        "checked_at": null
+      },
+      "screenshot": null,
+      "screenshot_source": "none",
+      "screenshot_note": "No live URL; nothing to capture",
+      "category": "Placeholder",
+      "status": "placeholder",
+      "tags": [],
+      "notes": "",
+      "display_name": "empty15",
+      "featured": false,
+      "hidden": false,
+      "source_channel": null
+    },
+    {
+      "name": "empty14",
+      "full_name": "imagine-os/empty14",
+      "html_url": "https://github.com/imagine-os/empty14",
+      "description": null,
+      "readme_title": null,
+      "readme_excerpt": "",
+      "default_branch": "main",
+      "branches": [],
+      "has_gh_pages_branch": false,
+      "has_pages_workflow": false,
+      "created_at": "2026-09-17T13:18:58Z",
+      "updated_at": "2026-09-17T13:19:16Z",
+      "pushed_at": "2026-09-17T13:18:59Z",
+      "last_commit": {
+        "sha": null,
+        "date": null,
+        "message": null,
+        "author": null
+      },
+      "commit_count": 0,
+      "contributors": [],
+      "language": null,
+      "languages": {},
+      "stack": [],
+      "size_kb": 0,
+      "entry_point": null,
+      "builds_with": null,
+      "deps": [],
+      "root_files": [],
+      "links": {
+        "repo": "https://github.com/imagine-os/empty14",
+        "live": null,
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": []
+      },
+      "other_count": 0,
+      "readme_links": [],
+      "is_placeholder": true,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": false,
+      "has_license": false,
+      "has_ci": false,
+      "workflow_files": [],
+      "open_todos": 0,
+      "pages": {
+        "has_pages": false,
+        "url": null,
+        "live": null,
+        "http_status": null,
+        "checked_at": null
+      },
+      "screenshot": null,
+      "screenshot_source": "none",
+      "screenshot_note": "No live URL; nothing to capture",
+      "category": "Placeholder",
+      "status": "placeholder",
+      "tags": [],
+      "notes": "",
+      "display_name": "empty14",
+      "featured": false,
+      "hidden": false,
+      "source_channel": null
     },
     {
       "name": "empty13",
@@ -277,6 +395,8 @@
       "size_kb": 0,
       "entry_point": null,
       "builds_with": null,
+      "deps": [],
+      "root_files": [],
       "links": {
         "repo": "https://github.com/imagine-os/empty13",
         "live": null,
@@ -285,6 +405,7 @@
         "docs": null,
         "other": []
       },
+      "other_count": 0,
       "readme_links": [],
       "is_placeholder": true,
       "topics": [],
@@ -313,9 +434,7 @@
       "display_name": "empty13",
       "featured": false,
       "hidden": false,
-      "source_channel": null,
-      "readme_lead": "",
-      "other_count": 0
+      "source_channel": null
     },
     {
       "name": "empty12",
@@ -345,6 +464,8 @@
       "size_kb": 0,
       "entry_point": null,
       "builds_with": null,
+      "deps": [],
+      "root_files": [],
       "links": {
         "repo": "https://github.com/imagine-os/empty12",
         "live": null,
@@ -353,6 +474,7 @@
         "docs": null,
         "other": []
       },
+      "other_count": 0,
       "readme_links": [],
       "is_placeholder": true,
       "topics": [],
@@ -381,9 +503,7 @@
       "display_name": "empty12",
       "featured": false,
       "hidden": false,
-      "source_channel": null,
-      "readme_lead": "",
-      "other_count": 0
+      "source_channel": null
     },
     {
       "name": "empty-11",
@@ -413,6 +533,8 @@
       "size_kb": 0,
       "entry_point": null,
       "builds_with": null,
+      "deps": [],
+      "root_files": [],
       "links": {
         "repo": "https://github.com/imagine-os/empty-11",
         "live": null,
@@ -421,6 +543,7 @@
         "docs": null,
         "other": []
       },
+      "other_count": 0,
       "readme_links": [],
       "is_placeholder": true,
       "topics": [],
@@ -449,9 +572,7 @@
       "display_name": "empty-11",
       "featured": false,
       "hidden": false,
-      "source_channel": null,
-      "readme_lead": "",
-      "other_count": 0
+      "source_channel": null
     },
     {
       "name": "hoy",
@@ -459,7 +580,7 @@
       "html_url": "https://github.com/imagine-os/hoy",
       "description": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Bogotá, Colombia, built to become a multi-tenant platform for other studios later.",
       "readme_title": "HoyOS",
-      "readme_excerpt": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Bogotá, Colombia, built to become a multi-tenant platform for other studios later. One codebase serves the public website, the customer app, the teacher app, the staff and admin desktop, the club's operations manual, the in-app documentation and the developer tooling. - Version: 0.4.0 (2026-09-17) — visual fidelity pass against the canvas (D-01 rewritten, textures and shadow scale as CSS, phone frame shell); all three build tracks integrated; 76 routes, 65 page codes, 0 stubs (//dev/specs). Changelog:…",
+      "readme_excerpt": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Bogotá, Colombia, built to become a multi-tenant platform for other studios later. One codebase serves the public website, the customer app, the teacher app, the staff and admin desktop, the club's operations manual, the in-app documentation and the developer tooling. The root route // is a testing hub for private testing between the studio team and the build team. It offers one card per perspective; picking a staff role switches the demo user (fictional people, one per role). The header has ES/EN, light/dark and,…",
       "default_branch": "main",
       "branches": [
         "main"
@@ -488,17 +609,51 @@
         "PLpgSQL": 42149
       },
       "stack": [
+        "dnd-kit",
         "React",
-        "Vite",
+        "React Router",
         "TypeScript",
-        "Supabase",
+        "Vite",
         "CSS",
-        "GitHub Pages",
-        "Vanilla JS"
+        "Supabase",
+        "GitHub Pages"
       ],
-      "size_kb": 33600,
+      "size_kb": 60602,
       "entry_point": "index.html",
       "builds_with": "npm run build",
+      "deps": [
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@dnd-kit/utilities",
+        "@types/react",
+        "@types/react-dom",
+        "@vitejs/plugin-react",
+        "playwright-core",
+        "react",
+        "react-dom",
+        "react-markdown",
+        "react-router-dom",
+        "typescript",
+        "vite"
+      ],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        "CLAUDE.md",
+        "README.md",
+        "ROADMAP.md",
+        "docs",
+        "index.html",
+        "package-lock.json",
+        "package.json",
+        "public",
+        "reference",
+        "scripts",
+        "src",
+        "supabase",
+        "tsconfig.json",
+        "vite.config.ts"
+      ],
       "links": {
         "repo": "https://github.com/imagine-os/hoy",
         "live": "https://imagine-os.github.io/hoy/",
@@ -507,6 +662,7 @@
         "docs": null,
         "other": []
       },
+      "other_count": 0,
       "readme_links": [
         {
           "text": "imagine-os.github.io/hoy/",
@@ -524,17 +680,17 @@
       "workflow_files": [
         ".github/workflows/pages.yml"
       ],
-      "open_todos": 5,
+      "open_todos": 0,
       "pages": {
         "has_pages": true,
         "url": "https://imagine-os.github.io/hoy/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:34:09.928Z"
+        "checked_at": "2026-09-17T13:49:17.030Z"
       },
       "screenshot": "screenshots/hoy.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-09-17 13:34 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-09-17 13:49 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -543,14 +699,13 @@
       "featured": true,
       "hidden": false,
       "source_channel": null,
-      "readme_lead": "",
-      "other_count": 0
+      "readme_lead": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Bogotá, Colombia, built to become a multi-tenant platform for other studios later. One codebase serves the public website, the customer app, the teacher app, the staff and admin desktop, the club's operations manual, the in-app documentation and the developer tooling."
     },
     {
       "name": "empty10",
       "full_name": "imagine-os/empty10",
       "html_url": "https://github.com/imagine-os/empty10",
-      "description": "The operations system for HOY Human Club — a wellness studio in Colombia — built so it can become the operations system for any wellness studio after it. Private test build. Publicly reachable, but unlisted and noindex. All data is demo data.",
+      "description": "The operations system for HOY Human Club — a wellness studio in Colombia — built so it can become the operations system for any wellness studio after it.",
       "readme_title": "HOY OS",
       "readme_excerpt": "The operations system for HOY Human Club — a wellness studio in Colombia — built so it can become the operations system for any wellness studio after it. Private test build. Publicly reachable, but unlisted and noindex. All data is demo data. No real person's information is in this repository. First time? If that link 404s, GitHub Pages has not been pointed at the published branch yet: Settings → Pages → Source → gh-pages branch, root. The branch is built and pushed automatically by .github/workflows/pages.yml on every push to main; only the one-time Source setting is manual.",
       "default_branch": "main",
@@ -581,15 +736,33 @@
         "PLpgSQL": 143982
       },
       "stack": [
-        "Supabase",
         "Vanilla JS",
         "Static HTML",
         "CSS",
+        "Supabase",
         "GitHub Pages"
       ],
       "size_kb": 16248,
       "entry_point": "index.html",
       "builds_with": null,
+      "deps": [],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        "ARCHITECTURE.md",
+        "CLAUDE.md",
+        "PLAN.md",
+        "README.md",
+        "assets",
+        "canvas",
+        "docs",
+        "index.html",
+        "ops-manual",
+        "reference",
+        "src",
+        "supabase",
+        "tools"
+      ],
       "links": {
         "repo": "https://github.com/imagine-os/empty10",
         "live": "https://imagine-os.github.io/empty10/",
@@ -598,6 +771,7 @@
         "docs": null,
         "other": []
       },
+      "other_count": 0,
       "readme_links": [
         {
           "text": "Open the system",
@@ -625,7 +799,7 @@
         "url": "https://imagine-os.github.io/empty10/",
         "live": false,
         "http_status": 404,
-        "checked_at": "2026-09-17T13:34:13.922Z"
+        "checked_at": "2026-09-17T13:49:20.139Z"
       },
       "screenshot": "screenshots/empty10.png",
       "screenshot_source": "local-render",
@@ -638,8 +812,7 @@
       "featured": false,
       "hidden": false,
       "source_channel": null,
-      "readme_lead": "",
-      "other_count": 0
+      "readme_lead": "The operations system for HOY Human Club — a wellness studio in Colombia — built so it can become the operations system for any wellness studio after it."
     },
     {
       "name": "circle-shell",
@@ -647,7 +820,7 @@
       "html_url": "https://github.com/imagine-os/circle-shell",
       "description": "A high-fidelity, static front-end recreation of the Circle community platform's logged-in app shell, built as a single self-contained index.html (inline CSS and JS, no build step, no backend).",
       "readme_title": "Circle app shell rebuild",
-      "readme_excerpt": "A high-fidelity, static front-end recreation of the Circle community platform's logged-in app shell, built as a single self-contained index.html (inline CSS and JS, no build step, no backend). Everything on the page is mock data: the community \"Maker Circle\", its spaces, members, posts, events, courses, notifications and messages are invented. Interactions (likes, polls, RSVPs, follows, the composer, DMs, the command palette, dark mode) work locally in the browser and reset on reload, except for the theme and collapsed sidebar groups, which are remembered in localStorage. - Double-click…",
+      "readme_excerpt": "A high-fidelity, static front-end recreation of the Circle community platform's logged-in app shell, built as a single self-contained index.html (inline CSS and JS, no build step, no backend). Everything on the page is mock data: the community \"Maker Circle\", its spaces, members, posts, events, courses, notifications and messages are invented. Interactions (likes, polls, RSVPs, follows, the composer, DMs, the command palette, dark mode) work locally in the browser and reset on reload, except for the theme and collapsed sidebar groups, which are remembered in localStorage. Keyboard: ⌘K /…",
       "default_branch": "main",
       "branches": [
         "claude/exciting-gauss-fnw1v2",
@@ -680,6 +853,13 @@
       "size_kb": 99101,
       "entry_point": "index.html",
       "builds_with": null,
+      "deps": [],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        "README.md",
+        "index.html"
+      ],
       "links": {
         "repo": "https://github.com/imagine-os/circle-shell",
         "live": "https://imagine-os.github.io/circle-shell/",
@@ -690,6 +870,7 @@
           "https://circle.so"
         ]
       },
+      "other_count": 1,
       "readme_links": [
         {
           "text": "Circle",
@@ -713,11 +894,11 @@
         "url": "https://imagine-os.github.io/circle-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:34:16.826Z"
+        "checked_at": "2026-09-17T13:49:22.174Z"
       },
       "screenshot": "screenshots/circle-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-09-17 13:34 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-09-17 13:49 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -726,8 +907,7 @@
       "featured": false,
       "hidden": false,
       "source_channel": "#rebuild-circle",
-      "readme_lead": "",
-      "other_count": 1
+      "readme_lead": "A high-fidelity, static front-end recreation of the Circle community platform's logged-in app shell, built as a single self-contained index.html (inline CSS and JS, no build step, no backend)."
     },
     {
       "name": "paperos",
@@ -766,17 +946,95 @@
         "JavaScript": 22716
       },
       "stack": [
-        "Next.js",
-        "TypeScript",
+        "CodeMirror",
+        "Liveblocks",
         "Playwright",
+        "tldraw",
+        "ESLint",
+        "Next.js",
+        "React",
+        "TypeScript",
         "Vitest",
-        "CSS",
-        "GitHub Pages",
-        "Vercel"
+        "WebSockets",
+        "Yjs",
+        "CSS"
       ],
       "size_kb": 3818,
       "entry_point": null,
-      "builds_with": "npm run build",
+      "builds_with": "npm run build:static",
+      "deps": [
+        "@axe-core/playwright",
+        "@codemirror/commands",
+        "@codemirror/lang-css",
+        "@codemirror/lang-html",
+        "@codemirror/lang-javascript",
+        "@codemirror/lang-json",
+        "@codemirror/lang-markdown",
+        "@codemirror/language",
+        "@codemirror/language-data",
+        "@codemirror/search",
+        "@codemirror/state",
+        "@codemirror/theme-one-dark",
+        "@codemirror/view",
+        "@eslint/eslintrc",
+        "@liveblocks/client",
+        "@liveblocks/node",
+        "@liveblocks/react",
+        "@liveblocks/react-ui",
+        "@liveblocks/yjs",
+        "@playwright/test",
+        "@tldraw/assets",
+        "@types/node",
+        "@types/react",
+        "@types/react-dom",
+        "@types/ws",
+        "codemirror",
+        "dompurify",
+        "eslint",
+        "eslint-config-next",
+        "eslint-config-prettier",
+        "jszip",
+        "lib0",
+        "marked",
+        "next",
+        "prettier",
+        "react",
+        "react-dom",
+        "tldraw",
+        "typescript",
+        "vitest",
+        "ws",
+        "y-codemirror.next",
+        "y-indexeddb",
+        "y-protocols",
+        "y-webrtc",
+        "y-websocket",
+        "yjs"
+      ],
+      "root_files": [
+        ".claude",
+        ".env.example",
+        ".github",
+        ".gitignore",
+        ".prettierignore",
+        ".prettierrc",
+        "CLAUDE.md",
+        "README.md",
+        "docs",
+        "e2e",
+        "eslint.config.mjs",
+        "next.config.ts",
+        "package-lock.json",
+        "package.json",
+        "playwright.config.ts",
+        "public",
+        "scripts",
+        "src",
+        "tasks",
+        "tools",
+        "tsconfig.json",
+        "vitest.config.ts"
+      ],
       "links": {
         "repo": "https://github.com/imagine-os/paperos",
         "live": "https://imagine-os.github.io/paperos/",
@@ -788,6 +1046,7 @@
           "https://api.github.com/repos/"
         ]
       },
+      "other_count": 2,
       "readme_links": [
         {
           "text": "MCP",
@@ -828,11 +1087,11 @@
         "url": "https://imagine-os.github.io/paperos/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:34:21.577Z"
+        "checked_at": "2026-09-17T13:49:25.874Z"
       },
       "screenshot": "screenshots/paperos.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-09-17 13:35 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-09-17 13:49 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -841,8 +1100,7 @@
       "featured": true,
       "hidden": false,
       "source_channel": null,
-      "readme_lead": "",
-      "other_count": 2
+      "readme_lead": "PaperOS is a zoomable canvas that behaves like an OS desktop. Windows are the one primitive: everything you open lives in a window you can move, resize and arrange. A tiling engine arranges windows into layouts, the windows hold IDE tools (file tree, editors, previews, consoles), and a Canvas API later makes the whole desktop programmable."
     },
     {
       "name": "slack-game-engine",
@@ -850,7 +1108,7 @@
       "html_url": "https://github.com/imagine-os/slack-game-engine",
       "description": "A web-based game engine for 2D and 3D games that run from any static host (including GitHub Pages), with an entity-component world, JavaScript scripting, deterministic physics, audio, an in-browser editor shell and hooks for multiplayer rooms where several people can control the…",
       "readme_title": "Forge Engine",
-      "readme_excerpt": "A web-based game engine for 2D and 3D games that run from any static host (including GitHub Pages), with an entity-component world, JavaScript scripting, deterministic physics, audio, an in-browser editor shell and hooks for multiplayer rooms where several people can control the same game. - Zero runtime dependencies. TypeScript + Vite; the whole engine ships as ES modules. - One world, two renderers. A Canvas 2D renderer (sprites, atlases, tilemaps, particles, lighting) and a WebGL2 renderer (instanced meshes, lit/unlit materials, GLTF, fog, sky gradient) share the same Transform, ECS and…",
+      "readme_excerpt": "A web-based game engine for 2D and 3D games that run from any static host (including GitHub Pages), with an entity-component world, JavaScript scripting, deterministic physics, audio, an in-browser editor shell and hooks for multiplayer rooms where several people can control the same game. Every demo is host-authoritative multiplayer out of the box. Open a room and share the link; the first player in the room hosts, everyone else joins: &name=Zoe picks a display name. Play Multiplayer in the launcher creates a fresh room code and the lobby's Copy invite link shares it. When the host…",
       "default_branch": "main",
       "branches": [
         "feat/demos",
@@ -884,16 +1142,54 @@
         "Dockerfile": 557
       },
       "stack": [
-        "Vite",
+        "CodeMirror",
+        "PeerJS",
         "TypeScript",
+        "Vite",
         "Vitest",
         "CSS",
-        "GitHub Pages",
-        "Vanilla JS"
+        "GitHub Pages"
       ],
       "size_kb": 2440,
       "entry_point": "index.html",
       "builds_with": "npm run build",
+      "deps": [
+        "@codemirror/autocomplete",
+        "@codemirror/commands",
+        "@codemirror/lang-javascript",
+        "@codemirror/language",
+        "@codemirror/lint",
+        "@codemirror/search",
+        "@codemirror/state",
+        "@codemirror/view",
+        "@lezer/highlight",
+        "@types/node",
+        "jsdom",
+        "peerjs",
+        "tsx",
+        "typescript",
+        "vite",
+        "vitest"
+      ],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        "README.md",
+        "demos",
+        "docs",
+        "editor.html",
+        "index.html",
+        "package-lock.json",
+        "package.json",
+        "play.html",
+        "public",
+        "scripts",
+        "server",
+        "src",
+        "tests",
+        "tsconfig.json",
+        "vite.config.ts"
+      ],
       "links": {
         "repo": "https://github.com/imagine-os/slack-game-engine",
         "live": "https://imagine-os.github.io/slack-game-engine/",
@@ -902,6 +1198,7 @@
         "docs": null,
         "other": []
       },
+      "other_count": 0,
       "readme_links": [],
       "is_placeholder": false,
       "topics": [],
@@ -921,11 +1218,11 @@
         "url": "https://imagine-os.github.io/slack-game-engine/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:34:24.477Z"
+        "checked_at": "2026-09-17T13:49:28.524Z"
       },
       "screenshot": "screenshots/slack-game-engine.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-09-17 13:35 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-09-17 13:49 UTC",
       "category": "Game",
       "status": "live",
       "tags": [],
@@ -934,99 +1231,7 @@
       "featured": false,
       "hidden": false,
       "source_channel": "#game-engine",
-      "readme_lead": "",
-      "other_count": 0
-    },
-    {
-      "name": "graph-gallery",
-      "full_name": "imagine-os/graph-gallery",
-      "html_url": "https://github.com/imagine-os/graph-gallery",
-      "description": "Fifteen live demos of graph visualization libraries in two groups, each group rendering one shared dataset with the same type colours and the same basic interactions, so the libraries can be compared on equal footing and we can pick the ones worth leading with.",
-      "readme_title": "Graph Gallery",
-      "readme_excerpt": "Fifteen live demos of graph visualization libraries in two groups, each group rendering one shared dataset with the same type colours and the same basic interactions, so the libraries can be compared on equal footing and we can pick the ones worth leading with. 1. Network views (9 demos): a fictional film-studio catalog (85 nodes, 361 links: studios, films, people, genres and awards) as a force-directed network. 2. Structured views (6 demos): a fictional company org tree (189 nodes: company, departments, projects and typed leaves) drawn so that every department branch stays in its own lane…",
-      "default_branch": "main",
-      "branches": [
-        "main"
-      ],
-      "has_gh_pages_branch": false,
-      "has_pages_workflow": false,
-      "created_at": "2026-09-16T22:42:12Z",
-      "updated_at": "2026-09-17T13:32:10Z",
-      "pushed_at": "2026-09-17T04:01:20Z",
-      "last_commit": {
-        "sha": "6b1f15326f136c1610d84ea4f31d6794f26974ad",
-        "date": "2026-09-17T04:01:05Z",
-        "message": "Add structured views: six branching demos on a department model",
-        "author": "Claude"
-      },
-      "commit_count": 3,
-      "contributors": [
-        "claude"
-      ],
-      "language": "HTML",
-      "languages": {
-        "HTML": 46099,
-        "Python": 11700,
-        "JavaScript": 9103,
-        "CSS": 4206
-      },
-      "stack": [
-        "Vanilla JS",
-        "Python",
-        "Static HTML",
-        "CSS",
-        "GitHub Pages"
-      ],
-      "size_kb": 6893,
-      "entry_point": "index.html",
-      "builds_with": null,
-      "links": {
-        "repo": "https://github.com/imagine-os/graph-gallery",
-        "live": "https://imagine-os.github.io/graph-gallery/",
-        "demo": null,
-        "sales": null,
-        "docs": null,
-        "other": [
-          "https://imagine-os.github.io/empty7/"
-        ]
-      },
-      "readme_links": [
-        {
-          "text": "imagine-os.github.io/empty7/",
-          "url": "https://imagine-os.github.io/empty7/"
-        }
-      ],
-      "is_placeholder": false,
-      "topics": [],
-      "open_issues": 0,
-      "stargazers": 0,
-      "archived": false,
-      "has_readme": true,
-      "has_license": false,
-      "has_ci": false,
-      "workflow_files": [],
-      "open_todos": 0,
-      "pages": {
-        "has_pages": true,
-        "url": "https://imagine-os.github.io/graph-gallery/",
-        "live": true,
-        "http_status": 200,
-        "checked_at": "2026-09-17T13:34:28.073Z"
-      },
-      "screenshot": "screenshots/graph-gallery.png",
-      "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-09-17 13:35 UTC",
-      "category": "Design exploration",
-      "status": "live",
-      "tags": [],
-      "notes": "Renamed from empty7 by Justin on 2026-09-17; live on Pages.",
-      "display_name": "Graph Gallery",
-      "featured": false,
-      "hidden": false,
-      "source_channel": "#build-website",
-      "readme_lead": "",
-      "other_count": 1,
-      "renamed_from": "empty7"
+      "readme_lead": "A web-based game engine for 2D and 3D games that run from any static host (including GitHub Pages), with an entity-component world, JavaScript scripting, deterministic physics, audio, an in-browser editor shell and hooks for multiplayer rooms where several people can control the same game."
     },
     {
       "name": "file-manager-designs",
@@ -1034,7 +1239,7 @@
       "html_url": "https://github.com/imagine-os/file-manager-designs",
       "description": "A static portfolio of high-fidelity file-manager product screens, built as plain HTML/CSS with no build step, no external fonts, scripts or CDNs, and published with GitHub Pages.",
       "readme_title": "File Manager Design Portfolio",
-      "readme_excerpt": "A static portfolio of high-fidelity file-manager product screens, built as plain HTML/CSS with no build step, no external fonts, scripts or CDNs, and published with GitHub Pages. - Live site: <https://imagine-os.github.io/file-manager-designs/ (repository imagine-os/file-manager-designs) - Gallery: index.html, two collections: Innovative (files that live in many places) and Classic (conventional file managers, done well) - Design pages: designs/<slug.html, one per screen Every screen is designed at 1440 × 900 inside a device frame and scaled to fit the viewport. Open index.html directly…",
+      "readme_excerpt": "A static portfolio of high-fidelity file-manager product screens, built as plain HTML/CSS with no build step, no external fonts, scripts or CDNs, and published with GitHub Pages. Every screen is designed at 1440 × 900 inside a device frame and scaled to fit the viewport. Open index.html directly from disk (file://) or serve the folder; both work. prototype/facet/ is an interactive build of the Facet concept with the classic Ledger browser beside it: a real CSS 3D cube over one shared dataset (data.js), a Miller-column Ledger of the same files, a Compare drawer with live demos, and a…",
       "default_branch": "main",
       "branches": [
         "gh-pages",
@@ -1070,6 +1275,19 @@
       "size_kb": 39207,
       "entry_point": "index.html",
       "builds_with": null,
+      "deps": [],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        ".nojekyll",
+        "README.md",
+        "assets",
+        "designs",
+        "index.html",
+        "prototype",
+        "shots",
+        "tools"
+      ],
       "links": {
         "repo": "https://github.com/imagine-os/file-manager-designs",
         "live": "https://imagine-os.github.io/file-manager-designs/",
@@ -1078,6 +1296,7 @@
         "docs": null,
         "other": []
       },
+      "other_count": 0,
       "readme_links": [
         {
           "text": "imagine-os.github.io/file-manager-designs/",
@@ -1105,11 +1324,11 @@
         "url": "https://imagine-os.github.io/file-manager-designs/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:34:32.866Z"
+        "checked_at": "2026-09-17T13:49:32.052Z"
       },
       "screenshot": "screenshots/file-manager-designs.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-09-17 13:35 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-09-17 13:49 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -1118,14 +1337,13 @@
       "featured": false,
       "hidden": false,
       "source_channel": null,
-      "readme_lead": "",
-      "other_count": 0
+      "readme_lead": "A static portfolio of high-fidelity file-manager product screens, built as plain HTML/CSS with no build step, no external fonts, scripts or CDNs, and published with GitHub Pages."
     },
     {
       "name": "vercel-audit",
       "full_name": "imagine-os/vercel-audit",
       "html_url": "https://github.com/imagine-os/vercel-audit",
-      "description": "What Claude can and cannot do against the Vercel API from its cloud environment, with terminal screenshots of every request (self-contained index.html). Live site: https://imagine-os.github.io/vercel-audit/",
+      "description": "What Claude can and cannot do against the Vercel API from its cloud environment, with terminal screenshots of every request (self-contained index.html).",
       "readme_title": "Vercel access audit",
       "readme_excerpt": "What Claude can and cannot do against the Vercel API from its cloud environment, with terminal screenshots of every request (self-contained index.html). Live site: https://imagine-os.github.io/vercel-audit/",
       "default_branch": "main",
@@ -1159,6 +1377,12 @@
       "size_kb": 870,
       "entry_point": "index.html",
       "builds_with": null,
+      "deps": [],
+      "root_files": [
+        ".nojekyll",
+        "README.md",
+        "index.html"
+      ],
       "links": {
         "repo": "https://github.com/imagine-os/vercel-audit",
         "live": "https://imagine-os.github.io/vercel-audit/",
@@ -1167,6 +1391,7 @@
         "docs": null,
         "other": []
       },
+      "other_count": 0,
       "readme_links": [
         {
           "text": "imagine-os.github.io/vercel-audit/",
@@ -1188,11 +1413,11 @@
         "url": "https://imagine-os.github.io/vercel-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:34:36.045Z"
+        "checked_at": "2026-09-17T13:49:34.141Z"
       },
       "screenshot": "screenshots/vercel-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-09-17 13:35 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-09-17 13:50 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -1201,8 +1426,7 @@
       "featured": false,
       "hidden": false,
       "source_channel": "#vercel",
-      "readme_lead": "",
-      "other_count": 0
+      "readme_lead": "What Claude can and cannot do against the Vercel API from its cloud environment, with terminal screenshots of every request (self-contained index.html)."
     },
     {
       "name": "dorum-lifestyle",
@@ -1246,6 +1470,21 @@
       "size_kb": 532,
       "entry_point": "index.html",
       "builds_with": null,
+      "deps": [],
+      "root_files": [
+        ".github",
+        ".nojekyll",
+        "404.html",
+        "CONVENTIONS.md",
+        "PLAN.md",
+        "README.md",
+        "app",
+        "assets",
+        "docs",
+        "dorum",
+        "index.html",
+        "mockups"
+      ],
       "links": {
         "repo": "https://github.com/imagine-os/dorum-lifestyle",
         "live": "https://imagine-os.github.io/dorum-lifestyle/",
@@ -1254,6 +1493,7 @@
         "docs": null,
         "other": []
       },
+      "other_count": 0,
       "readme_links": [
         {
           "text": "imagine-os.github.io/dorum-lifestyle/",
@@ -1277,11 +1517,11 @@
         "url": "https://imagine-os.github.io/dorum-lifestyle/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:34:39.473Z"
+        "checked_at": "2026-09-17T13:49:36.375Z"
       },
       "screenshot": "screenshots/dorum-lifestyle.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-09-17 13:35 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-09-17 13:50 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1290,8 +1530,7 @@
       "featured": false,
       "hidden": false,
       "source_channel": "#dorum-lifestyle",
-      "readme_lead": "",
-      "other_count": 0
+      "readme_lead": "Llave OS is an operating system for real-estate agencies: one system that replaces the five tools a brokerage usually juggles (CRM, listings/portals, contracts and paperwork, money/escrow/payroll, marketing). AI drafts, a person approves. This repository is a fully static demo of the product with Dorum Lifestyle (a boutique brokerage in Medellín, Colombia) as the example tenant."
     },
     {
       "name": "gamma-audit",
@@ -1330,6 +1569,13 @@
       "size_kb": 40,
       "entry_point": "index.html",
       "builds_with": null,
+      "deps": [],
+      "root_files": [
+        ".github",
+        ".nojekyll",
+        "README.md",
+        "index.html"
+      ],
       "links": {
         "repo": "https://github.com/imagine-os/gamma-audit",
         "live": "https://imagine-os.github.io/gamma-audit/",
@@ -1338,6 +1584,7 @@
         "docs": null,
         "other": []
       },
+      "other_count": 0,
       "readme_links": [],
       "is_placeholder": false,
       "topics": [],
@@ -1356,11 +1603,11 @@
         "url": "https://imagine-os.github.io/gamma-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:34:42.710Z"
+        "checked_at": "2026-09-17T13:49:38.545Z"
       },
       "screenshot": "screenshots/gamma-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-09-17 13:35 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-09-17 13:50 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -1369,8 +1616,7 @@
       "featured": false,
       "hidden": false,
       "source_channel": "#gamma",
-      "readme_lead": "",
-      "other_count": 0
+      "readme_lead": "Gamma Workspace Audit, generated 2026-09-16. Static page deployed with GitHub Pages."
     },
     {
       "name": "webflow-audit",
@@ -1404,12 +1650,17 @@
       },
       "stack": [
         "Static HTML",
-        "GitHub Pages",
-        "Webflow"
+        "GitHub Pages"
       ],
       "size_kb": 61,
       "entry_point": "index.html",
       "builds_with": null,
+      "deps": [],
+      "root_files": [
+        ".nojekyll",
+        "README.md",
+        "index.html"
+      ],
       "links": {
         "repo": "https://github.com/imagine-os/webflow-audit",
         "live": "https://imagine-os.github.io/webflow-audit/",
@@ -1418,6 +1669,7 @@
         "docs": null,
         "other": []
       },
+      "other_count": 0,
       "readme_links": [],
       "is_placeholder": false,
       "topics": [],
@@ -1434,11 +1686,11 @@
         "url": "https://imagine-os.github.io/webflow-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:34:46.662Z"
+        "checked_at": "2026-09-17T13:49:40.497Z"
       },
       "screenshot": "screenshots/webflow-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-09-17 13:35 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-09-17 13:50 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -1447,8 +1699,7 @@
       "featured": false,
       "hidden": false,
       "source_channel": "#webflow",
-      "readme_lead": "",
-      "other_count": 0
+      "readme_lead": "Webflow portfolio audit — static gallery served by GitHub Pages from the main branch root."
     },
     {
       "name": "rebuild-slack-shell",
@@ -1493,6 +1744,22 @@
       "size_kb": 315,
       "entry_point": "index.html",
       "builds_with": "node build-single.js",
+      "deps": [],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        ".nojekyll",
+        "README.md",
+        "app.js",
+        "bridge",
+        "build-single.js",
+        "data.js",
+        "dist",
+        "docs",
+        "index.html",
+        "provider.js",
+        "styles.css"
+      ],
       "links": {
         "repo": "https://github.com/imagine-os/rebuild-slack-shell",
         "live": "https://imagine-os.github.io/rebuild-slack-shell/",
@@ -1501,6 +1768,7 @@
         "docs": null,
         "other": []
       },
+      "other_count": 0,
       "readme_links": [],
       "is_placeholder": false,
       "topics": [],
@@ -1519,11 +1787,11 @@
         "url": "https://imagine-os.github.io/rebuild-slack-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:34:49.609Z"
+        "checked_at": "2026-09-17T13:49:43.709Z"
       },
       "screenshot": "screenshots/rebuild-slack-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-09-17 13:35 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-09-17 13:50 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -1532,8 +1800,7 @@
       "featured": false,
       "hidden": false,
       "source_channel": "#rebuild-slack",
-      "readme_lead": "",
-      "other_count": 0
+      "readme_lead": "A pixel-faithful, self-contained recreation of the Slack desktop application shell (2024–2026 design) as a static web app. No frameworks, no build step, no runtime dependencies. Everything — the workspace \"Playset\", 15 people, 10 channels, 8 DMs, ~200 seeded messages with threads, reactions, files, polls and app posts — is generated client-side from data.js, with timestamps relative to now so it always reads as current."
     },
     {
       "name": "empty6",
@@ -1563,6 +1830,8 @@
       "size_kb": 0,
       "entry_point": null,
       "builds_with": null,
+      "deps": [],
+      "root_files": [],
       "links": {
         "repo": "https://github.com/imagine-os/empty6",
         "live": null,
@@ -1571,6 +1840,7 @@
         "docs": null,
         "other": []
       },
+      "other_count": 0,
       "readme_links": [],
       "is_placeholder": true,
       "topics": [],
@@ -1599,15 +1869,13 @@
       "display_name": "empty6",
       "featured": false,
       "hidden": false,
-      "source_channel": null,
-      "readme_lead": "",
-      "other_count": 0
+      "source_channel": null
     },
     {
       "name": "OS-Folder-Structure",
       "full_name": "imagine-os/OS-Folder-Structure",
       "html_url": "https://github.com/imagine-os/OS-Folder-Structure",
-      "description": "NovaOS Explorer: a kid-friendly interactive blueprint for a new operating system, internet protocol, banking protocol, 3D multiplayer world and AI harness. Open https://imagine-os.github.io/OS-Folder-Structure/",
+      "description": "NovaOS Explorer: a kid-friendly interactive blueprint for a new operating system, internet protocol, banking protocol, 3D multiplayer world and AI harness.",
       "readme_title": "NovaOS Explorer",
       "readme_excerpt": "NovaOS Explorer: a kid-friendly interactive blueprint for a new operating system, internet protocol, banking protocol, 3D multiplayer world and AI harness. Open https://imagine-os.github.io/OS-Folder-Structure/",
       "default_branch": "main",
@@ -1641,6 +1909,13 @@
       "size_kb": 62,
       "entry_point": "index.html",
       "builds_with": null,
+      "deps": [],
+      "root_files": [
+        ".github",
+        ".nojekyll",
+        "README.md",
+        "index.html"
+      ],
       "links": {
         "repo": "https://github.com/imagine-os/OS-Folder-Structure",
         "live": "https://imagine-os.github.io/OS-Folder-Structure/",
@@ -1649,6 +1924,7 @@
         "docs": null,
         "other": []
       },
+      "other_count": 0,
       "readme_links": [
         {
           "text": "imagine-os.github.io/OS-Folder-Structure/",
@@ -1672,11 +1948,11 @@
         "url": "https://imagine-os.github.io/OS-Folder-Structure/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:34:56.969Z"
+        "checked_at": "2026-09-17T13:49:47.221Z"
       },
       "screenshot": "screenshots/OS-Folder-Structure.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-09-17 13:35 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-09-17 13:50 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -1685,9 +1961,7 @@
       "featured": false,
       "hidden": false,
       "source_channel": "#operating-system-folder-structure",
-      "readme_lead": "",
-      "other_count": 0
+      "readme_lead": "NovaOS Explorer: a kid-friendly interactive blueprint for a new operating system, internet protocol, banking protocol, 3D multiplayer world and AI harness."
     }
-  ],
-  "recomputed_at": "2026-09-17T13:48:09.106Z"
+  ]
 }
