@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T13:49:47.416Z",
+  "generated_at": "2026-09-17T21:29:38.300Z",
   "org": "imagine-os",
   "api_reachable": true,
   "sources": {
@@ -12,6 +12,319 @@
   },
   "errors": [],
   "projects": [
+    {
+      "name": "empty6",
+      "full_name": "imagine-os/empty6",
+      "html_url": "https://github.com/imagine-os/empty6",
+      "description": "This repo holds the plan, tooling notes, lead pipeline, built demos, and a full log of prompts and replies for the tester-acquisition project run by Claude from the hook-testers Slack channel.",
+      "readme_title": "Hook Testers",
+      "readme_excerpt": "This repo holds the plan, tooling notes, lead pipeline, built demos, and a full log of prompts and replies for the tester-acquisition project run by Claude from the hook-testers Slack channel. The project's job is to get qualified beta testers in the door for Justin Massion's adaptive custom-software offer, get them actually using the tool, and collect data that is useful. Everything Claude does for the project (prompts received, replies given, changelog entries, leads found, demos built) is committed here so the work is auditable and resumable from any session. The repo is currently named…",
+      "default_branch": "main",
+      "branches": [
+        "main"
+      ],
+      "has_gh_pages_branch": false,
+      "has_pages_workflow": false,
+      "created_at": "2026-09-16T22:41:59Z",
+      "updated_at": "2026-09-17T21:20:23Z",
+      "pushed_at": "2026-09-17T21:20:19Z",
+      "last_commit": {
+        "sha": "8ba8eb48787911b9061b841ea044a59526398263",
+        "date": "2026-09-17T21:20:17Z",
+        "message": "Add published plan page link",
+        "author": "Claude"
+      },
+      "commit_count": 2,
+      "contributors": [
+        "claude"
+      ],
+      "language": null,
+      "languages": {},
+      "stack": [],
+      "size_kb": 0,
+      "entry_point": null,
+      "builds_with": null,
+      "deps": [],
+      "root_files": [
+        ".gitignore",
+        "CHANGELOG.md",
+        "README.md",
+        "demos",
+        "docs",
+        "leads",
+        "templates"
+      ],
+      "links": {
+        "repo": "https://github.com/imagine-os/empty6",
+        "live": null,
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": [
+          "https://claude.ai/artifact/RwVMjN8JqZtYsdWHd4BnLx"
+        ]
+      },
+      "other_count": 1,
+      "readme_links": [
+        {
+          "text": "claude.ai/artifact/RwVMjN8JqZtYsdWHd4BnLx",
+          "url": "https://claude.ai/artifact/RwVMjN8JqZtYsdWHd4BnLx"
+        }
+      ],
+      "is_placeholder": false,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": true,
+      "has_license": false,
+      "has_ci": false,
+      "workflow_files": [],
+      "open_todos": 0,
+      "pages": {
+        "has_pages": false,
+        "url": null,
+        "live": null,
+        "http_status": null,
+        "checked_at": null
+      },
+      "screenshot": null,
+      "screenshot_source": "none",
+      "screenshot_note": "No live URL; nothing to capture",
+      "category": "Placeholder",
+      "status": "in-progress",
+      "tags": [],
+      "notes": "Only truly empty repo left. Claimed for the Google Drive profile page (#google-drive thread) — Justin was asked to upload index.html himself because the page holds personal data.",
+      "display_name": "empty6",
+      "featured": false,
+      "hidden": false,
+      "source_channel": null,
+      "readme_lead": "This repo holds the plan, tooling notes, lead pipeline, built demos, and a full log of prompts and replies for the tester-acquisition project run by Claude from the hook-testers Slack channel. The project's job is to get qualified beta testers in the door for Justin Massion's adaptive custom-software offer, get them actually using the tool, and collect data that is useful. Everything Claude does for the project (prompts received, replies given, changelog entries, leads found, demos built) is committed here so the work is auditable and resumable from any session. The repo is currently named empty6 and will be renamed later."
+    },
+    {
+      "name": "petrock",
+      "full_name": "imagine-os/petrock",
+      "html_url": "https://github.com/imagine-os/petrock",
+      "description": "Software for Petrock Hotel (dog hotel and spa, two locations, petrockhotel.com).",
+      "readme_title": "Petrock",
+      "readme_excerpt": "Software for Petrock Hotel (dog hotel and spa, two locations, petrockhotel.com). One system that runs the whole business: customers book boarding, daycare, grooming and spa from a mobile app; front-desk staff run the day from a desktop web app (check-ins, check-outs, timelines, grooming agenda, messages); owners and admins manage locations, staff, roles, pricing and settings from an admin web app. Everything shares one design system, one component library, one table library and one role/permission model, with a super-admin builder tool on every page that exposes the tables, roles,…",
+      "default_branch": "main",
+      "branches": [
+        "main"
+      ],
+      "has_gh_pages_branch": false,
+      "has_pages_workflow": false,
+      "created_at": "2026-09-17T17:58:43Z",
+      "updated_at": "2026-09-17T20:38:19Z",
+      "pushed_at": "2026-09-17T20:38:15Z",
+      "last_commit": {
+        "sha": "d1586ef6707111a70dd4b89bd01ccf6358e23e72",
+        "date": "2026-09-17T20:38:12Z",
+        "message": "docs: add prompt 0004 reply",
+        "author": "Claude"
+      },
+      "commit_count": 9,
+      "contributors": [
+        "claude"
+      ],
+      "language": null,
+      "languages": {},
+      "stack": [],
+      "size_kb": 55525,
+      "entry_point": null,
+      "builds_with": null,
+      "deps": [],
+      "root_files": [
+        ".gitignore",
+        "README.md",
+        "docs"
+      ],
+      "links": {
+        "repo": "https://github.com/imagine-os/petrock",
+        "live": null,
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": [
+          "https://petrockhotel.com"
+        ]
+      },
+      "other_count": 1,
+      "readme_links": [
+        {
+          "text": "petrockhotel.com",
+          "url": "https://petrockhotel.com"
+        },
+        {
+          "text": "Playset-LLC/Company-OS",
+          "url": "https://github.com/Playset-LLC/Company-OS"
+        },
+        {
+          "text": "imagine-os/hoy",
+          "url": "https://github.com/imagine-os/hoy"
+        }
+      ],
+      "is_placeholder": false,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": true,
+      "has_license": false,
+      "has_ci": false,
+      "workflow_files": [],
+      "open_todos": 0,
+      "pages": {
+        "has_pages": false,
+        "url": null,
+        "live": null,
+        "http_status": null,
+        "checked_at": null
+      },
+      "screenshot": null,
+      "screenshot_source": "none",
+      "screenshot_note": "No live URL; nothing to capture",
+      "category": "Product",
+      "status": "in-progress",
+      "tags": [],
+      "notes": "",
+      "display_name": "petrock",
+      "featured": false,
+      "hidden": false,
+      "source_channel": null,
+      "readme_lead": "Software for Petrock Hotel (dog hotel and spa, two locations, petrockhotel.com)."
+    },
+    {
+      "name": "hoy",
+      "full_name": "imagine-os/hoy",
+      "html_url": "https://github.com/imagine-os/hoy",
+      "description": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Medellín, Colombia, built to become a multi-tenant platform for other studios later.",
+      "readme_title": "HoyOS",
+      "readme_excerpt": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Medellín, Colombia, built to become a multi-tenant platform for other studios later. One codebase serves the public website, the customer app, the teacher app, the staff and admin desktop, the club's operations manual, the in-app documentation and the developer tooling. The root route // is a testing hub for private testing between the studio team and the build team. It offers one card per perspective; picking a staff role switches the demo user (fictional people, one per role). The header has ES/EN, light/dark and,…",
+      "default_branch": "main",
+      "branches": [
+        "main",
+        "work/appstore",
+        "work/especiales",
+        "work/expenses",
+        "work/settings"
+      ],
+      "has_gh_pages_branch": false,
+      "has_pages_workflow": true,
+      "created_at": "2026-09-17T02:34:14Z",
+      "updated_at": "2026-09-17T19:20:04Z",
+      "pushed_at": "2026-09-17T19:20:02Z",
+      "last_commit": {
+        "sha": "a415fee3b9c0be5801a0e78138a27590298dac6f",
+        "date": "2026-09-17T19:19:43Z",
+        "message": "feat(admin): owner decisions as settings, M-10 Integraciones, ROADMAP §G (0018 · v0.7.0)",
+        "author": "Claude"
+      },
+      "commit_count": 67,
+      "contributors": [
+        "claude"
+      ],
+      "language": "TypeScript",
+      "languages": {
+        "TypeScript": 1846121,
+        "HTML": 609648,
+        "PLpgSQL": 226944,
+        "CSS": 136035,
+        "JavaScript": 119407
+      },
+      "stack": [
+        "dnd-kit",
+        "React",
+        "React Router",
+        "TypeScript",
+        "Vite",
+        "CSS",
+        "Supabase",
+        "GitHub Pages"
+      ],
+      "size_kb": 168313,
+      "entry_point": "index.html",
+      "builds_with": "npm run build",
+      "deps": [
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@dnd-kit/utilities",
+        "@types/react",
+        "@types/react-dom",
+        "@vitejs/plugin-react",
+        "playwright-core",
+        "react",
+        "react-dom",
+        "react-markdown",
+        "react-router-dom",
+        "typescript",
+        "vite"
+      ],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        "CLAUDE.md",
+        "README.md",
+        "ROADMAP.md",
+        "docs",
+        "index.html",
+        "package-lock.json",
+        "package.json",
+        "public",
+        "reference",
+        "scripts",
+        "src",
+        "supabase",
+        "tsconfig.json",
+        "vite.config.ts"
+      ],
+      "links": {
+        "repo": "https://github.com/imagine-os/hoy",
+        "live": "https://imagine-os.github.io/hoy/",
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": []
+      },
+      "other_count": 0,
+      "readme_links": [
+        {
+          "text": "imagine-os.github.io/hoy/",
+          "url": "https://imagine-os.github.io/hoy/"
+        }
+      ],
+      "is_placeholder": false,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": true,
+      "has_license": false,
+      "has_ci": true,
+      "workflow_files": [
+        ".github/workflows/pages.yml"
+      ],
+      "open_todos": 0,
+      "pages": {
+        "has_pages": true,
+        "url": "https://imagine-os.github.io/hoy/",
+        "live": true,
+        "http_status": 200,
+        "checked_at": "2026-09-17T21:29:00.646Z"
+      },
+      "screenshot": "screenshots/hoy.png",
+      "screenshot_source": "live",
+      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-09-17 21:29 UTC",
+      "category": "Product",
+      "status": "live",
+      "tags": [],
+      "notes": "Vite + React + Supabase ops system for HOY Human Club (Bogotá). Canonical HOY repo.",
+      "display_name": "HOY OS",
+      "featured": true,
+      "hidden": false,
+      "source_channel": null,
+      "readme_lead": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Medellín, Colombia, built to become a multi-tenant platform for other studios later. One codebase serves the public website, the customer app, the teacher app, the staff and admin desktop, the club's operations manual, the in-app documentation and the developer tooling."
+    },
     {
       "name": "linear-builder",
       "full_name": "imagine-os/linear-builder",
@@ -27,31 +340,33 @@
       "has_gh_pages_branch": true,
       "has_pages_workflow": true,
       "created_at": "2026-09-17T12:49:15Z",
-      "updated_at": "2026-09-17T13:45:38Z",
-      "pushed_at": "2026-09-17T13:45:32Z",
+      "updated_at": "2026-09-17T15:48:01Z",
+      "pushed_at": "2026-09-17T15:47:55Z",
       "last_commit": {
-        "sha": "4f7cff07142a32648d2fb5aa3576d5ef01c2e4d9",
-        "date": "2026-09-17T13:45:28Z",
-        "message": "Add suggested model and effort per issue, plus the cost and duration estimate",
+        "sha": "d31e89efec78e9d27fc6b6b8b48b4348cc5240cc",
+        "date": "2026-09-17T15:47:26Z",
+        "message": "Refresh specs after round 3 (module system, chunk plan)",
         "author": "Claude"
       },
-      "commit_count": 4,
+      "commit_count": 7,
       "contributors": [
         "claude"
       ],
       "language": "Python",
       "languages": {
         "Python": 2264444,
-        "HTML": 313861,
-        "JavaScript": 39012
+        "HTML": 1296434,
+        "JavaScript": 57965,
+        "CSS": 19617
       },
       "stack": [
         "Vanilla JS",
         "Python",
         "Static HTML",
+        "CSS",
         "GitHub Pages"
       ],
-      "size_kb": 0,
+      "size_kb": 5564,
       "entry_point": "site/index.html",
       "builds_with": null,
       "deps": [],
@@ -74,15 +389,30 @@
         "docs": null,
         "other": [
           "https://linear.app/paperos/issue/PAP-91",
+          "https://linear.app/paperos/issue/PAP-433",
+          "https://linear.app/paperos/project/module-system-and-swap-tooling-8f81243eebfc",
+          "https://linear.app/paperos/document/paperos-module-system-8007373cc6bb",
           "https://linear.app/paperos",
           "https://claude.ai/artifact/M8PdehTznioG49QJUnkWTU"
         ]
       },
-      "other_count": 3,
+      "other_count": 6,
       "readme_links": [
         {
           "text": "PAP-91",
           "url": "https://linear.app/paperos/issue/PAP-91"
+        },
+        {
+          "text": "PAP-433",
+          "url": "https://linear.app/paperos/issue/PAP-433"
+        },
+        {
+          "text": "Module System & Swap Tooling",
+          "url": "https://linear.app/paperos/project/module-system-and-swap-tooling-8f81243eebfc"
+        },
+        {
+          "text": "PaperOS Module System",
+          "url": "https://linear.app/paperos/document/paperos-module-system-8007373cc6bb"
         },
         {
           "text": "linear.app/paperos",
@@ -91,6 +421,10 @@
         {
           "text": "claude.ai/artifact/M8PdehTznioG49QJUnkWTU",
           "url": "https://claude.ai/artifact/M8PdehTznioG49QJUnkWTU"
+        },
+        {
+          "text": "imagine-os.github.io/linear-builder/",
+          "url": "https://imagine-os.github.io/linear-builder/"
         }
       ],
       "is_placeholder": false,
@@ -110,11 +444,11 @@
         "url": "https://imagine-os.github.io/linear-builder/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:49:03.476Z"
+        "checked_at": "2026-09-17T21:29:03.641Z"
       },
       "screenshot": "screenshots/linear-builder.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-09-17 13:49 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-09-17 21:29 UTC",
       "category": "Tooling",
       "status": "live",
       "tags": [],
@@ -124,6 +458,299 @@
       "hidden": false,
       "source_channel": null,
       "readme_lead": "PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience, business modules and a documented ten-minute path from a one-paragraph idea to a deployed app. It is built by parallel Claude Code sessions that pick issues from a Linear queue (team PAP) under nine agent characters, with Justin Massion (imagine-os) as the only human in the loop. This repository is the plan: every issue spec, the platform documents, the schedule, the pending backlog, the blueprint page and the scripts that put all of it into Linear."
+    },
+    {
+      "name": "circle-shell",
+      "full_name": "imagine-os/circle-shell",
+      "html_url": "https://github.com/imagine-os/circle-shell",
+      "description": "A high-fidelity, static front-end recreation of the Circle community platform's logged-in app shell, built as a single self-contained index.html (inline CSS and JS, no build step, no backend).",
+      "readme_title": "Circle app shell rebuild",
+      "readme_excerpt": "A high-fidelity, static front-end recreation of the Circle community platform's logged-in app shell, built as a single self-contained index.html (inline CSS and JS, no build step, no backend). Everything on the page is mock data: the community \"Maker Circle\", its spaces, members, posts, events, courses, notifications and messages are invented. Interactions (likes, polls, RSVPs, follows, the composer, DMs, the command palette, dark mode) work locally in the browser and reset on reload, except for the theme and collapsed sidebar groups, which are remembered in localStorage. Live site:…",
+      "default_branch": "main",
+      "branches": [
+        "gh-pages",
+        "main"
+      ],
+      "has_gh_pages_branch": true,
+      "has_pages_workflow": true,
+      "created_at": "2026-09-16T22:42:29Z",
+      "updated_at": "2026-09-17T14:12:06Z",
+      "pushed_at": "2026-09-17T15:14:22Z",
+      "last_commit": {
+        "sha": "d8acd100fc20eaa678a79fcbbbda5ead2b372080",
+        "date": "2026-09-17T14:11:59Z",
+        "message": "Document the live Pages URL",
+        "author": "Claude"
+      },
+      "commit_count": 3,
+      "contributors": [
+        "claude"
+      ],
+      "language": "HTML",
+      "languages": {
+        "HTML": 171486
+      },
+      "stack": [
+        "Static HTML",
+        "GitHub Pages"
+      ],
+      "size_kb": 50,
+      "entry_point": "index.html",
+      "builds_with": null,
+      "deps": [],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        "README.md",
+        "index.html"
+      ],
+      "links": {
+        "repo": "https://github.com/imagine-os/circle-shell",
+        "live": "https://imagine-os.github.io/circle-shell/",
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": [
+          "https://circle.so"
+        ]
+      },
+      "other_count": 1,
+      "readme_links": [
+        {
+          "text": "Circle",
+          "url": "https://circle.so"
+        },
+        {
+          "text": "imagine-os.github.io/circle-shell/",
+          "url": "https://imagine-os.github.io/circle-shell/"
+        }
+      ],
+      "is_placeholder": false,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": true,
+      "has_license": false,
+      "has_ci": true,
+      "workflow_files": [
+        ".github/workflows/pages.yml"
+      ],
+      "open_todos": 0,
+      "pages": {
+        "has_pages": true,
+        "url": "https://imagine-os.github.io/circle-shell/",
+        "live": true,
+        "http_status": 200,
+        "checked_at": "2026-09-17T21:29:05.901Z"
+      },
+      "screenshot": "screenshots/circle-shell.png",
+      "screenshot_source": "live",
+      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-09-17 21:29 UTC",
+      "category": "Prototype / Shell rebuild",
+      "status": "live",
+      "tags": [],
+      "notes": "Was empty8. WARNING: a second branch (claude/exciting-gauss-fnw1v2) builds HOY OS and force-publishes gh-pages on every push, so the live URL currently shows HOY OS, not the Circle shell. Fix: delete that branch or move HOY OS to the hoy repo, then re-run the pages workflow.",
+      "display_name": "Circle Shell (Circle.so rebuild)",
+      "featured": false,
+      "hidden": false,
+      "source_channel": "#rebuild-circle",
+      "readme_lead": "A high-fidelity, static front-end recreation of the Circle community platform's logged-in app shell, built as a single self-contained index.html (inline CSS and JS, no build step, no backend)."
+    },
+    {
+      "name": "sendr-rebuild",
+      "full_name": "imagine-os/sendr-rebuild",
+      "html_url": "https://github.com/imagine-os/sendr-rebuild",
+      "description": "A self-contained, static rebuild of the Sendr (sendr.ai) web-app shell, built for UI/IA study. It is a single index.html with inline CSS and JavaScript: no build step, no external fonts, no CDNs. Everything on screen is invented mock data.",
+      "readme_title": "Sendr app shell — static rebuild",
+      "readme_excerpt": "A self-contained, static rebuild of the Sendr (sendr.ai) web-app shell, built for UI/IA study. It is a single index.html with inline CSS and JavaScript: no build step, no external fonts, no CDNs. Everything on screen is invented mock data. Unofficial study rebuild; not affiliated with, endorsed by or connected to Sendr. Sendr is a trademark of its owner. Brand colours, fonts and layout are inferred, not copied. Navigation uses hash routes (/dashboard, /sequencer/c1, /unibox, ...), so the back/forward buttons work and every screen is linkable. Press ⌘/Ctrl + K for search, Esc to close any…",
+      "default_branch": "main",
+      "branches": [
+        "main"
+      ],
+      "has_gh_pages_branch": false,
+      "has_pages_workflow": true,
+      "created_at": "2026-09-17T14:42:09Z",
+      "updated_at": "2026-09-17T15:12:23Z",
+      "pushed_at": "2026-09-17T15:12:19Z",
+      "last_commit": {
+        "sha": "e60fc7560d63bf9aa9f7e3ee96c473778f00943e",
+        "date": "2026-09-17T15:12:04Z",
+        "message": "Sendr app shell rebuild: static HTML/CSS/JS with module stubs and Pages workflow",
+        "author": "Claude"
+      },
+      "commit_count": 1,
+      "contributors": [
+        "claude"
+      ],
+      "language": "HTML",
+      "languages": {
+        "HTML": 226089
+      },
+      "stack": [
+        "Static HTML",
+        "GitHub Pages"
+      ],
+      "size_kb": 61,
+      "entry_point": "index.html",
+      "builds_with": null,
+      "deps": [],
+      "root_files": [
+        ".github",
+        "README.md",
+        "index.html"
+      ],
+      "links": {
+        "repo": "https://github.com/imagine-os/sendr-rebuild",
+        "live": "https://imagine-os.github.io/sendr-rebuild/",
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": []
+      },
+      "other_count": 0,
+      "readme_links": [],
+      "is_placeholder": false,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": true,
+      "has_license": false,
+      "has_ci": true,
+      "workflow_files": [
+        ".github/workflows/pages.yml"
+      ],
+      "open_todos": 0,
+      "pages": {
+        "has_pages": true,
+        "url": "https://imagine-os.github.io/sendr-rebuild/",
+        "live": false,
+        "http_status": 404,
+        "checked_at": "2026-09-17T21:29:07.962Z"
+      },
+      "screenshot": null,
+      "screenshot_source": "none",
+      "screenshot_note": "URL not live (404)",
+      "category": "Prototype / Shell rebuild",
+      "status": "deployed-unverified",
+      "tags": [],
+      "notes": "",
+      "display_name": "sendr-rebuild",
+      "featured": false,
+      "hidden": false,
+      "source_channel": null,
+      "readme_lead": "A self-contained, static rebuild of the Sendr (sendr.ai) web-app shell, built for UI/IA study. It is a single index.html with inline CSS and JavaScript: no build step, no external fonts, no CDNs. Everything on screen is invented mock data."
+    },
+    {
+      "name": "file-manager-designs",
+      "full_name": "imagine-os/file-manager-designs",
+      "html_url": "https://github.com/imagine-os/file-manager-designs",
+      "description": "A static portfolio of high-fidelity file-manager product screens, built as plain HTML/CSS with no build step, no external fonts, scripts or CDNs, and published with GitHub Pages.",
+      "readme_title": "File Manager Design Portfolio",
+      "readme_excerpt": "A static portfolio of high-fidelity file-manager product screens, built as plain HTML/CSS with no build step, no external fonts, scripts or CDNs, and published with GitHub Pages. Every screen is designed at 1440 × 900 inside a device frame and scaled to fit the viewport. Open index.html directly from disk (file://) or serve the folder; both work. prototype/facet/ is an interactive build of the Facet concept with the classic Ledger browser beside it: a real CSS 3D cube over one shared dataset (data.js), a Miller-column Ledger of the same files, a Compare drawer with live demos, and a…",
+      "default_branch": "main",
+      "branches": [
+        "gh-pages",
+        "main"
+      ],
+      "has_gh_pages_branch": true,
+      "has_pages_workflow": true,
+      "created_at": "2026-09-16T21:17:55Z",
+      "updated_at": "2026-09-17T13:57:13Z",
+      "pushed_at": "2026-09-17T13:57:25Z",
+      "last_commit": {
+        "sha": "40b2424a8d0e9df821a7d358ffdb030de85e6a4c",
+        "date": "2026-09-17T13:57:01Z",
+        "message": "Add Tesseract, Polyhedron and Nested cubes prototypes with shared modules and hub",
+        "author": "Claude"
+      },
+      "commit_count": 4,
+      "contributors": [
+        "claude"
+      ],
+      "language": "HTML",
+      "languages": {
+        "HTML": 475187,
+        "CSS": 176002,
+        "JavaScript": 162534
+      },
+      "stack": [
+        "Vanilla JS",
+        "Static HTML",
+        "CSS",
+        "GitHub Pages"
+      ],
+      "size_kb": 76340,
+      "entry_point": "index.html",
+      "builds_with": null,
+      "deps": [],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        ".nojekyll",
+        "README.md",
+        "assets",
+        "designs",
+        "index.html",
+        "prototype",
+        "shots",
+        "tools"
+      ],
+      "links": {
+        "repo": "https://github.com/imagine-os/file-manager-designs",
+        "live": "https://imagine-os.github.io/file-manager-designs/",
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": []
+      },
+      "other_count": 0,
+      "readme_links": [
+        {
+          "text": "imagine-os.github.io/file-manager-designs/",
+          "url": "https://imagine-os.github.io/file-manager-designs/"
+        },
+        {
+          "text": "imagine-os.github.io/file-manager-designs/prototype/facet/",
+          "url": "https://imagine-os.github.io/file-manager-designs/prototype/facet/"
+        },
+        {
+          "text": "imagine-os.github.io/file-manager-designs/prototype/",
+          "url": "https://imagine-os.github.io/file-manager-designs/prototype/"
+        }
+      ],
+      "is_placeholder": false,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": true,
+      "has_license": false,
+      "has_ci": true,
+      "workflow_files": [
+        ".github/workflows/pages.yml"
+      ],
+      "open_todos": 0,
+      "pages": {
+        "has_pages": true,
+        "url": "https://imagine-os.github.io/file-manager-designs/",
+        "live": true,
+        "http_status": 200,
+        "checked_at": "2026-09-17T21:29:09.786Z"
+      },
+      "screenshot": "screenshots/file-manager-designs.png",
+      "screenshot_source": "live",
+      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-09-17 21:29 UTC",
+      "category": "Design exploration",
+      "status": "live",
+      "tags": [],
+      "notes": "Was empty-3; renamed by Justin on 2026-09-16.",
+      "display_name": "file-manager-designs",
+      "featured": false,
+      "hidden": false,
+      "source_channel": null,
+      "readme_lead": "A static portfolio of high-fidelity file-manager product screens, built as plain HTML/CSS with no build step, no external fonts, scripts or CDNs, and published with GitHub Pages."
     },
     {
       "name": "graph-gallery",
@@ -165,7 +792,7 @@
         "CSS",
         "GitHub Pages"
       ],
-      "size_kb": 6893,
+      "size_kb": 11634,
       "entry_point": "index.html",
       "builds_with": null,
       "deps": [],
@@ -213,11 +840,11 @@
         "url": "https://imagine-os.github.io/graph-gallery/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:49:06.259Z"
+        "checked_at": "2026-09-17T21:29:12.509Z"
       },
       "screenshot": "screenshots/graph-gallery.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-09-17 13:49 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-09-17 21:29 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -575,341 +1202,6 @@
       "source_channel": null
     },
     {
-      "name": "hoy",
-      "full_name": "imagine-os/hoy",
-      "html_url": "https://github.com/imagine-os/hoy",
-      "description": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Bogotá, Colombia, built to become a multi-tenant platform for other studios later.",
-      "readme_title": "HoyOS",
-      "readme_excerpt": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Bogotá, Colombia, built to become a multi-tenant platform for other studios later. One codebase serves the public website, the customer app, the teacher app, the staff and admin desktop, the club's operations manual, the in-app documentation and the developer tooling. The root route // is a testing hub for private testing between the studio team and the build team. It offers one card per perspective; picking a staff role switches the demo user (fictional people, one per role). The header has ES/EN, light/dark and,…",
-      "default_branch": "main",
-      "branches": [
-        "main"
-      ],
-      "has_gh_pages_branch": false,
-      "has_pages_workflow": true,
-      "created_at": "2026-09-17T02:34:14Z",
-      "updated_at": "2026-09-17T12:48:46Z",
-      "pushed_at": "2026-09-17T12:48:41Z",
-      "last_commit": {
-        "sha": "e5ee4bd329ad0dbf6ff2f387b4ec85553669b512",
-        "date": "2026-09-17T12:48:25Z",
-        "message": "docs: 0006 visual fidelity — prompt, changelog 0.4.0, design-system token mapping, kanban, before/after screenshots",
-        "author": "Claude"
-      },
-      "commit_count": 25,
-      "contributors": [
-        "claude"
-      ],
-      "language": "TypeScript",
-      "languages": {
-        "TypeScript": 1074985,
-        "HTML": 609648,
-        "JavaScript": 103923,
-        "CSS": 83654,
-        "PLpgSQL": 42149
-      },
-      "stack": [
-        "dnd-kit",
-        "React",
-        "React Router",
-        "TypeScript",
-        "Vite",
-        "CSS",
-        "Supabase",
-        "GitHub Pages"
-      ],
-      "size_kb": 60602,
-      "entry_point": "index.html",
-      "builds_with": "npm run build",
-      "deps": [
-        "@dnd-kit/core",
-        "@dnd-kit/sortable",
-        "@dnd-kit/utilities",
-        "@types/react",
-        "@types/react-dom",
-        "@vitejs/plugin-react",
-        "playwright-core",
-        "react",
-        "react-dom",
-        "react-markdown",
-        "react-router-dom",
-        "typescript",
-        "vite"
-      ],
-      "root_files": [
-        ".github",
-        ".gitignore",
-        "CLAUDE.md",
-        "README.md",
-        "ROADMAP.md",
-        "docs",
-        "index.html",
-        "package-lock.json",
-        "package.json",
-        "public",
-        "reference",
-        "scripts",
-        "src",
-        "supabase",
-        "tsconfig.json",
-        "vite.config.ts"
-      ],
-      "links": {
-        "repo": "https://github.com/imagine-os/hoy",
-        "live": "https://imagine-os.github.io/hoy/",
-        "demo": null,
-        "sales": null,
-        "docs": null,
-        "other": []
-      },
-      "other_count": 0,
-      "readme_links": [
-        {
-          "text": "imagine-os.github.io/hoy/",
-          "url": "https://imagine-os.github.io/hoy/"
-        }
-      ],
-      "is_placeholder": false,
-      "topics": [],
-      "open_issues": 0,
-      "stargazers": 0,
-      "archived": false,
-      "has_readme": true,
-      "has_license": false,
-      "has_ci": true,
-      "workflow_files": [
-        ".github/workflows/pages.yml"
-      ],
-      "open_todos": 0,
-      "pages": {
-        "has_pages": true,
-        "url": "https://imagine-os.github.io/hoy/",
-        "live": true,
-        "http_status": 200,
-        "checked_at": "2026-09-17T13:49:17.030Z"
-      },
-      "screenshot": "screenshots/hoy.png",
-      "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-09-17 13:49 UTC",
-      "category": "Product",
-      "status": "live",
-      "tags": [],
-      "notes": "Vite + React + Supabase ops system for HOY Human Club (Bogotá). Canonical HOY repo.",
-      "display_name": "HOY OS",
-      "featured": true,
-      "hidden": false,
-      "source_channel": null,
-      "readme_lead": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Bogotá, Colombia, built to become a multi-tenant platform for other studios later. One codebase serves the public website, the customer app, the teacher app, the staff and admin desktop, the club's operations manual, the in-app documentation and the developer tooling."
-    },
-    {
-      "name": "empty10",
-      "full_name": "imagine-os/empty10",
-      "html_url": "https://github.com/imagine-os/empty10",
-      "description": "The operations system for HOY Human Club — a wellness studio in Colombia — built so it can become the operations system for any wellness studio after it.",
-      "readme_title": "HOY OS",
-      "readme_excerpt": "The operations system for HOY Human Club — a wellness studio in Colombia — built so it can become the operations system for any wellness studio after it. Private test build. Publicly reachable, but unlisted and noindex. All data is demo data. No real person's information is in this repository. First time? If that link 404s, GitHub Pages has not been pointed at the published branch yet: Settings → Pages → Source → gh-pages branch, root. The branch is built and pushed automatically by .github/workflows/pages.yml on every push to main; only the one-time Source setting is manual.",
-      "default_branch": "main",
-      "branches": [
-        "gh-pages",
-        "main"
-      ],
-      "has_gh_pages_branch": true,
-      "has_pages_workflow": true,
-      "created_at": "2026-09-16T22:43:00Z",
-      "updated_at": "2026-09-17T12:19:29Z",
-      "pushed_at": "2026-09-17T12:19:36Z",
-      "last_commit": {
-        "sha": "407fbe024401f9375739c25a80fe5c40dddf1789",
-        "date": "2026-09-17T12:19:23Z",
-        "message": "Record the verification results and the real screenshot count in the plan",
-        "author": "Claude"
-      },
-      "commit_count": 3,
-      "contributors": [
-        "claude"
-      ],
-      "language": "JavaScript",
-      "languages": {
-        "JavaScript": 1362557,
-        "HTML": 776247,
-        "CSS": 234776,
-        "PLpgSQL": 143982
-      },
-      "stack": [
-        "Vanilla JS",
-        "Static HTML",
-        "CSS",
-        "Supabase",
-        "GitHub Pages"
-      ],
-      "size_kb": 16248,
-      "entry_point": "index.html",
-      "builds_with": null,
-      "deps": [],
-      "root_files": [
-        ".github",
-        ".gitignore",
-        "ARCHITECTURE.md",
-        "CLAUDE.md",
-        "PLAN.md",
-        "README.md",
-        "assets",
-        "canvas",
-        "docs",
-        "index.html",
-        "ops-manual",
-        "reference",
-        "src",
-        "supabase",
-        "tools"
-      ],
-      "links": {
-        "repo": "https://github.com/imagine-os/empty10",
-        "live": "https://imagine-os.github.io/empty10/",
-        "demo": null,
-        "sales": null,
-        "docs": null,
-        "other": []
-      },
-      "other_count": 0,
-      "readme_links": [
-        {
-          "text": "Open the system",
-          "url": "https://imagine-os.github.io/empty10/"
-        },
-        {
-          "text": "github.com/imagine-os/empty10.git",
-          "url": "https://github.com/imagine-os/empty10.git"
-        }
-      ],
-      "is_placeholder": false,
-      "topics": [],
-      "open_issues": 0,
-      "stargazers": 0,
-      "archived": false,
-      "has_readme": true,
-      "has_license": false,
-      "has_ci": true,
-      "workflow_files": [
-        ".github/workflows/pages.yml"
-      ],
-      "open_todos": 0,
-      "pages": {
-        "has_pages": false,
-        "url": "https://imagine-os.github.io/empty10/",
-        "live": false,
-        "http_status": 404,
-        "checked_at": "2026-09-17T13:49:20.139Z"
-      },
-      "screenshot": "screenshots/empty10.png",
-      "screenshot_source": "local-render",
-      "screenshot_note": "Kept previous screenshot; URL not live (404)",
-      "category": "Product",
-      "status": "deployed-unverified",
-      "tags": [],
-      "notes": "Full HOY OS operations system pushed into placeholder empty10 on 2026-09-17 with a pages.yml that force-pushes gh-pages. Duplicates/overlaps the hoy repo — decide which is canonical, rename or archive this one.",
-      "display_name": "HOY OS (in placeholder repo)",
-      "featured": false,
-      "hidden": false,
-      "source_channel": null,
-      "readme_lead": "The operations system for HOY Human Club — a wellness studio in Colombia — built so it can become the operations system for any wellness studio after it."
-    },
-    {
-      "name": "circle-shell",
-      "full_name": "imagine-os/circle-shell",
-      "html_url": "https://github.com/imagine-os/circle-shell",
-      "description": "A high-fidelity, static front-end recreation of the Circle community platform's logged-in app shell, built as a single self-contained index.html (inline CSS and JS, no build step, no backend).",
-      "readme_title": "Circle app shell rebuild",
-      "readme_excerpt": "A high-fidelity, static front-end recreation of the Circle community platform's logged-in app shell, built as a single self-contained index.html (inline CSS and JS, no build step, no backend). Everything on the page is mock data: the community \"Maker Circle\", its spaces, members, posts, events, courses, notifications and messages are invented. Interactions (likes, polls, RSVPs, follows, the composer, DMs, the command palette, dark mode) work locally in the browser and reset on reload, except for the theme and collapsed sidebar groups, which are remembered in localStorage. Keyboard: ⌘K /…",
-      "default_branch": "main",
-      "branches": [
-        "claude/exciting-gauss-fnw1v2",
-        "gh-pages",
-        "main"
-      ],
-      "has_gh_pages_branch": true,
-      "has_pages_workflow": true,
-      "created_at": "2026-09-16T22:42:29Z",
-      "updated_at": "2026-09-17T02:15:05Z",
-      "pushed_at": "2026-09-17T12:19:32Z",
-      "last_commit": {
-        "sha": "39c4257cd6adeb6d0186c5737d532dfae0318df9",
-        "date": "2026-09-17T00:04:00Z",
-        "message": "Add live rooms, streams, chat, gallery, lessons and calendar views",
-        "author": "Claude"
-      },
-      "commit_count": 2,
-      "contributors": [
-        "claude"
-      ],
-      "language": "HTML",
-      "languages": {
-        "HTML": 171486
-      },
-      "stack": [
-        "Static HTML",
-        "GitHub Pages"
-      ],
-      "size_kb": 99101,
-      "entry_point": "index.html",
-      "builds_with": null,
-      "deps": [],
-      "root_files": [
-        ".github",
-        ".gitignore",
-        "README.md",
-        "index.html"
-      ],
-      "links": {
-        "repo": "https://github.com/imagine-os/circle-shell",
-        "live": "https://imagine-os.github.io/circle-shell/",
-        "demo": null,
-        "sales": null,
-        "docs": null,
-        "other": [
-          "https://circle.so"
-        ]
-      },
-      "other_count": 1,
-      "readme_links": [
-        {
-          "text": "Circle",
-          "url": "https://circle.so"
-        }
-      ],
-      "is_placeholder": false,
-      "topics": [],
-      "open_issues": 0,
-      "stargazers": 0,
-      "archived": false,
-      "has_readme": true,
-      "has_license": false,
-      "has_ci": true,
-      "workflow_files": [
-        ".github/workflows/pages.yml"
-      ],
-      "open_todos": 0,
-      "pages": {
-        "has_pages": true,
-        "url": "https://imagine-os.github.io/circle-shell/",
-        "live": true,
-        "http_status": 200,
-        "checked_at": "2026-09-17T13:49:22.174Z"
-      },
-      "screenshot": "screenshots/circle-shell.png",
-      "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-09-17 13:49 UTC",
-      "category": "Prototype / Shell rebuild",
-      "status": "live",
-      "tags": [],
-      "notes": "Was empty8. WARNING: a second branch (claude/exciting-gauss-fnw1v2) builds HOY OS and force-publishes gh-pages on every push, so the live URL currently shows HOY OS, not the Circle shell. Fix: delete that branch or move HOY OS to the hoy repo, then re-run the pages workflow.",
-      "display_name": "Circle Shell (Circle.so rebuild)",
-      "featured": false,
-      "hidden": false,
-      "source_channel": "#rebuild-circle",
-      "readme_lead": "A high-fidelity, static front-end recreation of the Circle community platform's logged-in app shell, built as a single self-contained index.html (inline CSS and JS, no build step, no backend)."
-    },
-    {
       "name": "paperos",
       "full_name": "imagine-os/paperos",
       "html_url": "https://github.com/imagine-os/paperos",
@@ -1087,11 +1379,11 @@
         "url": "https://imagine-os.github.io/paperos/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:49:25.874Z"
+        "checked_at": "2026-09-17T21:29:22.497Z"
       },
       "screenshot": "screenshots/paperos.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-09-17 13:49 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-09-17 21:29 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1218,11 +1510,11 @@
         "url": "https://imagine-os.github.io/slack-game-engine/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:49:28.524Z"
+        "checked_at": "2026-09-17T21:29:25.203Z"
       },
       "screenshot": "screenshots/slack-game-engine.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-09-17 13:49 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-09-17 21:29 UTC",
       "category": "Game",
       "status": "live",
       "tags": [],
@@ -1232,112 +1524,6 @@
       "hidden": false,
       "source_channel": "#game-engine",
       "readme_lead": "A web-based game engine for 2D and 3D games that run from any static host (including GitHub Pages), with an entity-component world, JavaScript scripting, deterministic physics, audio, an in-browser editor shell and hooks for multiplayer rooms where several people can control the same game."
-    },
-    {
-      "name": "file-manager-designs",
-      "full_name": "imagine-os/file-manager-designs",
-      "html_url": "https://github.com/imagine-os/file-manager-designs",
-      "description": "A static portfolio of high-fidelity file-manager product screens, built as plain HTML/CSS with no build step, no external fonts, scripts or CDNs, and published with GitHub Pages.",
-      "readme_title": "File Manager Design Portfolio",
-      "readme_excerpt": "A static portfolio of high-fidelity file-manager product screens, built as plain HTML/CSS with no build step, no external fonts, scripts or CDNs, and published with GitHub Pages. Every screen is designed at 1440 × 900 inside a device frame and scaled to fit the viewport. Open index.html directly from disk (file://) or serve the folder; both work. prototype/facet/ is an interactive build of the Facet concept with the classic Ledger browser beside it: a real CSS 3D cube over one shared dataset (data.js), a Miller-column Ledger of the same files, a Compare drawer with live demos, and a…",
-      "default_branch": "main",
-      "branches": [
-        "gh-pages",
-        "main"
-      ],
-      "has_gh_pages_branch": true,
-      "has_pages_workflow": true,
-      "created_at": "2026-09-16T21:17:55Z",
-      "updated_at": "2026-09-17T02:43:37Z",
-      "pushed_at": "2026-09-17T02:43:44Z",
-      "last_commit": {
-        "sha": "733145b7799ce1b5722b1c328d94224daf32a4d0",
-        "date": "2026-09-17T02:43:29Z",
-        "message": "Add interactive Facet prototype with Ledger comparison and tutorial",
-        "author": "Claude"
-      },
-      "commit_count": 3,
-      "contributors": [
-        "claude"
-      ],
-      "language": "HTML",
-      "languages": {
-        "HTML": 432392,
-        "CSS": 74799,
-        "JavaScript": 55959
-      },
-      "stack": [
-        "Vanilla JS",
-        "Static HTML",
-        "CSS",
-        "GitHub Pages"
-      ],
-      "size_kb": 39207,
-      "entry_point": "index.html",
-      "builds_with": null,
-      "deps": [],
-      "root_files": [
-        ".github",
-        ".gitignore",
-        ".nojekyll",
-        "README.md",
-        "assets",
-        "designs",
-        "index.html",
-        "prototype",
-        "shots",
-        "tools"
-      ],
-      "links": {
-        "repo": "https://github.com/imagine-os/file-manager-designs",
-        "live": "https://imagine-os.github.io/file-manager-designs/",
-        "demo": null,
-        "sales": null,
-        "docs": null,
-        "other": []
-      },
-      "other_count": 0,
-      "readme_links": [
-        {
-          "text": "imagine-os.github.io/file-manager-designs/",
-          "url": "https://imagine-os.github.io/file-manager-designs/"
-        },
-        {
-          "text": "imagine-os.github.io/file-manager-designs/prototype/facet/",
-          "url": "https://imagine-os.github.io/file-manager-designs/prototype/facet/"
-        }
-      ],
-      "is_placeholder": false,
-      "topics": [],
-      "open_issues": 0,
-      "stargazers": 0,
-      "archived": false,
-      "has_readme": true,
-      "has_license": false,
-      "has_ci": true,
-      "workflow_files": [
-        ".github/workflows/pages.yml"
-      ],
-      "open_todos": 0,
-      "pages": {
-        "has_pages": true,
-        "url": "https://imagine-os.github.io/file-manager-designs/",
-        "live": true,
-        "http_status": 200,
-        "checked_at": "2026-09-17T13:49:32.052Z"
-      },
-      "screenshot": "screenshots/file-manager-designs.png",
-      "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-09-17 13:49 UTC",
-      "category": "Design exploration",
-      "status": "live",
-      "tags": [],
-      "notes": "Was empty-3; renamed by Justin on 2026-09-16.",
-      "display_name": "file-manager-designs",
-      "featured": false,
-      "hidden": false,
-      "source_channel": null,
-      "readme_lead": "A static portfolio of high-fidelity file-manager product screens, built as plain HTML/CSS with no build step, no external fonts, scripts or CDNs, and published with GitHub Pages."
     },
     {
       "name": "vercel-audit",
@@ -1413,11 +1599,11 @@
         "url": "https://imagine-os.github.io/vercel-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:49:34.141Z"
+        "checked_at": "2026-09-17T21:29:27.267Z"
       },
       "screenshot": "screenshots/vercel-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-09-17 13:50 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-09-17 21:29 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -1517,11 +1703,11 @@
         "url": "https://imagine-os.github.io/dorum-lifestyle/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:49:36.375Z"
+        "checked_at": "2026-09-17T21:29:29.573Z"
       },
       "screenshot": "screenshots/dorum-lifestyle.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-09-17 13:50 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-09-17 21:29 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1603,11 +1789,11 @@
         "url": "https://imagine-os.github.io/gamma-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:49:38.545Z"
+        "checked_at": "2026-09-17T21:29:31.867Z"
       },
       "screenshot": "screenshots/gamma-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-09-17 13:50 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-09-17 21:29 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -1686,11 +1872,11 @@
         "url": "https://imagine-os.github.io/webflow-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:49:40.497Z"
+        "checked_at": "2026-09-17T21:29:33.723Z"
       },
       "screenshot": "screenshots/webflow-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-09-17 13:50 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-09-17 21:29 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -1787,11 +1973,11 @@
         "url": "https://imagine-os.github.io/rebuild-slack-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:49:43.709Z"
+        "checked_at": "2026-09-17T21:29:35.907Z"
       },
       "screenshot": "screenshots/rebuild-slack-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-09-17 13:50 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-09-17 21:29 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -1801,75 +1987,6 @@
       "hidden": false,
       "source_channel": "#rebuild-slack",
       "readme_lead": "A pixel-faithful, self-contained recreation of the Slack desktop application shell (2024–2026 design) as a static web app. No frameworks, no build step, no runtime dependencies. Everything — the workspace \"Playset\", 15 people, 10 channels, 8 DMs, ~200 seeded messages with threads, reactions, files, polls and app posts — is generated client-side from data.js, with timestamps relative to now so it always reads as current."
-    },
-    {
-      "name": "empty6",
-      "full_name": "imagine-os/empty6",
-      "html_url": "https://github.com/imagine-os/empty6",
-      "description": null,
-      "readme_title": null,
-      "readme_excerpt": "",
-      "default_branch": "main",
-      "branches": [],
-      "has_gh_pages_branch": false,
-      "has_pages_workflow": false,
-      "created_at": "2026-09-16T22:41:59Z",
-      "updated_at": "2026-09-16T22:42:00Z",
-      "pushed_at": "2026-09-16T22:42:00Z",
-      "last_commit": {
-        "sha": null,
-        "date": null,
-        "message": null,
-        "author": null
-      },
-      "commit_count": 0,
-      "contributors": [],
-      "language": null,
-      "languages": {},
-      "stack": [],
-      "size_kb": 0,
-      "entry_point": null,
-      "builds_with": null,
-      "deps": [],
-      "root_files": [],
-      "links": {
-        "repo": "https://github.com/imagine-os/empty6",
-        "live": null,
-        "demo": null,
-        "sales": null,
-        "docs": null,
-        "other": []
-      },
-      "other_count": 0,
-      "readme_links": [],
-      "is_placeholder": true,
-      "topics": [],
-      "open_issues": 0,
-      "stargazers": 0,
-      "archived": false,
-      "has_readme": false,
-      "has_license": false,
-      "has_ci": false,
-      "workflow_files": [],
-      "open_todos": 0,
-      "pages": {
-        "has_pages": false,
-        "url": null,
-        "live": null,
-        "http_status": null,
-        "checked_at": null
-      },
-      "screenshot": null,
-      "screenshot_source": "none",
-      "screenshot_note": "No live URL; nothing to capture",
-      "category": "Placeholder",
-      "status": "placeholder",
-      "tags": [],
-      "notes": "Only truly empty repo left. Claimed for the Google Drive profile page (#google-drive thread) — Justin was asked to upload index.html himself because the page holds personal data.",
-      "display_name": "empty6",
-      "featured": false,
-      "hidden": false,
-      "source_channel": null
     },
     {
       "name": "OS-Folder-Structure",
@@ -1948,11 +2065,11 @@
         "url": "https://imagine-os.github.io/OS-Folder-Structure/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T13:49:47.221Z"
+        "checked_at": "2026-09-17T21:29:38.186Z"
       },
       "screenshot": "screenshots/OS-Folder-Structure.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-09-17 13:50 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-09-17 21:29 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
