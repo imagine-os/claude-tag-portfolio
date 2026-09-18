@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T11:26:57.554Z",
+  "generated_at": "2026-09-18T16:32:46.876Z",
   "org": "imagine-os",
   "api_reachable": true,
   "sources": {
@@ -26,25 +26,25 @@
       "has_gh_pages_branch": false,
       "has_pages_workflow": true,
       "created_at": "2026-09-17T17:58:43Z",
-      "updated_at": "2026-09-18T08:21:06Z",
-      "pushed_at": "2026-09-18T08:21:02Z",
+      "updated_at": "2026-09-18T16:20:11Z",
+      "pushed_at": "2026-09-18T16:20:07Z",
       "last_commit": {
-        "sha": "8ec320a63b4edfaed49fe0252b5f780b213121ca",
-        "date": "2026-09-18T08:21:00Z",
-        "message": "chore(release): 0.1.0 - release summary, Pages status, screenshots, version bump",
+        "sha": "1ea5e741b512d0feabcf5355ed00a0d7a2b132b9",
+        "date": "2026-09-18T16:19:24Z",
+        "message": "docs(principles): quality bar, input modalities, actions, annotations, placeholders, surfaces (D-193..D-209)",
         "author": "Claude"
       },
-      "commit_count": 56,
+      "commit_count": 68,
       "contributors": [
         "claude"
       ],
       "language": "TypeScript",
       "languages": {
-        "TypeScript": 2385128,
-        "CSS": 141348,
-        "PLpgSQL": 79620,
+        "TypeScript": 2455950,
+        "CSS": 143146,
+        "PLpgSQL": 79941,
         "JavaScript": 57461,
-        "HTML": 818
+        "HTML": 559
       },
       "stack": [
         "Playwright",
@@ -56,10 +56,12 @@
         "Supabase",
         "GitHub Pages"
       ],
-      "size_kb": 115987,
+      "size_kb": 117957,
       "entry_point": "index.html",
       "builds_with": "npm run build",
       "deps": [
+        "@fontsource/be-vietnam-pro",
+        "@fontsource/open-sans",
         "@types/react",
         "@types/react-dom",
         "@vitejs/plugin-react",
@@ -121,17 +123,17 @@
       ],
       "open_todos": 0,
       "pages": {
-        "has_pages": false,
+        "has_pages": true,
         "url": "https://imagine-os.github.io/petrock/",
-        "live": false,
-        "http_status": 404,
-        "checked_at": "2026-09-18T11:26:13.806Z"
+        "live": true,
+        "http_status": 200,
+        "checked_at": "2026-09-18T16:31:57.803Z"
       },
-      "screenshot": null,
-      "screenshot_source": "none",
-      "screenshot_note": "URL not live (404)",
+      "screenshot": "screenshots/petrock.png",
+      "screenshot_source": "live",
+      "screenshot_note": "Captured from https://imagine-os.github.io/petrock/ at 1440x900 on 2026-09-18 16:32 UTC",
       "category": "Product",
-      "status": "deployed-unverified",
+      "status": "live",
       "tags": [],
       "notes": "",
       "display_name": "petrock",
@@ -139,6 +141,131 @@
       "hidden": false,
       "source_channel": null,
       "readme_lead": "Software for Petrock Hotel (dog hotel and spa, two locations: Encino and Westwood, Los Angeles; petrockhotel.com)."
+    },
+    {
+      "name": "linear-builder",
+      "full_name": "imagine-os/linear-builder",
+      "html_url": "https://github.com/imagine-os/linear-builder",
+      "description": "PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience,…",
+      "readme_title": "PaperOS Core Platform plan",
+      "readme_excerpt": "PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience, business modules and a documented ten-minute path from a one-paragraph idea to a deployed app. It is built by parallel Claude Code sessions that pick issues from a Linear queue (team PAP) under nine agent characters, with Justin Massion (imagine-os) as the only human in the loop. This repository is the plan: every…",
+      "default_branch": "main",
+      "branches": [
+        "gh-pages",
+        "main"
+      ],
+      "has_gh_pages_branch": true,
+      "has_pages_workflow": true,
+      "created_at": "2026-09-17T12:49:15Z",
+      "updated_at": "2026-09-18T15:08:21Z",
+      "pushed_at": "2026-09-18T15:08:29Z",
+      "last_commit": {
+        "sha": "87f2d11cee46d18a4d437cfdb2b9faae6415bcfa",
+        "date": "2026-09-18T15:08:13Z",
+        "message": "Round 4: blueprint v5 at new artifact URL",
+        "author": "Claude"
+      },
+      "commit_count": 27,
+      "contributors": [
+        "claude"
+      ],
+      "language": "Python",
+      "languages": {
+        "Python": 2859795,
+        "HTML": 2425444,
+        "JavaScript": 57965,
+        "CSS": 49947
+      },
+      "stack": [
+        "Vanilla JS",
+        "Python",
+        "Static HTML",
+        "CSS",
+        "GitHub Pages"
+      ],
+      "size_kb": 14112,
+      "entry_point": "site/index.html",
+      "builds_with": null,
+      "deps": [],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        "CHANGELOG.md",
+        "CLAUDE.md",
+        "README.md",
+        "docs",
+        "plan",
+        "site",
+        "specs",
+        "tools"
+      ],
+      "links": {
+        "repo": "https://github.com/imagine-os/linear-builder",
+        "live": "https://imagine-os.github.io/linear-builder/",
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": [
+          "https://linear.app/paperos/project/module-system-and-swap-tooling-8f81243eebfc",
+          "https://linear.app/paperos/document/paperos-module-system-8007373cc6bb",
+          "https://linear.app/paperos",
+          "https://claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h"
+        ]
+      },
+      "other_count": 4,
+      "readme_links": [
+        {
+          "text": "Module System & Swap Tooling",
+          "url": "https://linear.app/paperos/project/module-system-and-swap-tooling-8f81243eebfc"
+        },
+        {
+          "text": "PaperOS Module System",
+          "url": "https://linear.app/paperos/document/paperos-module-system-8007373cc6bb"
+        },
+        {
+          "text": "linear.app/paperos",
+          "url": "https://linear.app/paperos"
+        },
+        {
+          "text": "claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h",
+          "url": "https://claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h"
+        },
+        {
+          "text": "imagine-os.github.io/linear-builder/",
+          "url": "https://imagine-os.github.io/linear-builder/"
+        }
+      ],
+      "is_placeholder": false,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": true,
+      "has_license": false,
+      "has_ci": true,
+      "workflow_files": [
+        ".github/workflows/pages.yml"
+      ],
+      "open_todos": 76,
+      "pages": {
+        "has_pages": true,
+        "url": "https://imagine-os.github.io/linear-builder/",
+        "live": true,
+        "http_status": 200,
+        "checked_at": "2026-09-18T16:32:02.412Z"
+      },
+      "screenshot": "screenshots/linear-builder.png",
+      "screenshot_source": "live",
+      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-09-18 16:32 UTC",
+      "category": "Tooling",
+      "status": "live",
+      "tags": [],
+      "notes": "Created by Justin 2026-09-17. PaperOS planning repo plus ~100 Python scripts that drive Linear; site/ is a static plan viewer published via workflow.",
+      "display_name": "Linear Builder (PaperOS plan)",
+      "featured": false,
+      "hidden": false,
+      "source_channel": null,
+      "readme_lead": "PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience, business modules and a documented ten-minute path from a one-paragraph idea to a deployed app. It is built by parallel Claude Code sessions that pick issues from a Linear queue (team PAP) under nine agent characters, with Justin Massion (imagine-os) as the only human in the loop. This repository is the plan: every issue spec, the platform documents, the schedule, the pending backlog, the blueprint page and the scripts that put all of it into Linear."
     },
     {
       "name": "hoy",
@@ -257,11 +384,11 @@
         "url": "https://imagine-os.github.io/hoy/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T11:26:16.060Z"
+        "checked_at": "2026-09-18T16:32:04.904Z"
       },
       "screenshot": "screenshots/hoy.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-09-18 11:27 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-09-18 16:32 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -362,140 +489,6 @@
       "readme_lead": "This repo holds the plan, tooling notes, lead pipeline, built demos, and a full log of prompts and replies for the tester-acquisition project run by Claude from the hook-testers Slack channel. The project's job is to get qualified beta testers in the door for Justin Massion's adaptive custom-software offer, get them actually using the tool, and collect data that is useful. Everything Claude does for the project (prompts received, replies given, changelog entries, leads found, demos built) is committed here so the work is auditable and resumable from any session. The repo is currently named empty6 and will be renamed later."
     },
     {
-      "name": "linear-builder",
-      "full_name": "imagine-os/linear-builder",
-      "html_url": "https://github.com/imagine-os/linear-builder",
-      "description": "PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience,…",
-      "readme_title": "PaperOS Core Platform plan",
-      "readme_excerpt": "PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience, business modules and a documented ten-minute path from a one-paragraph idea to a deployed app. It is built by parallel Claude Code sessions that pick issues from a Linear queue (team PAP) under nine agent characters, with Justin Massion (imagine-os) as the only human in the loop. This repository is the plan: every…",
-      "default_branch": "main",
-      "branches": [
-        "gh-pages",
-        "main"
-      ],
-      "has_gh_pages_branch": true,
-      "has_pages_workflow": true,
-      "created_at": "2026-09-17T12:49:15Z",
-      "updated_at": "2026-09-17T15:48:01Z",
-      "pushed_at": "2026-09-17T15:47:55Z",
-      "last_commit": {
-        "sha": "d31e89efec78e9d27fc6b6b8b48b4348cc5240cc",
-        "date": "2026-09-17T15:47:26Z",
-        "message": "Refresh specs after round 3 (module system, chunk plan)",
-        "author": "Claude"
-      },
-      "commit_count": 7,
-      "contributors": [
-        "claude"
-      ],
-      "language": "Python",
-      "languages": {
-        "Python": 2264444,
-        "HTML": 1296434,
-        "JavaScript": 57965,
-        "CSS": 19617
-      },
-      "stack": [
-        "Vanilla JS",
-        "Python",
-        "Static HTML",
-        "CSS",
-        "GitHub Pages"
-      ],
-      "size_kb": 5564,
-      "entry_point": "site/index.html",
-      "builds_with": null,
-      "deps": [],
-      "root_files": [
-        ".github",
-        ".gitignore",
-        "CLAUDE.md",
-        "README.md",
-        "docs",
-        "plan",
-        "site",
-        "specs",
-        "tools"
-      ],
-      "links": {
-        "repo": "https://github.com/imagine-os/linear-builder",
-        "live": "https://imagine-os.github.io/linear-builder/",
-        "demo": null,
-        "sales": null,
-        "docs": null,
-        "other": [
-          "https://linear.app/paperos/issue/PAP-91",
-          "https://linear.app/paperos/issue/PAP-433",
-          "https://linear.app/paperos/project/module-system-and-swap-tooling-8f81243eebfc",
-          "https://linear.app/paperos/document/paperos-module-system-8007373cc6bb",
-          "https://linear.app/paperos",
-          "https://claude.ai/artifact/M8PdehTznioG49QJUnkWTU"
-        ]
-      },
-      "other_count": 6,
-      "readme_links": [
-        {
-          "text": "PAP-91",
-          "url": "https://linear.app/paperos/issue/PAP-91"
-        },
-        {
-          "text": "PAP-433",
-          "url": "https://linear.app/paperos/issue/PAP-433"
-        },
-        {
-          "text": "Module System & Swap Tooling",
-          "url": "https://linear.app/paperos/project/module-system-and-swap-tooling-8f81243eebfc"
-        },
-        {
-          "text": "PaperOS Module System",
-          "url": "https://linear.app/paperos/document/paperos-module-system-8007373cc6bb"
-        },
-        {
-          "text": "linear.app/paperos",
-          "url": "https://linear.app/paperos"
-        },
-        {
-          "text": "claude.ai/artifact/M8PdehTznioG49QJUnkWTU",
-          "url": "https://claude.ai/artifact/M8PdehTznioG49QJUnkWTU"
-        },
-        {
-          "text": "imagine-os.github.io/linear-builder/",
-          "url": "https://imagine-os.github.io/linear-builder/"
-        }
-      ],
-      "is_placeholder": false,
-      "topics": [],
-      "open_issues": 0,
-      "stargazers": 0,
-      "archived": false,
-      "has_readme": true,
-      "has_license": false,
-      "has_ci": true,
-      "workflow_files": [
-        ".github/workflows/pages.yml"
-      ],
-      "open_todos": 56,
-      "pages": {
-        "has_pages": true,
-        "url": "https://imagine-os.github.io/linear-builder/",
-        "live": true,
-        "http_status": 200,
-        "checked_at": "2026-09-18T11:26:21.666Z"
-      },
-      "screenshot": "screenshots/linear-builder.png",
-      "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-09-18 11:27 UTC",
-      "category": "Tooling",
-      "status": "live",
-      "tags": [],
-      "notes": "Created by Justin 2026-09-17. PaperOS planning repo plus ~100 Python scripts that drive Linear; site/ is a static plan viewer published via workflow.",
-      "display_name": "Linear Builder (PaperOS plan)",
-      "featured": false,
-      "hidden": false,
-      "source_channel": null,
-      "readme_lead": "PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience, business modules and a documented ten-minute path from a one-paragraph idea to a deployed app. It is built by parallel Claude Code sessions that pick issues from a Linear queue (team PAP) under nine agent characters, with Justin Massion (imagine-os) as the only human in the loop. This repository is the plan: every issue spec, the platform documents, the schedule, the pending backlog, the blueprint page and the scripts that put all of it into Linear."
-    },
-    {
       "name": "circle-shell",
       "full_name": "imagine-os/circle-shell",
       "html_url": "https://github.com/imagine-os/circle-shell",
@@ -578,11 +571,11 @@
         "url": "https://imagine-os.github.io/circle-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T11:26:24.033Z"
+        "checked_at": "2026-09-18T16:32:10.158Z"
       },
       "screenshot": "screenshots/circle-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-09-18 11:27 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-09-18 16:32 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -663,7 +656,7 @@
         "url": "https://imagine-os.github.io/sendr-rebuild/",
         "live": false,
         "http_status": 404,
-        "checked_at": "2026-09-18T11:26:26.451Z"
+        "checked_at": "2026-09-18T16:32:12.823Z"
       },
       "screenshot": null,
       "screenshot_source": "none",
@@ -773,11 +766,11 @@
         "url": "https://imagine-os.github.io/file-manager-designs/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T11:26:28.430Z"
+        "checked_at": "2026-09-18T16:32:15.041Z"
       },
       "screenshot": "screenshots/file-manager-designs.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-09-18 11:27 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-09-18 16:32 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -876,11 +869,11 @@
         "url": "https://imagine-os.github.io/graph-gallery/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T11:26:31.009Z"
+        "checked_at": "2026-09-18T16:32:18.080Z"
       },
       "screenshot": "screenshots/graph-gallery.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-09-18 11:27 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-09-18 16:32 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -1415,11 +1408,11 @@
         "url": "https://imagine-os.github.io/paperos/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T11:26:41.783Z"
+        "checked_at": "2026-09-18T16:32:29.706Z"
       },
       "screenshot": "screenshots/paperos.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-09-18 11:27 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-09-18 16:32 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1546,11 +1539,11 @@
         "url": "https://imagine-os.github.io/slack-game-engine/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T11:26:44.624Z"
+        "checked_at": "2026-09-18T16:32:32.614Z"
       },
       "screenshot": "screenshots/slack-game-engine.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-09-18 11:27 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-09-18 16:32 UTC",
       "category": "Game",
       "status": "live",
       "tags": [],
@@ -1635,11 +1628,11 @@
         "url": "https://imagine-os.github.io/vercel-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T11:26:46.703Z"
+        "checked_at": "2026-09-18T16:32:34.959Z"
       },
       "screenshot": "screenshots/vercel-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-09-18 11:27 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-09-18 16:32 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -1739,11 +1732,11 @@
         "url": "https://imagine-os.github.io/dorum-lifestyle/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T11:26:48.965Z"
+        "checked_at": "2026-09-18T16:32:37.325Z"
       },
       "screenshot": "screenshots/dorum-lifestyle.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-09-18 11:27 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-09-18 16:33 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1825,11 +1818,11 @@
         "url": "https://imagine-os.github.io/gamma-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T11:26:51.102Z"
+        "checked_at": "2026-09-18T16:32:39.744Z"
       },
       "screenshot": "screenshots/gamma-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-09-18 11:27 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-09-18 16:33 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -1908,11 +1901,11 @@
         "url": "https://imagine-os.github.io/webflow-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T11:26:53.068Z"
+        "checked_at": "2026-09-18T16:32:41.764Z"
       },
       "screenshot": "screenshots/webflow-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-09-18 11:27 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-09-18 16:33 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -2009,11 +2002,11 @@
         "url": "https://imagine-os.github.io/rebuild-slack-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T11:26:55.371Z"
+        "checked_at": "2026-09-18T16:32:44.249Z"
       },
       "screenshot": "screenshots/rebuild-slack-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-09-18 11:27 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-09-18 16:33 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -2101,11 +2094,11 @@
         "url": "https://imagine-os.github.io/OS-Folder-Structure/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T11:26:57.460Z"
+        "checked_at": "2026-09-18T16:32:46.760Z"
       },
       "screenshot": "screenshots/OS-Folder-Structure.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-09-18 11:27 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-09-18 16:33 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
