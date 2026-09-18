@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T04:53:10.734Z",
+  "generated_at": "2026-09-18T11:26:57.554Z",
   "org": "imagine-os",
   "api_reachable": true,
   "sources": {
@@ -13,144 +13,12 @@
   "errors": [],
   "projects": [
     {
-      "name": "hoy",
-      "full_name": "imagine-os/hoy",
-      "html_url": "https://github.com/imagine-os/hoy",
-      "description": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Medellín, Colombia, built to become a multi-tenant platform for other studios later.",
-      "readme_title": "HoyOS",
-      "readme_excerpt": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Medellín, Colombia, built to become a multi-tenant platform for other studios later. One codebase serves the public website, the customer app, the teacher app, the staff and admin desktop, the club's operations manual, the in-app documentation and the developer tooling. The root route // is a testing hub for private testing between the studio team and the build team. It offers one card per perspective; picking a staff role switches the demo user (fictional people, one per role). The header has ES/EN, light/dark and,…",
-      "default_branch": "main",
-      "branches": [
-        "main",
-        "work/appstore",
-        "work/especiales",
-        "work/expenses",
-        "work/polish",
-        "work/settings"
-      ],
-      "has_gh_pages_branch": false,
-      "has_pages_workflow": true,
-      "created_at": "2026-09-17T02:34:14Z",
-      "updated_at": "2026-09-18T04:07:49Z",
-      "pushed_at": "2026-09-18T04:07:44Z",
-      "last_commit": {
-        "sha": "32b0d75de0a07e61e6ed60228001f292e3a59f0c",
-        "date": "2026-09-18T04:07:27Z",
-        "message": "docs: 0021 conversación CRM y bandeja — prompt, changelog, kanban, ROADMAP 0.8.0, manual, page docs, screenshots (K-01 K-02 K-03)",
-        "author": "Claude"
-      },
-      "commit_count": 79,
-      "contributors": [
-        "claude"
-      ],
-      "language": "TypeScript",
-      "languages": {
-        "TypeScript": 1969742,
-        "HTML": 609648,
-        "PLpgSQL": 229017,
-        "CSS": 147781,
-        "JavaScript": 133977
-      },
-      "stack": [
-        "dnd-kit",
-        "React",
-        "React Router",
-        "TypeScript",
-        "Vite",
-        "CSS",
-        "Supabase",
-        "GitHub Pages"
-      ],
-      "size_kb": 219074,
-      "entry_point": "index.html",
-      "builds_with": "npm run build",
-      "deps": [
-        "@dnd-kit/core",
-        "@dnd-kit/sortable",
-        "@dnd-kit/utilities",
-        "@types/react",
-        "@types/react-dom",
-        "@vitejs/plugin-react",
-        "playwright-core",
-        "react",
-        "react-dom",
-        "react-markdown",
-        "react-router-dom",
-        "typescript",
-        "vite"
-      ],
-      "root_files": [
-        ".github",
-        ".gitignore",
-        "CLAUDE.md",
-        "README.md",
-        "ROADMAP.md",
-        "docs",
-        "index.html",
-        "package-lock.json",
-        "package.json",
-        "public",
-        "reference",
-        "scripts",
-        "src",
-        "supabase",
-        "tsconfig.json",
-        "vite.config.ts"
-      ],
-      "links": {
-        "repo": "https://github.com/imagine-os/hoy",
-        "live": "https://imagine-os.github.io/hoy/",
-        "demo": null,
-        "sales": null,
-        "docs": null,
-        "other": []
-      },
-      "other_count": 0,
-      "readme_links": [
-        {
-          "text": "imagine-os.github.io/hoy/",
-          "url": "https://imagine-os.github.io/hoy/"
-        }
-      ],
-      "is_placeholder": false,
-      "topics": [],
-      "open_issues": 0,
-      "stargazers": 0,
-      "archived": false,
-      "has_readme": true,
-      "has_license": false,
-      "has_ci": true,
-      "workflow_files": [
-        ".github/workflows/pages.yml"
-      ],
-      "open_todos": 0,
-      "pages": {
-        "has_pages": true,
-        "url": "https://imagine-os.github.io/hoy/",
-        "live": true,
-        "http_status": 200,
-        "checked_at": "2026-09-18T04:52:27.675Z"
-      },
-      "screenshot": "screenshots/hoy.png",
-      "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-09-18 04:53 UTC",
-      "category": "Product",
-      "status": "live",
-      "tags": [],
-      "notes": "Vite + React + Supabase ops system for HOY Human Club (Bogotá). Canonical HOY repo.",
-      "display_name": "HOY OS",
-      "featured": true,
-      "hidden": false,
-      "source_channel": null,
-      "readme_lead": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Medellín, Colombia, built to become a multi-tenant platform for other studios later. One codebase serves the public website, the customer app, the teacher app, the staff and admin desktop, the club's operations manual, the in-app documentation and the developer tooling."
-    },
-    {
       "name": "petrock",
       "full_name": "imagine-os/petrock",
       "html_url": "https://github.com/imagine-os/petrock",
       "description": "Software for Petrock Hotel (dog hotel and spa, two locations: Encino and Westwood, Los Angeles; petrockhotel.com).",
       "readme_title": "Petrock",
-      "readme_excerpt": "Software for Petrock Hotel (dog hotel and spa, two locations: Encino and Westwood, Los Angeles; petrockhotel.com). Live: https://imagine-os.github.io/petrock/ (GitHub Pages, deployed from main; enable Pages Source \"GitHub Actions\" once). The hub at // opens every surface with demo users per role. Stack: Vite + React 18 + TypeScript strict, HashRouter, CSS tokens (light / dark, brands petrock and sunset), mock data in localStorage behind a DataProvider with a Company-OS REST adapter seam, payments behind a PaymentProvider (Stripe stub). 42 library components, 39 tables, 76 business rules,…",
+      "readme_excerpt": "Software for Petrock Hotel (dog hotel and spa, two locations: Encino and Westwood, Los Angeles; petrockhotel.com). Status: release 0.1.0 (2026-09-18, changelog 0020): 182 routes across customer app, front desk, owner / admin, public site, ops manual and dev tools; 137 components, 74 tables, 238 rules; build, typecheck, responsive matrix and e2e green. Mock data only (Company-OS and Stripe are seams). Live: https://imagine-os.github.io/petrock/ - deployed from main by .github/workflows/pages.yml once Pages is enabled (Settings Pages Source = \"GitHub Actions\"; the workflow token cannot…",
       "default_branch": "main",
       "branches": [
         "main"
@@ -158,24 +26,24 @@
       "has_gh_pages_branch": false,
       "has_pages_workflow": true,
       "created_at": "2026-09-17T17:58:43Z",
-      "updated_at": "2026-09-18T02:54:02Z",
-      "pushed_at": "2026-09-18T02:53:58Z",
+      "updated_at": "2026-09-18T08:21:06Z",
+      "pushed_at": "2026-09-18T08:21:02Z",
       "last_commit": {
-        "sha": "f03e9dd4ef77ba67824d01476062acea08ebb590",
-        "date": "2026-09-18T02:53:55Z",
-        "message": "feat(foundation): app scaffold, design system, component library, data layer, rules, hub and dev pages (v0.1.0)",
+        "sha": "8ec320a63b4edfaed49fe0252b5f780b213121ca",
+        "date": "2026-09-18T08:21:00Z",
+        "message": "chore(release): 0.1.0 - release summary, Pages status, screenshots, version bump",
         "author": "Claude"
       },
-      "commit_count": 10,
+      "commit_count": 56,
       "contributors": [
         "claude"
       ],
       "language": "TypeScript",
       "languages": {
-        "TypeScript": 404568,
-        "CSS": 42005,
-        "PLpgSQL": 38675,
-        "JavaScript": 21814,
+        "TypeScript": 2385128,
+        "CSS": 141348,
+        "PLpgSQL": 79620,
+        "JavaScript": 57461,
         "HTML": 818
       },
       "stack": [
@@ -188,7 +56,7 @@
         "Supabase",
         "GitHub Pages"
       ],
-      "size_kb": 61524,
+      "size_kb": 115987,
       "entry_point": "index.html",
       "builds_with": "npm run build",
       "deps": [
@@ -257,7 +125,7 @@
         "url": "https://imagine-os.github.io/petrock/",
         "live": false,
         "http_status": 404,
-        "checked_at": "2026-09-18T04:52:29.839Z"
+        "checked_at": "2026-09-18T11:26:13.806Z"
       },
       "screenshot": null,
       "screenshot_source": "none",
@@ -271,6 +139,138 @@
       "hidden": false,
       "source_channel": null,
       "readme_lead": "Software for Petrock Hotel (dog hotel and spa, two locations: Encino and Westwood, Los Angeles; petrockhotel.com)."
+    },
+    {
+      "name": "hoy",
+      "full_name": "imagine-os/hoy",
+      "html_url": "https://github.com/imagine-os/hoy",
+      "description": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Medellín, Colombia, built to become a multi-tenant platform for other studios later.",
+      "readme_title": "HoyOS",
+      "readme_excerpt": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Medellín, Colombia, built to become a multi-tenant platform for other studios later. One codebase serves the public website, the customer app, the teacher app, the staff and admin desktop, the club's operations manual, the in-app documentation and the developer tooling. The root route // is a testing hub for private testing between the studio team and the build team. It offers one card per perspective; picking a staff role switches the demo user (fictional people, one per role). The header has ES/EN, light/dark and,…",
+      "default_branch": "main",
+      "branches": [
+        "main",
+        "work/appstore",
+        "work/especiales",
+        "work/expenses",
+        "work/polish",
+        "work/settings"
+      ],
+      "has_gh_pages_branch": false,
+      "has_pages_workflow": true,
+      "created_at": "2026-09-17T02:34:14Z",
+      "updated_at": "2026-09-18T04:07:49Z",
+      "pushed_at": "2026-09-18T04:07:44Z",
+      "last_commit": {
+        "sha": "32b0d75de0a07e61e6ed60228001f292e3a59f0c",
+        "date": "2026-09-18T04:07:27Z",
+        "message": "docs: 0021 conversación CRM y bandeja — prompt, changelog, kanban, ROADMAP 0.8.0, manual, page docs, screenshots (K-01 K-02 K-03)",
+        "author": "Claude"
+      },
+      "commit_count": 79,
+      "contributors": [
+        "claude"
+      ],
+      "language": "TypeScript",
+      "languages": {
+        "TypeScript": 1969742,
+        "HTML": 609648,
+        "PLpgSQL": 229017,
+        "CSS": 147781,
+        "JavaScript": 133977
+      },
+      "stack": [
+        "dnd-kit",
+        "React",
+        "React Router",
+        "TypeScript",
+        "Vite",
+        "CSS",
+        "Supabase",
+        "GitHub Pages"
+      ],
+      "size_kb": 265728,
+      "entry_point": "index.html",
+      "builds_with": "npm run build",
+      "deps": [
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@dnd-kit/utilities",
+        "@types/react",
+        "@types/react-dom",
+        "@vitejs/plugin-react",
+        "playwright-core",
+        "react",
+        "react-dom",
+        "react-markdown",
+        "react-router-dom",
+        "typescript",
+        "vite"
+      ],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        "CLAUDE.md",
+        "README.md",
+        "ROADMAP.md",
+        "docs",
+        "index.html",
+        "package-lock.json",
+        "package.json",
+        "public",
+        "reference",
+        "scripts",
+        "src",
+        "supabase",
+        "tsconfig.json",
+        "vite.config.ts"
+      ],
+      "links": {
+        "repo": "https://github.com/imagine-os/hoy",
+        "live": "https://imagine-os.github.io/hoy/",
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": []
+      },
+      "other_count": 0,
+      "readme_links": [
+        {
+          "text": "imagine-os.github.io/hoy/",
+          "url": "https://imagine-os.github.io/hoy/"
+        }
+      ],
+      "is_placeholder": false,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": true,
+      "has_license": false,
+      "has_ci": true,
+      "workflow_files": [
+        ".github/workflows/pages.yml"
+      ],
+      "open_todos": 0,
+      "pages": {
+        "has_pages": true,
+        "url": "https://imagine-os.github.io/hoy/",
+        "live": true,
+        "http_status": 200,
+        "checked_at": "2026-09-18T11:26:16.060Z"
+      },
+      "screenshot": "screenshots/hoy.png",
+      "screenshot_source": "live",
+      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-09-18 11:27 UTC",
+      "category": "Product",
+      "status": "live",
+      "tags": [],
+      "notes": "Vite + React + Supabase ops system for HOY Human Club (Bogotá). Canonical HOY repo.",
+      "display_name": "HOY OS",
+      "featured": true,
+      "hidden": false,
+      "source_channel": null,
+      "readme_lead": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Medellín, Colombia, built to become a multi-tenant platform for other studios later. One codebase serves the public website, the customer app, the teacher app, the staff and admin desktop, the club's operations manual, the in-app documentation and the developer tooling."
     },
     {
       "name": "empty6",
@@ -480,11 +480,11 @@
         "url": "https://imagine-os.github.io/linear-builder/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T04:52:35.552Z"
+        "checked_at": "2026-09-18T11:26:21.666Z"
       },
       "screenshot": "screenshots/linear-builder.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-09-18 04:53 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-09-18 11:27 UTC",
       "category": "Tooling",
       "status": "live",
       "tags": [],
@@ -578,11 +578,11 @@
         "url": "https://imagine-os.github.io/circle-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T04:52:38.005Z"
+        "checked_at": "2026-09-18T11:26:24.033Z"
       },
       "screenshot": "screenshots/circle-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-09-18 04:53 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-09-18 11:27 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -663,7 +663,7 @@
         "url": "https://imagine-os.github.io/sendr-rebuild/",
         "live": false,
         "http_status": 404,
-        "checked_at": "2026-09-18T04:52:40.338Z"
+        "checked_at": "2026-09-18T11:26:26.451Z"
       },
       "screenshot": null,
       "screenshot_source": "none",
@@ -773,11 +773,11 @@
         "url": "https://imagine-os.github.io/file-manager-designs/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T04:52:42.142Z"
+        "checked_at": "2026-09-18T11:26:28.430Z"
       },
       "screenshot": "screenshots/file-manager-designs.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-09-18 04:53 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-09-18 11:27 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -876,11 +876,11 @@
         "url": "https://imagine-os.github.io/graph-gallery/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T04:52:44.817Z"
+        "checked_at": "2026-09-18T11:26:31.009Z"
       },
       "screenshot": "screenshots/graph-gallery.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-09-18 04:53 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-09-18 11:27 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -1415,11 +1415,11 @@
         "url": "https://imagine-os.github.io/paperos/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T04:52:55.199Z"
+        "checked_at": "2026-09-18T11:26:41.783Z"
       },
       "screenshot": "screenshots/paperos.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-09-18 04:53 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-09-18 11:27 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1546,11 +1546,11 @@
         "url": "https://imagine-os.github.io/slack-game-engine/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T04:52:58.005Z"
+        "checked_at": "2026-09-18T11:26:44.624Z"
       },
       "screenshot": "screenshots/slack-game-engine.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-09-18 04:53 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-09-18 11:27 UTC",
       "category": "Game",
       "status": "live",
       "tags": [],
@@ -1635,11 +1635,11 @@
         "url": "https://imagine-os.github.io/vercel-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T04:52:59.994Z"
+        "checked_at": "2026-09-18T11:26:46.703Z"
       },
       "screenshot": "screenshots/vercel-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-09-18 04:53 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-09-18 11:27 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -1739,11 +1739,11 @@
         "url": "https://imagine-os.github.io/dorum-lifestyle/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T04:53:02.362Z"
+        "checked_at": "2026-09-18T11:26:48.965Z"
       },
       "screenshot": "screenshots/dorum-lifestyle.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-09-18 04:53 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-09-18 11:27 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1825,11 +1825,11 @@
         "url": "https://imagine-os.github.io/gamma-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T04:53:04.487Z"
+        "checked_at": "2026-09-18T11:26:51.102Z"
       },
       "screenshot": "screenshots/gamma-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-09-18 04:53 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-09-18 11:27 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -1908,11 +1908,11 @@
         "url": "https://imagine-os.github.io/webflow-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T04:53:06.373Z"
+        "checked_at": "2026-09-18T11:26:53.068Z"
       },
       "screenshot": "screenshots/webflow-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-09-18 04:53 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-09-18 11:27 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -2009,11 +2009,11 @@
         "url": "https://imagine-os.github.io/rebuild-slack-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T04:53:08.448Z"
+        "checked_at": "2026-09-18T11:26:55.371Z"
       },
       "screenshot": "screenshots/rebuild-slack-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-09-18 04:53 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-09-18 11:27 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -2101,11 +2101,11 @@
         "url": "https://imagine-os.github.io/OS-Folder-Structure/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T04:53:10.622Z"
+        "checked_at": "2026-09-18T11:26:57.460Z"
       },
       "screenshot": "screenshots/OS-Folder-Structure.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-09-18 04:53 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-09-18 11:27 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
