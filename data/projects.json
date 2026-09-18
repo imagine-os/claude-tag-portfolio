@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T21:29:38.300Z",
+  "generated_at": "2026-09-18T04:53:10.734Z",
   "org": "imagine-os",
   "api_reachable": true,
   "sources": {
@@ -13,188 +13,6 @@
   "errors": [],
   "projects": [
     {
-      "name": "empty6",
-      "full_name": "imagine-os/empty6",
-      "html_url": "https://github.com/imagine-os/empty6",
-      "description": "This repo holds the plan, tooling notes, lead pipeline, built demos, and a full log of prompts and replies for the tester-acquisition project run by Claude from the hook-testers Slack channel.",
-      "readme_title": "Hook Testers",
-      "readme_excerpt": "This repo holds the plan, tooling notes, lead pipeline, built demos, and a full log of prompts and replies for the tester-acquisition project run by Claude from the hook-testers Slack channel. The project's job is to get qualified beta testers in the door for Justin Massion's adaptive custom-software offer, get them actually using the tool, and collect data that is useful. Everything Claude does for the project (prompts received, replies given, changelog entries, leads found, demos built) is committed here so the work is auditable and resumable from any session. The repo is currently named…",
-      "default_branch": "main",
-      "branches": [
-        "main"
-      ],
-      "has_gh_pages_branch": false,
-      "has_pages_workflow": false,
-      "created_at": "2026-09-16T22:41:59Z",
-      "updated_at": "2026-09-17T21:20:23Z",
-      "pushed_at": "2026-09-17T21:20:19Z",
-      "last_commit": {
-        "sha": "8ba8eb48787911b9061b841ea044a59526398263",
-        "date": "2026-09-17T21:20:17Z",
-        "message": "Add published plan page link",
-        "author": "Claude"
-      },
-      "commit_count": 2,
-      "contributors": [
-        "claude"
-      ],
-      "language": null,
-      "languages": {},
-      "stack": [],
-      "size_kb": 0,
-      "entry_point": null,
-      "builds_with": null,
-      "deps": [],
-      "root_files": [
-        ".gitignore",
-        "CHANGELOG.md",
-        "README.md",
-        "demos",
-        "docs",
-        "leads",
-        "templates"
-      ],
-      "links": {
-        "repo": "https://github.com/imagine-os/empty6",
-        "live": null,
-        "demo": null,
-        "sales": null,
-        "docs": null,
-        "other": [
-          "https://claude.ai/artifact/RwVMjN8JqZtYsdWHd4BnLx"
-        ]
-      },
-      "other_count": 1,
-      "readme_links": [
-        {
-          "text": "claude.ai/artifact/RwVMjN8JqZtYsdWHd4BnLx",
-          "url": "https://claude.ai/artifact/RwVMjN8JqZtYsdWHd4BnLx"
-        }
-      ],
-      "is_placeholder": false,
-      "topics": [],
-      "open_issues": 0,
-      "stargazers": 0,
-      "archived": false,
-      "has_readme": true,
-      "has_license": false,
-      "has_ci": false,
-      "workflow_files": [],
-      "open_todos": 0,
-      "pages": {
-        "has_pages": false,
-        "url": null,
-        "live": null,
-        "http_status": null,
-        "checked_at": null
-      },
-      "screenshot": null,
-      "screenshot_source": "none",
-      "screenshot_note": "No live URL; nothing to capture",
-      "category": "Placeholder",
-      "status": "in-progress",
-      "tags": [],
-      "notes": "Only truly empty repo left. Claimed for the Google Drive profile page (#google-drive thread) — Justin was asked to upload index.html himself because the page holds personal data.",
-      "display_name": "empty6",
-      "featured": false,
-      "hidden": false,
-      "source_channel": null,
-      "readme_lead": "This repo holds the plan, tooling notes, lead pipeline, built demos, and a full log of prompts and replies for the tester-acquisition project run by Claude from the hook-testers Slack channel. The project's job is to get qualified beta testers in the door for Justin Massion's adaptive custom-software offer, get them actually using the tool, and collect data that is useful. Everything Claude does for the project (prompts received, replies given, changelog entries, leads found, demos built) is committed here so the work is auditable and resumable from any session. The repo is currently named empty6 and will be renamed later."
-    },
-    {
-      "name": "petrock",
-      "full_name": "imagine-os/petrock",
-      "html_url": "https://github.com/imagine-os/petrock",
-      "description": "Software for Petrock Hotel (dog hotel and spa, two locations, petrockhotel.com).",
-      "readme_title": "Petrock",
-      "readme_excerpt": "Software for Petrock Hotel (dog hotel and spa, two locations, petrockhotel.com). One system that runs the whole business: customers book boarding, daycare, grooming and spa from a mobile app; front-desk staff run the day from a desktop web app (check-ins, check-outs, timelines, grooming agenda, messages); owners and admins manage locations, staff, roles, pricing and settings from an admin web app. Everything shares one design system, one component library, one table library and one role/permission model, with a super-admin builder tool on every page that exposes the tables, roles,…",
-      "default_branch": "main",
-      "branches": [
-        "main"
-      ],
-      "has_gh_pages_branch": false,
-      "has_pages_workflow": false,
-      "created_at": "2026-09-17T17:58:43Z",
-      "updated_at": "2026-09-17T20:38:19Z",
-      "pushed_at": "2026-09-17T20:38:15Z",
-      "last_commit": {
-        "sha": "d1586ef6707111a70dd4b89bd01ccf6358e23e72",
-        "date": "2026-09-17T20:38:12Z",
-        "message": "docs: add prompt 0004 reply",
-        "author": "Claude"
-      },
-      "commit_count": 9,
-      "contributors": [
-        "claude"
-      ],
-      "language": null,
-      "languages": {},
-      "stack": [],
-      "size_kb": 55525,
-      "entry_point": null,
-      "builds_with": null,
-      "deps": [],
-      "root_files": [
-        ".gitignore",
-        "README.md",
-        "docs"
-      ],
-      "links": {
-        "repo": "https://github.com/imagine-os/petrock",
-        "live": null,
-        "demo": null,
-        "sales": null,
-        "docs": null,
-        "other": [
-          "https://petrockhotel.com"
-        ]
-      },
-      "other_count": 1,
-      "readme_links": [
-        {
-          "text": "petrockhotel.com",
-          "url": "https://petrockhotel.com"
-        },
-        {
-          "text": "Playset-LLC/Company-OS",
-          "url": "https://github.com/Playset-LLC/Company-OS"
-        },
-        {
-          "text": "imagine-os/hoy",
-          "url": "https://github.com/imagine-os/hoy"
-        }
-      ],
-      "is_placeholder": false,
-      "topics": [],
-      "open_issues": 0,
-      "stargazers": 0,
-      "archived": false,
-      "has_readme": true,
-      "has_license": false,
-      "has_ci": false,
-      "workflow_files": [],
-      "open_todos": 0,
-      "pages": {
-        "has_pages": false,
-        "url": null,
-        "live": null,
-        "http_status": null,
-        "checked_at": null
-      },
-      "screenshot": null,
-      "screenshot_source": "none",
-      "screenshot_note": "No live URL; nothing to capture",
-      "category": "Product",
-      "status": "in-progress",
-      "tags": [],
-      "notes": "",
-      "display_name": "petrock",
-      "featured": false,
-      "hidden": false,
-      "source_channel": null,
-      "readme_lead": "Software for Petrock Hotel (dog hotel and spa, two locations, petrockhotel.com)."
-    },
-    {
       "name": "hoy",
       "full_name": "imagine-os/hoy",
       "html_url": "https://github.com/imagine-os/hoy",
@@ -207,30 +25,31 @@
         "work/appstore",
         "work/especiales",
         "work/expenses",
+        "work/polish",
         "work/settings"
       ],
       "has_gh_pages_branch": false,
       "has_pages_workflow": true,
       "created_at": "2026-09-17T02:34:14Z",
-      "updated_at": "2026-09-17T19:20:04Z",
-      "pushed_at": "2026-09-17T19:20:02Z",
+      "updated_at": "2026-09-18T04:07:49Z",
+      "pushed_at": "2026-09-18T04:07:44Z",
       "last_commit": {
-        "sha": "a415fee3b9c0be5801a0e78138a27590298dac6f",
-        "date": "2026-09-17T19:19:43Z",
-        "message": "feat(admin): owner decisions as settings, M-10 Integraciones, ROADMAP §G (0018 · v0.7.0)",
+        "sha": "32b0d75de0a07e61e6ed60228001f292e3a59f0c",
+        "date": "2026-09-18T04:07:27Z",
+        "message": "docs: 0021 conversación CRM y bandeja — prompt, changelog, kanban, ROADMAP 0.8.0, manual, page docs, screenshots (K-01 K-02 K-03)",
         "author": "Claude"
       },
-      "commit_count": 67,
+      "commit_count": 79,
       "contributors": [
         "claude"
       ],
       "language": "TypeScript",
       "languages": {
-        "TypeScript": 1846121,
+        "TypeScript": 1969742,
         "HTML": 609648,
-        "PLpgSQL": 226944,
-        "CSS": 136035,
-        "JavaScript": 119407
+        "PLpgSQL": 229017,
+        "CSS": 147781,
+        "JavaScript": 133977
       },
       "stack": [
         "dnd-kit",
@@ -242,7 +61,7 @@
         "Supabase",
         "GitHub Pages"
       ],
-      "size_kb": 168313,
+      "size_kb": 219074,
       "entry_point": "index.html",
       "builds_with": "npm run build",
       "deps": [
@@ -310,11 +129,11 @@
         "url": "https://imagine-os.github.io/hoy/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T21:29:00.646Z"
+        "checked_at": "2026-09-18T04:52:27.675Z"
       },
       "screenshot": "screenshots/hoy.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-09-17 21:29 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-09-18 04:53 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -324,6 +143,223 @@
       "hidden": false,
       "source_channel": null,
       "readme_lead": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Medellín, Colombia, built to become a multi-tenant platform for other studios later. One codebase serves the public website, the customer app, the teacher app, the staff and admin desktop, the club's operations manual, the in-app documentation and the developer tooling."
+    },
+    {
+      "name": "petrock",
+      "full_name": "imagine-os/petrock",
+      "html_url": "https://github.com/imagine-os/petrock",
+      "description": "Software for Petrock Hotel (dog hotel and spa, two locations: Encino and Westwood, Los Angeles; petrockhotel.com).",
+      "readme_title": "Petrock",
+      "readme_excerpt": "Software for Petrock Hotel (dog hotel and spa, two locations: Encino and Westwood, Los Angeles; petrockhotel.com). Live: https://imagine-os.github.io/petrock/ (GitHub Pages, deployed from main; enable Pages Source \"GitHub Actions\" once). The hub at // opens every surface with demo users per role. Stack: Vite + React 18 + TypeScript strict, HashRouter, CSS tokens (light / dark, brands petrock and sunset), mock data in localStorage behind a DataProvider with a Company-OS REST adapter seam, payments behind a PaymentProvider (Stripe stub). 42 library components, 39 tables, 76 business rules,…",
+      "default_branch": "main",
+      "branches": [
+        "main"
+      ],
+      "has_gh_pages_branch": false,
+      "has_pages_workflow": true,
+      "created_at": "2026-09-17T17:58:43Z",
+      "updated_at": "2026-09-18T02:54:02Z",
+      "pushed_at": "2026-09-18T02:53:58Z",
+      "last_commit": {
+        "sha": "f03e9dd4ef77ba67824d01476062acea08ebb590",
+        "date": "2026-09-18T02:53:55Z",
+        "message": "feat(foundation): app scaffold, design system, component library, data layer, rules, hub and dev pages (v0.1.0)",
+        "author": "Claude"
+      },
+      "commit_count": 10,
+      "contributors": [
+        "claude"
+      ],
+      "language": "TypeScript",
+      "languages": {
+        "TypeScript": 404568,
+        "CSS": 42005,
+        "PLpgSQL": 38675,
+        "JavaScript": 21814,
+        "HTML": 818
+      },
+      "stack": [
+        "Playwright",
+        "React",
+        "React Router",
+        "TypeScript",
+        "Vite",
+        "CSS",
+        "Supabase",
+        "GitHub Pages"
+      ],
+      "size_kb": 61524,
+      "entry_point": "index.html",
+      "builds_with": "npm run build",
+      "deps": [
+        "@types/react",
+        "@types/react-dom",
+        "@vitejs/plugin-react",
+        "playwright",
+        "react",
+        "react-dom",
+        "react-markdown",
+        "react-router-dom",
+        "typescript",
+        "vite"
+      ],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        "CLAUDE.md",
+        "README.md",
+        "docs",
+        "index.html",
+        "package-lock.json",
+        "package.json",
+        "public",
+        "scripts",
+        "src",
+        "supabase",
+        "tsconfig.json",
+        "vite.config.ts"
+      ],
+      "links": {
+        "repo": "https://github.com/imagine-os/petrock",
+        "live": "https://imagine-os.github.io/petrock/",
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": [
+          "https://petrockhotel.com"
+        ]
+      },
+      "other_count": 1,
+      "readme_links": [
+        {
+          "text": "petrockhotel.com",
+          "url": "https://petrockhotel.com"
+        },
+        {
+          "text": "imagine-os.github.io/petrock/",
+          "url": "https://imagine-os.github.io/petrock/"
+        }
+      ],
+      "is_placeholder": false,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": true,
+      "has_license": false,
+      "has_ci": true,
+      "workflow_files": [
+        ".github/workflows/pages.yml"
+      ],
+      "open_todos": 0,
+      "pages": {
+        "has_pages": false,
+        "url": "https://imagine-os.github.io/petrock/",
+        "live": false,
+        "http_status": 404,
+        "checked_at": "2026-09-18T04:52:29.839Z"
+      },
+      "screenshot": null,
+      "screenshot_source": "none",
+      "screenshot_note": "URL not live (404)",
+      "category": "Product",
+      "status": "deployed-unverified",
+      "tags": [],
+      "notes": "",
+      "display_name": "petrock",
+      "featured": false,
+      "hidden": false,
+      "source_channel": null,
+      "readme_lead": "Software for Petrock Hotel (dog hotel and spa, two locations: Encino and Westwood, Los Angeles; petrockhotel.com)."
+    },
+    {
+      "name": "empty6",
+      "full_name": "imagine-os/empty6",
+      "html_url": "https://github.com/imagine-os/empty6",
+      "description": "This repo holds the plan, tooling notes, lead pipeline, built demos, and a full log of prompts and replies for the tester-acquisition project run by Claude from the hook-testers Slack channel.",
+      "readme_title": "Hook Testers",
+      "readme_excerpt": "This repo holds the plan, tooling notes, lead pipeline, built demos, and a full log of prompts and replies for the tester-acquisition project run by Claude from the hook-testers Slack channel. The project's job is to get qualified beta testers in the door for Justin Massion's adaptive custom-software offer, get them actually using the tool, and collect data that is useful. Everything Claude does for the project (prompts received, replies given, changelog entries, leads found, demos built) is committed here so the work is auditable and resumable from any session. The repo is currently named…",
+      "default_branch": "main",
+      "branches": [
+        "main"
+      ],
+      "has_gh_pages_branch": false,
+      "has_pages_workflow": false,
+      "created_at": "2026-09-16T22:41:59Z",
+      "updated_at": "2026-09-17T21:43:00Z",
+      "pushed_at": "2026-09-17T21:42:56Z",
+      "last_commit": {
+        "sha": "d139119002cfd1b6ea24111fda335831e34ff533",
+        "date": "2026-09-17T21:42:54Z",
+        "message": "Set ICP to AI-first builders; update plan and page",
+        "author": "Claude"
+      },
+      "commit_count": 3,
+      "contributors": [
+        "claude"
+      ],
+      "language": null,
+      "languages": {},
+      "stack": [],
+      "size_kb": 27,
+      "entry_point": null,
+      "builds_with": null,
+      "deps": [],
+      "root_files": [
+        ".gitignore",
+        "CHANGELOG.md",
+        "README.md",
+        "demos",
+        "docs",
+        "leads",
+        "templates"
+      ],
+      "links": {
+        "repo": "https://github.com/imagine-os/empty6",
+        "live": null,
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": [
+          "https://claude.ai/artifact/RwVMjN8JqZtYsdWHd4BnLx"
+        ]
+      },
+      "other_count": 1,
+      "readme_links": [
+        {
+          "text": "claude.ai/artifact/RwVMjN8JqZtYsdWHd4BnLx",
+          "url": "https://claude.ai/artifact/RwVMjN8JqZtYsdWHd4BnLx"
+        }
+      ],
+      "is_placeholder": false,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": true,
+      "has_license": false,
+      "has_ci": false,
+      "workflow_files": [],
+      "open_todos": 0,
+      "pages": {
+        "has_pages": false,
+        "url": null,
+        "live": null,
+        "http_status": null,
+        "checked_at": null
+      },
+      "screenshot": null,
+      "screenshot_source": "none",
+      "screenshot_note": "No live URL; nothing to capture",
+      "category": "Placeholder",
+      "status": "in-progress",
+      "tags": [],
+      "notes": "Only truly empty repo left. Claimed for the Google Drive profile page (#google-drive thread) — Justin was asked to upload index.html himself because the page holds personal data.",
+      "display_name": "empty6",
+      "featured": false,
+      "hidden": false,
+      "source_channel": null,
+      "readme_lead": "This repo holds the plan, tooling notes, lead pipeline, built demos, and a full log of prompts and replies for the tester-acquisition project run by Claude from the hook-testers Slack channel. The project's job is to get qualified beta testers in the door for Justin Massion's adaptive custom-software offer, get them actually using the tool, and collect data that is useful. Everything Claude does for the project (prompts received, replies given, changelog entries, leads found, demos built) is committed here so the work is auditable and resumable from any session. The repo is currently named empty6 and will be renamed later."
     },
     {
       "name": "linear-builder",
@@ -444,11 +480,11 @@
         "url": "https://imagine-os.github.io/linear-builder/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T21:29:03.641Z"
+        "checked_at": "2026-09-18T04:52:35.552Z"
       },
       "screenshot": "screenshots/linear-builder.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-09-17 21:29 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-09-18 04:53 UTC",
       "category": "Tooling",
       "status": "live",
       "tags": [],
@@ -542,11 +578,11 @@
         "url": "https://imagine-os.github.io/circle-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T21:29:05.901Z"
+        "checked_at": "2026-09-18T04:52:38.005Z"
       },
       "screenshot": "screenshots/circle-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-09-17 21:29 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-09-18 04:53 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -627,7 +663,7 @@
         "url": "https://imagine-os.github.io/sendr-rebuild/",
         "live": false,
         "http_status": 404,
-        "checked_at": "2026-09-17T21:29:07.962Z"
+        "checked_at": "2026-09-18T04:52:40.338Z"
       },
       "screenshot": null,
       "screenshot_source": "none",
@@ -737,11 +773,11 @@
         "url": "https://imagine-os.github.io/file-manager-designs/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T21:29:09.786Z"
+        "checked_at": "2026-09-18T04:52:42.142Z"
       },
       "screenshot": "screenshots/file-manager-designs.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-09-17 21:29 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-09-18 04:53 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -840,11 +876,11 @@
         "url": "https://imagine-os.github.io/graph-gallery/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T21:29:12.509Z"
+        "checked_at": "2026-09-18T04:52:44.817Z"
       },
       "screenshot": "screenshots/graph-gallery.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-09-17 21:29 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-09-18 04:53 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -1379,11 +1415,11 @@
         "url": "https://imagine-os.github.io/paperos/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T21:29:22.497Z"
+        "checked_at": "2026-09-18T04:52:55.199Z"
       },
       "screenshot": "screenshots/paperos.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-09-17 21:29 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-09-18 04:53 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1510,11 +1546,11 @@
         "url": "https://imagine-os.github.io/slack-game-engine/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T21:29:25.203Z"
+        "checked_at": "2026-09-18T04:52:58.005Z"
       },
       "screenshot": "screenshots/slack-game-engine.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-09-17 21:29 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-09-18 04:53 UTC",
       "category": "Game",
       "status": "live",
       "tags": [],
@@ -1599,11 +1635,11 @@
         "url": "https://imagine-os.github.io/vercel-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T21:29:27.267Z"
+        "checked_at": "2026-09-18T04:52:59.994Z"
       },
       "screenshot": "screenshots/vercel-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-09-17 21:29 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-09-18 04:53 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -1703,11 +1739,11 @@
         "url": "https://imagine-os.github.io/dorum-lifestyle/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T21:29:29.573Z"
+        "checked_at": "2026-09-18T04:53:02.362Z"
       },
       "screenshot": "screenshots/dorum-lifestyle.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-09-17 21:29 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-09-18 04:53 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1789,11 +1825,11 @@
         "url": "https://imagine-os.github.io/gamma-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T21:29:31.867Z"
+        "checked_at": "2026-09-18T04:53:04.487Z"
       },
       "screenshot": "screenshots/gamma-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-09-17 21:29 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-09-18 04:53 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -1872,11 +1908,11 @@
         "url": "https://imagine-os.github.io/webflow-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T21:29:33.723Z"
+        "checked_at": "2026-09-18T04:53:06.373Z"
       },
       "screenshot": "screenshots/webflow-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-09-17 21:29 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-09-18 04:53 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -1973,11 +2009,11 @@
         "url": "https://imagine-os.github.io/rebuild-slack-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T21:29:35.907Z"
+        "checked_at": "2026-09-18T04:53:08.448Z"
       },
       "screenshot": "screenshots/rebuild-slack-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-09-17 21:29 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-09-18 04:53 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -2065,11 +2101,11 @@
         "url": "https://imagine-os.github.io/OS-Folder-Structure/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-17T21:29:38.186Z"
+        "checked_at": "2026-09-18T04:53:10.622Z"
       },
       "screenshot": "screenshots/OS-Folder-Structure.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-09-17 21:29 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-09-18 04:53 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
