@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T16:32:46.876Z",
+  "generated_at": "2026-09-18T20:59:32.200Z",
   "org": "imagine-os",
   "api_reachable": true,
   "sources": {
@@ -12,6 +12,140 @@
   },
   "errors": [],
   "projects": [
+    {
+      "name": "cal-tenant-law",
+      "full_name": "imagine-os/cal-tenant-law",
+      "html_url": "https://github.com/imagine-os/cal-tenant-law",
+      "description": "CTL OS is the operations system for California Tenant Law (caltenantlaw.com): public website, tenant app, staff and attorney dashboards, the eviction game board, ops manual, docs and dev tools in one codebase, live at https://imagine-os.github.io/cal-tenant-law/.",
+      "readme_title": "CTL OS",
+      "readme_excerpt": "CTL OS is the operations system for California Tenant Law (caltenantlaw.com): public website, tenant app, staff and attorney dashboards, the eviction game board, ops manual, docs and dev tools in one codebase, live at https://imagine-os.github.io/cal-tenant-law/. Version 0.1.0 (Pass 1, 2026-09-18): foundation (scaffold, paper / ink / sky / amber design system light / dark with --scale bands to 4K, 54-component library with metas, mock data layer with tenant-scoped schema and generated RLS SQL, actions bus, rules registry, en / es), the testing hub with live role previews, the D-21 canvas…",
+      "default_branch": "main",
+      "branches": [
+        "main",
+        "mod/board",
+        "mod/design",
+        "mod/homes",
+        "mod/knowledge",
+        "mod/plan",
+        "mod/scrape",
+        "mod/showcase",
+        "mod/site"
+      ],
+      "has_gh_pages_branch": false,
+      "has_pages_workflow": true,
+      "created_at": "2026-09-18T16:57:35Z",
+      "updated_at": "2026-09-18T19:38:20Z",
+      "pushed_at": "2026-09-18T20:58:14Z",
+      "last_commit": {
+        "sha": "8f772583ff457b3795ccc8151a09e0a8164891d7",
+        "date": "2026-09-18T19:38:06Z",
+        "message": "chore(release): 0.1.0",
+        "author": "Claude"
+      },
+      "commit_count": 21,
+      "contributors": [
+        "claude"
+      ],
+      "language": "TypeScript",
+      "languages": {
+        "TypeScript": 1249768,
+        "CSS": 135908,
+        "PLpgSQL": 58508,
+        "JavaScript": 44653,
+        "HTML": 611
+      },
+      "stack": [
+        "Playwright",
+        "React",
+        "React Router",
+        "TypeScript",
+        "Vite",
+        "CSS",
+        "Supabase",
+        "GitHub Pages"
+      ],
+      "size_kb": 44993,
+      "entry_point": "index.html",
+      "builds_with": "npm run build",
+      "deps": [
+        "@fontsource/source-sans-3",
+        "@fontsource/source-serif-4",
+        "@types/react",
+        "@types/react-dom",
+        "@vitejs/plugin-react",
+        "esbuild",
+        "playwright",
+        "react",
+        "react-dom",
+        "react-markdown",
+        "react-router-dom",
+        "typescript",
+        "vite"
+      ],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        "CLAUDE.md",
+        "README.md",
+        "docs",
+        "index.html",
+        "package-lock.json",
+        "package.json",
+        "public",
+        "reference",
+        "scripts",
+        "src",
+        "supabase",
+        "tsconfig.json",
+        "vite.config.ts"
+      ],
+      "links": {
+        "repo": "https://github.com/imagine-os/cal-tenant-law",
+        "live": "https://imagine-os.github.io/cal-tenant-law/",
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": []
+      },
+      "other_count": 0,
+      "readme_links": [
+        {
+          "text": "imagine-os.github.io/cal-tenant-law/",
+          "url": "https://imagine-os.github.io/cal-tenant-law/"
+        }
+      ],
+      "is_placeholder": false,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": true,
+      "has_license": false,
+      "has_ci": true,
+      "workflow_files": [
+        ".github/workflows/pages.yml"
+      ],
+      "open_todos": 0,
+      "pages": {
+        "has_pages": true,
+        "url": "https://imagine-os.github.io/cal-tenant-law/",
+        "live": true,
+        "http_status": 200,
+        "checked_at": "2026-09-18T20:58:49.954Z"
+      },
+      "screenshot": "screenshots/cal-tenant-law.png",
+      "screenshot_source": "live",
+      "screenshot_note": "Captured from https://imagine-os.github.io/cal-tenant-law/ at 1440x900 on 2026-09-18 20:59 UTC",
+      "category": "Game",
+      "status": "live",
+      "tags": [],
+      "notes": "",
+      "display_name": "cal-tenant-law",
+      "featured": false,
+      "hidden": false,
+      "source_channel": null,
+      "readme_lead": "CTL OS is the operations system for California Tenant Law (caltenantlaw.com): public website, tenant app, staff and attorney dashboards, the eviction game board, ops manual, docs and dev tools in one codebase, live at https://imagine-os.github.io/cal-tenant-law/."
+    },
     {
       "name": "petrock",
       "full_name": "imagine-os/petrock",
@@ -26,24 +160,25 @@
       "has_gh_pages_branch": false,
       "has_pages_workflow": true,
       "created_at": "2026-09-17T17:58:43Z",
-      "updated_at": "2026-09-18T16:20:11Z",
-      "pushed_at": "2026-09-18T16:20:07Z",
+      "updated_at": "2026-09-18T16:49:56Z",
+      "pushed_at": "2026-09-18T16:49:52Z",
       "last_commit": {
-        "sha": "1ea5e741b512d0feabcf5355ed00a0d7a2b132b9",
-        "date": "2026-09-18T16:19:24Z",
-        "message": "docs(principles): quality bar, input modalities, actions, annotations, placeholders, surfaces (D-193..D-209)",
+        "sha": "c25356b87a4c5147bf41df5b938797e4789d58d4",
+        "date": "2026-09-18T16:49:47Z",
+        "message": "docs(release): 0.2.0 design-fidelity wrap-up - changelog 0024-0029, prompt 0015, D-210..D-217, full screenshot set",
         "author": "Claude"
       },
-      "commit_count": 68,
+      "commit_count": 76,
       "contributors": [
         "claude"
       ],
       "language": "TypeScript",
       "languages": {
-        "TypeScript": 2455950,
-        "CSS": 143146,
+        "TypeScript": 2474427,
+        "CSS": 145806,
         "PLpgSQL": 79941,
-        "JavaScript": 57461,
+        "JavaScript": 66017,
+        "Python": 9855,
         "HTML": 559
       },
       "stack": [
@@ -52,11 +187,12 @@
         "React Router",
         "TypeScript",
         "Vite",
+        "Python",
         "CSS",
         "Supabase",
         "GitHub Pages"
       ],
-      "size_kb": 117957,
+      "size_kb": 148309,
       "entry_point": "index.html",
       "builds_with": "npm run build",
       "deps": [
@@ -127,11 +263,11 @@
         "url": "https://imagine-os.github.io/petrock/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T16:31:57.803Z"
+        "checked_at": "2026-09-18T20:58:52.017Z"
       },
       "screenshot": "screenshots/petrock.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/petrock/ at 1440x900 on 2026-09-18 16:32 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/petrock/ at 1440x900 on 2026-09-18 20:59 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -252,11 +388,11 @@
         "url": "https://imagine-os.github.io/linear-builder/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T16:32:02.412Z"
+        "checked_at": "2026-09-18T20:58:56.184Z"
       },
       "screenshot": "screenshots/linear-builder.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-09-18 16:32 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-09-18 20:59 UTC",
       "category": "Tooling",
       "status": "live",
       "tags": [],
@@ -384,11 +520,11 @@
         "url": "https://imagine-os.github.io/hoy/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T16:32:04.904Z"
+        "checked_at": "2026-09-18T20:58:58.033Z"
       },
       "screenshot": "screenshots/hoy.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-09-18 16:32 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-09-18 20:59 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -571,11 +707,11 @@
         "url": "https://imagine-os.github.io/circle-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T16:32:10.158Z"
+        "checked_at": "2026-09-18T20:59:01.995Z"
       },
       "screenshot": "screenshots/circle-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-09-18 16:32 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-09-18 20:59 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -656,7 +792,7 @@
         "url": "https://imagine-os.github.io/sendr-rebuild/",
         "live": false,
         "http_status": 404,
-        "checked_at": "2026-09-18T16:32:12.823Z"
+        "checked_at": "2026-09-18T20:59:03.939Z"
       },
       "screenshot": null,
       "screenshot_source": "none",
@@ -766,11 +902,11 @@
         "url": "https://imagine-os.github.io/file-manager-designs/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T16:32:15.041Z"
+        "checked_at": "2026-09-18T20:59:05.655Z"
       },
       "screenshot": "screenshots/file-manager-designs.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-09-18 16:32 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-09-18 20:59 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -869,11 +1005,11 @@
         "url": "https://imagine-os.github.io/graph-gallery/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T16:32:18.080Z"
+        "checked_at": "2026-09-18T20:59:07.937Z"
       },
       "screenshot": "screenshots/graph-gallery.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-09-18 16:32 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-09-18 20:59 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -1408,11 +1544,11 @@
         "url": "https://imagine-os.github.io/paperos/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T16:32:29.706Z"
+        "checked_at": "2026-09-18T20:59:17.769Z"
       },
       "screenshot": "screenshots/paperos.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-09-18 16:32 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-09-18 20:59 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1539,11 +1675,11 @@
         "url": "https://imagine-os.github.io/slack-game-engine/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T16:32:32.614Z"
+        "checked_at": "2026-09-18T20:59:20.198Z"
       },
       "screenshot": "screenshots/slack-game-engine.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-09-18 16:32 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-09-18 20:59 UTC",
       "category": "Game",
       "status": "live",
       "tags": [],
@@ -1628,11 +1764,11 @@
         "url": "https://imagine-os.github.io/vercel-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T16:32:34.959Z"
+        "checked_at": "2026-09-18T20:59:22.212Z"
       },
       "screenshot": "screenshots/vercel-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-09-18 16:32 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-09-18 20:59 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -1732,11 +1868,11 @@
         "url": "https://imagine-os.github.io/dorum-lifestyle/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T16:32:37.325Z"
+        "checked_at": "2026-09-18T20:59:24.414Z"
       },
       "screenshot": "screenshots/dorum-lifestyle.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-09-18 16:33 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-09-18 20:59 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1818,11 +1954,11 @@
         "url": "https://imagine-os.github.io/gamma-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T16:32:39.744Z"
+        "checked_at": "2026-09-18T20:59:26.278Z"
       },
       "screenshot": "screenshots/gamma-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-09-18 16:33 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-09-18 20:59 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -1901,11 +2037,11 @@
         "url": "https://imagine-os.github.io/webflow-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T16:32:41.764Z"
+        "checked_at": "2026-09-18T20:59:28.154Z"
       },
       "screenshot": "screenshots/webflow-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-09-18 16:33 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-09-18 20:59 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -2002,11 +2138,11 @@
         "url": "https://imagine-os.github.io/rebuild-slack-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T16:32:44.249Z"
+        "checked_at": "2026-09-18T20:59:30.218Z"
       },
       "screenshot": "screenshots/rebuild-slack-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-09-18 16:33 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-09-18 20:59 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -2094,11 +2230,11 @@
         "url": "https://imagine-os.github.io/OS-Folder-Structure/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T16:32:46.760Z"
+        "checked_at": "2026-09-18T20:59:32.123Z"
       },
       "screenshot": "screenshots/OS-Folder-Structure.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-09-18 16:33 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-09-18 20:59 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
