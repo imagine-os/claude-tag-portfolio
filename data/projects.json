@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-18T20:59:32.200Z",
+  "generated_at": "2026-09-19T04:45:15.621Z",
   "org": "imagine-os",
   "api_reachable": true,
   "sources": {
@@ -13,46 +13,328 @@
   "errors": [],
   "projects": [
     {
-      "name": "cal-tenant-law",
-      "full_name": "imagine-os/cal-tenant-law",
-      "html_url": "https://github.com/imagine-os/cal-tenant-law",
-      "description": "CTL OS is the operations system for California Tenant Law (caltenantlaw.com): public website, tenant app, staff and attorney dashboards, the eviction game board, ops manual, docs and dev tools in one codebase, live at https://imagine-os.github.io/cal-tenant-law/.",
-      "readme_title": "CTL OS",
-      "readme_excerpt": "CTL OS is the operations system for California Tenant Law (caltenantlaw.com): public website, tenant app, staff and attorney dashboards, the eviction game board, ops manual, docs and dev tools in one codebase, live at https://imagine-os.github.io/cal-tenant-law/. Version 0.1.0 (Pass 1, 2026-09-18): foundation (scaffold, paper / ink / sky / amber design system light / dark with --scale bands to 4K, 54-component library with metas, mock data layer with tenant-scoped schema and generated RLS SQL, actions bus, rules registry, en / es), the testing hub with live role previews, the D-21 canvas…",
+      "name": "empty12",
+      "full_name": "imagine-os/empty12",
+      "html_url": "https://github.com/imagine-os/empty12",
+      "description": "The PaperOS build-loop orchestrator: Linear workspace-as-code, the claim/promote loop, and the plumbing that spawns a builder session per claimed issue.",
+      "readme_title": "paperos-orchestrator",
+      "readme_excerpt": "The PaperOS build-loop orchestrator: Linear workspace-as-code, the claim/promote loop, and the plumbing that spawns a builder session per claimed issue. Team PAP on Linear (https://linear.app/paperos) is the system of record for the plan; this repo turns its configuration and its claim loop into code so paperos create <app gets the same pipeline every time. docs/pm/session-playbook.md, templates/ and src/agents/ are added by PAP-92; this issue (PAP-91) leaves those paths alone.",
       "default_branch": "main",
       "branches": [
-        "main",
-        "mod/board",
-        "mod/design",
-        "mod/homes",
-        "mod/knowledge",
-        "mod/plan",
-        "mod/scrape",
-        "mod/showcase",
-        "mod/site"
+        "feat/PAP-91-review-fixes",
+        "feat/PAP-92-playbook-v2",
+        "feat/PAP-93-issue-contract",
+        "feat/PAP-94-justin-queue",
+        "feat/PAP-281-poll-claim-transitions",
+        "feat/PAP-281-review-fixes",
+        "main"
       ],
       "has_gh_pages_branch": false,
-      "has_pages_workflow": true,
-      "created_at": "2026-09-18T16:57:35Z",
-      "updated_at": "2026-09-18T19:38:20Z",
-      "pushed_at": "2026-09-18T20:58:14Z",
+      "has_pages_workflow": false,
+      "created_at": "2026-09-17T13:18:15Z",
+      "updated_at": "2026-09-19T03:17:57Z",
+      "pushed_at": "2026-09-19T03:17:54Z",
       "last_commit": {
-        "sha": "8f772583ff457b3795ccc8151a09e0a8164891d7",
-        "date": "2026-09-18T19:38:06Z",
-        "message": "chore(release): 0.1.0",
+        "sha": "fa60f81787d76ffe037619c4dc2a0f52a83f988c",
+        "date": "2026-09-19T03:17:42Z",
+        "message": "merge(PAP-281): feat/PAP-281-review-fixes",
         "author": "Claude"
       },
-      "commit_count": 21,
+      "commit_count": 13,
       "contributors": [
         "claude"
       ],
       "language": "TypeScript",
       "languages": {
-        "TypeScript": 1249768,
-        "CSS": 135908,
-        "PLpgSQL": 58508,
-        "JavaScript": 44653,
-        "HTML": 611
+        "TypeScript": 421318
+      },
+      "stack": [
+        "TypeScript",
+        "Vitest"
+      ],
+      "size_kb": 270,
+      "entry_point": null,
+      "builds_with": null,
+      "deps": [
+        "@biomejs/biome",
+        "@linear/sdk",
+        "@types/node",
+        "@vitest/coverage-v8",
+        "ajv",
+        "ajv-formats",
+        "tsx",
+        "typescript",
+        "vitest",
+        "yaml",
+        "zod"
+      ],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        ".nvmrc",
+        "CLAUDE.md",
+        "README.md",
+        "biome.json",
+        "docs",
+        "fixtures",
+        "linear-workspace.json",
+        "ops",
+        "orchestrator.config.yaml",
+        "package.json",
+        "pnpm-lock.yaml",
+        "pnpm-workspace.yaml",
+        "scripts",
+        "src",
+        "templates",
+        "tests",
+        "tsconfig.json",
+        "vitest.config.ts"
+      ],
+      "links": {
+        "repo": "https://github.com/imagine-os/empty12",
+        "live": null,
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": []
+      },
+      "other_count": 0,
+      "readme_links": [],
+      "is_placeholder": false,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": true,
+      "has_license": false,
+      "has_ci": true,
+      "workflow_files": [
+        ".github/workflows/ci.yml"
+      ],
+      "open_todos": 0,
+      "pages": {
+        "has_pages": false,
+        "url": null,
+        "live": null,
+        "http_status": null,
+        "checked_at": null
+      },
+      "screenshot": null,
+      "screenshot_source": "none",
+      "screenshot_note": "No live URL; nothing to capture",
+      "category": "Product",
+      "status": "in-progress",
+      "tags": [],
+      "notes": "",
+      "display_name": "empty12",
+      "featured": false,
+      "hidden": false,
+      "source_channel": null,
+      "readme_lead": "The PaperOS build-loop orchestrator: Linear workspace-as-code, the claim/promote loop, and the plumbing that spawns a builder session per claimed issue."
+    },
+    {
+      "name": "empty-11",
+      "full_name": "imagine-os/empty-11",
+      "html_url": "https://github.com/imagine-os/empty-11",
+      "description": "The monorepo every PaperOS app is cloned from: pnpm 10 workspaces, Turborepo 2, strict TypeScript 5.9, Biome 2, Vitest 3, and a Vite 7 + React 19 web shell.",
+      "readme_title": "paperos-template",
+      "readme_excerpt": "The monorepo every PaperOS app is cloned from: pnpm 10 workspaces, Turborepo 2, strict TypeScript 5.9, Biome 2, Vitest 3, and a Vite 7 + React 19 web shell. Start with CLAUDE.md for the working rules and docs/README.md for the documentation map. Architecture decisions: docs/adr/. Copy .env.example to .env for local overrides; .env is git-ignored.",
+      "default_branch": "main",
+      "branches": [
+        "feat/PAP-13-review-fixes",
+        "feat/PAP-14-review-fixes",
+        "feat/PAP-15-gh-pages-demo-deploy",
+        "feat/PAP-15-review-fixes",
+        "feat/PAP-16-router-layout-slots",
+        "feat/PAP-17-typed-env-config",
+        "feat/PAP-42-local-dev-stack",
+        "feat/PAP-55-audience-model",
+        "feat/PAP-66-design-tokens",
+        "feat/PAP-66-review-fixes",
+        "feat/PAP-79-review-fixes",
+        "feat/PAP-90-flake-quarantine-timing-tests",
+        "feat/PAP-92-playbook-v2",
+        "feat/PAP-114-review-fixes",
+        "feat/PAP-139-benchmark-crdt",
+        "feat/PAP-150-input-events",
+        "feat/PAP-150-review-fixes",
+        "feat/PAP-162-review-fixes",
+        "feat/PAP-176-payroll-provider-research",
+        "feat/PAP-176-provider-interface",
+        "feat/PAP-176-review-fixes",
+        "feat/PAP-209-review-fixes",
+        "feat/PAP-210-mcp-catalog",
+        "feat/PAP-211-license-policy",
+        "feat/PAP-212-ui-kits-survey",
+        "feat/PAP-219-security-threat-model",
+        "feat/PAP-239-gate-artifact-contract",
+        "feat/PAP-284-roster-yaml",
+        "feat/PAP-302-shared-value-types",
+        "feat/PAP-305-package-boundaries",
+        "feat/PAP-433-module-manifest-schema",
+        "feat/PAP-555-review-fixes",
+        "feat/PAP-644-playwright-input-fixtures",
+        "feat/PAP-748-synthetic-corpus",
+        "feat/PAP-753-spike-harness-kit",
+        "feat/PAP-754-reusable-compose-smoke-workflow",
+        "feat/PAP-754-review-fixes",
+        "main"
+      ],
+      "has_gh_pages_branch": false,
+      "has_pages_workflow": false,
+      "created_at": "2026-09-17T13:17:59Z",
+      "updated_at": "2026-09-19T03:06:27Z",
+      "pushed_at": "2026-09-19T03:06:23Z",
+      "last_commit": {
+        "sha": "d14f76c2ecf4dcc1b93721b0057fa8fd8e323559",
+        "date": "2026-09-19T02:52:35Z",
+        "message": "feat(PAP-17): typed environment and config layer with per-target secret storage",
+        "author": "Claude"
+      },
+      "commit_count": 58,
+      "contributors": [
+        "claude"
+      ],
+      "language": "TypeScript",
+      "languages": {
+        "TypeScript": 1052472,
+        "JavaScript": 137739,
+        "CSS": 36429,
+        "HTML": 20357
+      },
+      "stack": [
+        "TypeScript",
+        "Vitest",
+        "Static HTML",
+        "CSS"
+      ],
+      "size_kb": 4298,
+      "entry_point": null,
+      "builds_with": "npm run build",
+      "deps": [
+        "@biomejs/biome",
+        "@paperos/config-biome",
+        "@paperos/config-ts",
+        "@vitest/coverage-v8",
+        "dependency-cruiser",
+        "tsx",
+        "turbo",
+        "typescript",
+        "vitest"
+      ],
+      "root_files": [
+        ".claude",
+        ".dependency-cruiser.cjs",
+        ".editorconfig",
+        ".env.example",
+        ".env.test",
+        ".gitattributes",
+        ".github",
+        ".gitignore",
+        ".npmrc",
+        ".nvmrc",
+        "CHANGELOG.md",
+        "CLAUDE.md",
+        "LICENSE",
+        "README.md",
+        "apps",
+        "biome.json",
+        "docs",
+        "examples",
+        "ops",
+        "ownership.json",
+        "package.json",
+        "packages",
+        "pnpm-lock.yaml",
+        "pnpm-workspace.yaml",
+        "scripts",
+        "specs",
+        "spikes",
+        "tsconfig.json",
+        "turbo.json",
+        "vitest.config.ts"
+      ],
+      "links": {
+        "repo": "https://github.com/imagine-os/empty-11",
+        "live": null,
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": []
+      },
+      "other_count": 0,
+      "readme_links": [
+        {
+          "text": "![ci",
+          "url": "https://github.com/imagine-os/empty-11/actions/workflows/ci.yml/badge.svg"
+        }
+      ],
+      "is_placeholder": false,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": true,
+      "has_license": true,
+      "has_ci": true,
+      "workflow_files": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/compose-smoke.yml"
+      ],
+      "open_todos": 7,
+      "pages": {
+        "has_pages": false,
+        "url": null,
+        "live": null,
+        "http_status": null,
+        "checked_at": null
+      },
+      "screenshot": null,
+      "screenshot_source": "none",
+      "screenshot_note": "No live URL; nothing to capture",
+      "category": "Prototype / Shell rebuild",
+      "status": "built-not-deployed",
+      "tags": [],
+      "notes": "",
+      "display_name": "empty-11",
+      "featured": false,
+      "hidden": false,
+      "source_channel": null,
+      "readme_lead": "The monorepo every PaperOS app is cloned from: pnpm 10 workspaces, Turborepo 2, strict TypeScript 5.9, Biome 2, Vitest 3, and a Vite 7 + React 19 web shell."
+    },
+    {
+      "name": "lead-magnet",
+      "full_name": "imagine-os/lead-magnet",
+      "html_url": "https://github.com/imagine-os/lead-magnet",
+      "description": "Hyper-personalized landing pages whose lead magnet is a pre-built, fully themed operations system for one prospect.",
+      "readme_title": "Lead Magnet",
+      "readme_excerpt": "Hyper-personalized landing pages whose lead magnet is a pre-built, fully themed operations system for one prospect. From what we know about a prospect (business, style, life, the roles of the people around them) we guess their software stack and what they can cut, derive departments and roles, compose the highest-converting landing page, show their OS live, and push them to the next stage: open the demo or book a call. Outreach, proposal and content connect to it; everything is tracked; as the AI intake learns more, the page adapts. Counts come from the hub footer; re-measure when you…",
+      "default_branch": "main",
+      "branches": [
+        "main"
+      ],
+      "has_gh_pages_branch": false,
+      "has_pages_workflow": true,
+      "created_at": "2026-09-18T22:43:50Z",
+      "updated_at": "2026-09-19T03:01:20Z",
+      "pushed_at": "2026-09-19T03:01:16Z",
+      "last_commit": {
+        "sha": "6dc921715888641dbaa82e85224b04964e69df10",
+        "date": "2026-09-19T03:01:14Z",
+        "message": "docs(plan): correct the v0.3.0 task tally (23 done, 6 awaiting Justin)",
+        "author": "Claude"
+      },
+      "commit_count": 27,
+      "contributors": [
+        "claude"
+      ],
+      "language": "TypeScript",
+      "languages": {
+        "TypeScript": 1097464,
+        "CSS": 137960,
+        "JavaScript": 76330,
+        "PLpgSQL": 12032,
+        "HTML": 577
       },
       "stack": [
         "Playwright",
@@ -64,10 +346,272 @@
         "Supabase",
         "GitHub Pages"
       ],
-      "size_kb": 44993,
+      "size_kb": 50679,
       "entry_point": "index.html",
       "builds_with": "npm run build",
       "deps": [
+        "@axe-core/playwright",
+        "@fontsource/bricolage-grotesque",
+        "@fontsource/inter",
+        "@types/react",
+        "@types/react-dom",
+        "@vitejs/plugin-react",
+        "playwright",
+        "react",
+        "react-dom",
+        "react-markdown",
+        "react-router-dom",
+        "typescript",
+        "vite"
+      ],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        ".npmrc",
+        "CLAUDE.md",
+        "README.md",
+        "docs",
+        "index.html",
+        "package-lock.json",
+        "package.json",
+        "public",
+        "scripts",
+        "src",
+        "supabase",
+        "tsconfig.json",
+        "vite.config.ts"
+      ],
+      "links": {
+        "repo": "https://github.com/imagine-os/lead-magnet",
+        "live": "https://imagine-os.github.io/lead-magnet/",
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": []
+      },
+      "other_count": 0,
+      "readme_links": [
+        {
+          "text": "imagine-os.github.io/lead-magnet/",
+          "url": "https://imagine-os.github.io/lead-magnet/"
+        }
+      ],
+      "is_placeholder": false,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": true,
+      "has_license": false,
+      "has_ci": true,
+      "workflow_files": [
+        ".github/workflows/pages.yml"
+      ],
+      "open_todos": 0,
+      "pages": {
+        "has_pages": true,
+        "url": "https://imagine-os.github.io/lead-magnet/",
+        "live": true,
+        "http_status": 200,
+        "checked_at": "2026-09-19T04:44:39.503Z"
+      },
+      "screenshot": "screenshots/lead-magnet.png",
+      "screenshot_source": "live",
+      "screenshot_note": "Captured from https://imagine-os.github.io/lead-magnet/ at 1440x900 on 2026-09-19 04:45 UTC",
+      "category": "Product",
+      "status": "live",
+      "tags": [],
+      "notes": "",
+      "display_name": "lead-magnet",
+      "featured": false,
+      "hidden": false,
+      "source_channel": null,
+      "readme_lead": "Hyper-personalized landing pages whose lead magnet is a pre-built, fully themed operations system for one prospect. From what we know about a prospect (business, style, life, the roles of the people around them) we guess their software stack and what they can cut, derive departments and roles, compose the highest-converting landing page, show their OS live, and push them to the next stage: open the demo or book a call. Outreach, proposal and content connect to it; everything is tracked; as the AI intake learns more, the page adapts."
+    },
+    {
+      "name": "linear-builder",
+      "full_name": "imagine-os/linear-builder",
+      "html_url": "https://github.com/imagine-os/linear-builder",
+      "description": "PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience,…",
+      "readme_title": "PaperOS Core Platform plan",
+      "readme_excerpt": "PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience, business modules and a documented ten-minute path from a one-paragraph idea to a deployed app. It is built by parallel Claude Code sessions that pick issues from a Linear queue (team PAP) under nine agent characters, with Justin Massion (imagine-os) as the only human in the loop. This repository is the plan: every…",
+      "default_branch": "main",
+      "branches": [
+        "gh-pages",
+        "main"
+      ],
+      "has_gh_pages_branch": true,
+      "has_pages_workflow": true,
+      "created_at": "2026-09-17T12:49:15Z",
+      "updated_at": "2026-09-19T02:37:50Z",
+      "pushed_at": "2026-09-19T02:37:46Z",
+      "last_commit": {
+        "sha": "a75d252a9bbd8956d237dbf8fb393eaa2b538621",
+        "date": "2026-09-19T02:37:43Z",
+        "message": "docs(build): wave 1 reviewed, wave 2 landing, decision 0003, brief v1.3",
+        "author": "Claude"
+      },
+      "commit_count": 31,
+      "contributors": [
+        "claude"
+      ],
+      "language": "Python",
+      "languages": {
+        "Python": 2859795,
+        "HTML": 2425444,
+        "JavaScript": 57965,
+        "CSS": 49947
+      },
+      "stack": [
+        "Vanilla JS",
+        "Python",
+        "Static HTML",
+        "CSS",
+        "GitHub Pages"
+      ],
+      "size_kb": 14095,
+      "entry_point": "site/index.html",
+      "builds_with": null,
+      "deps": [],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        "CHANGELOG.md",
+        "CLAUDE.md",
+        "README.md",
+        "docs",
+        "plan",
+        "site",
+        "specs",
+        "tools"
+      ],
+      "links": {
+        "repo": "https://github.com/imagine-os/linear-builder",
+        "live": "https://imagine-os.github.io/linear-builder/",
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": [
+          "https://linear.app/paperos/project/module-system-and-swap-tooling-8f81243eebfc",
+          "https://linear.app/paperos/document/paperos-module-system-8007373cc6bb",
+          "https://linear.app/paperos",
+          "https://claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h"
+        ]
+      },
+      "other_count": 4,
+      "readme_links": [
+        {
+          "text": "Module System & Swap Tooling",
+          "url": "https://linear.app/paperos/project/module-system-and-swap-tooling-8f81243eebfc"
+        },
+        {
+          "text": "PaperOS Module System",
+          "url": "https://linear.app/paperos/document/paperos-module-system-8007373cc6bb"
+        },
+        {
+          "text": "linear.app/paperos",
+          "url": "https://linear.app/paperos"
+        },
+        {
+          "text": "claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h",
+          "url": "https://claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h"
+        },
+        {
+          "text": "imagine-os.github.io/linear-builder/",
+          "url": "https://imagine-os.github.io/linear-builder/"
+        }
+      ],
+      "is_placeholder": false,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": true,
+      "has_license": false,
+      "has_ci": true,
+      "workflow_files": [
+        ".github/workflows/pages.yml"
+      ],
+      "open_todos": 76,
+      "pages": {
+        "has_pages": true,
+        "url": "https://imagine-os.github.io/linear-builder/",
+        "live": true,
+        "http_status": 200,
+        "checked_at": "2026-09-19T04:44:43.310Z"
+      },
+      "screenshot": "screenshots/linear-builder.png",
+      "screenshot_source": "live",
+      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-09-19 04:45 UTC",
+      "category": "Tooling",
+      "status": "live",
+      "tags": [],
+      "notes": "Created by Justin 2026-09-17. PaperOS planning repo plus ~100 Python scripts that drive Linear; site/ is a static plan viewer published via workflow.",
+      "display_name": "Linear Builder (PaperOS plan)",
+      "featured": false,
+      "hidden": false,
+      "source_channel": null,
+      "readme_lead": "PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience, business modules and a documented ten-minute path from a one-paragraph idea to a deployed app. It is built by parallel Claude Code sessions that pick issues from a Linear queue (team PAP) under nine agent characters, with Justin Massion (imagine-os) as the only human in the loop. This repository is the plan: every issue spec, the platform documents, the schedule, the pending backlog, the blueprint page and the scripts that put all of it into Linear."
+    },
+    {
+      "name": "cal-tenant-law",
+      "full_name": "imagine-os/cal-tenant-law",
+      "html_url": "https://github.com/imagine-os/cal-tenant-law",
+      "description": "CTL OS is the operations system for California Tenant Law (caltenantlaw.com): public website, tenant app, staff and attorney dashboards, the eviction game board, ops manual, docs and dev tools in one codebase, live at https://imagine-os.github.io/cal-tenant-law/.",
+      "readme_title": "CTL OS",
+      "readme_excerpt": "CTL OS is the operations system for California Tenant Law (caltenantlaw.com): public website, tenant app, staff and attorney dashboards, the eviction game board, ops manual, docs and dev tools in one codebase, live at https://imagine-os.github.io/cal-tenant-law/. Version 0.1.2 (2026-09-18): the testing hub's previews render their page at a 1280 x 800 desktop viewport and fill a 16:10 frame edge to edge (DeviceFrame viewport / aspect / edge; the global iframe { max-width: 100% } had been shrinking them into phone layouts), a window-wireframe tile for cards whose frame is not live, the…",
+      "default_branch": "main",
+      "branches": [
+        "main",
+        "mod/board",
+        "mod/catalog",
+        "mod/design",
+        "mod/directions",
+        "mod/homes",
+        "mod/knowledge",
+        "mod/plan",
+        "mod/scrape",
+        "mod/showcase",
+        "mod/site"
+      ],
+      "has_gh_pages_branch": false,
+      "has_pages_workflow": true,
+      "created_at": "2026-09-18T16:57:35Z",
+      "updated_at": "2026-09-18T22:12:55Z",
+      "pushed_at": "2026-09-18T22:12:51Z",
+      "last_commit": {
+        "sha": "8ba432ea64302bf3087378ebc68d28bf4c3b8285",
+        "date": "2026-09-18T22:12:47Z",
+        "message": "chore(release): 0.1.2 package.json version (the release commit bumped only the lockfile)",
+        "author": "Claude"
+      },
+      "commit_count": 37,
+      "contributors": [
+        "claude"
+      ],
+      "language": "HTML",
+      "languages": {
+        "HTML": 6952724,
+        "TypeScript": 1487709,
+        "CSS": 180595,
+        "PLpgSQL": 74863,
+        "JavaScript": 45299
+      },
+      "stack": [
+        "Playwright",
+        "React",
+        "React Router",
+        "TypeScript",
+        "Vite",
+        "CSS",
+        "Supabase",
+        "GitHub Pages"
+      ],
+      "size_kb": 80637,
+      "entry_point": "index.html",
+      "builds_with": "npm run build",
+      "deps": [
+        "@fontsource-variable/bricolage-grotesque",
         "@fontsource/source-sans-3",
         "@fontsource/source-serif-4",
         "@types/react",
@@ -131,11 +675,11 @@
         "url": "https://imagine-os.github.io/cal-tenant-law/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T20:58:49.954Z"
+        "checked_at": "2026-09-19T04:44:44.949Z"
       },
       "screenshot": "screenshots/cal-tenant-law.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/cal-tenant-law/ at 1440x900 on 2026-09-18 20:59 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/cal-tenant-law/ at 1440x900 on 2026-09-19 04:45 UTC",
       "category": "Game",
       "status": "live",
       "tags": [],
@@ -263,11 +807,11 @@
         "url": "https://imagine-os.github.io/petrock/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T20:58:52.017Z"
+        "checked_at": "2026-09-19T04:44:46.525Z"
       },
       "screenshot": "screenshots/petrock.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/petrock/ at 1440x900 on 2026-09-18 20:59 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/petrock/ at 1440x900 on 2026-09-19 04:45 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -277,131 +821,6 @@
       "hidden": false,
       "source_channel": null,
       "readme_lead": "Software for Petrock Hotel (dog hotel and spa, two locations: Encino and Westwood, Los Angeles; petrockhotel.com)."
-    },
-    {
-      "name": "linear-builder",
-      "full_name": "imagine-os/linear-builder",
-      "html_url": "https://github.com/imagine-os/linear-builder",
-      "description": "PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience,…",
-      "readme_title": "PaperOS Core Platform plan",
-      "readme_excerpt": "PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience, business modules and a documented ten-minute path from a one-paragraph idea to a deployed app. It is built by parallel Claude Code sessions that pick issues from a Linear queue (team PAP) under nine agent characters, with Justin Massion (imagine-os) as the only human in the loop. This repository is the plan: every…",
-      "default_branch": "main",
-      "branches": [
-        "gh-pages",
-        "main"
-      ],
-      "has_gh_pages_branch": true,
-      "has_pages_workflow": true,
-      "created_at": "2026-09-17T12:49:15Z",
-      "updated_at": "2026-09-18T15:08:21Z",
-      "pushed_at": "2026-09-18T15:08:29Z",
-      "last_commit": {
-        "sha": "87f2d11cee46d18a4d437cfdb2b9faae6415bcfa",
-        "date": "2026-09-18T15:08:13Z",
-        "message": "Round 4: blueprint v5 at new artifact URL",
-        "author": "Claude"
-      },
-      "commit_count": 27,
-      "contributors": [
-        "claude"
-      ],
-      "language": "Python",
-      "languages": {
-        "Python": 2859795,
-        "HTML": 2425444,
-        "JavaScript": 57965,
-        "CSS": 49947
-      },
-      "stack": [
-        "Vanilla JS",
-        "Python",
-        "Static HTML",
-        "CSS",
-        "GitHub Pages"
-      ],
-      "size_kb": 14112,
-      "entry_point": "site/index.html",
-      "builds_with": null,
-      "deps": [],
-      "root_files": [
-        ".github",
-        ".gitignore",
-        "CHANGELOG.md",
-        "CLAUDE.md",
-        "README.md",
-        "docs",
-        "plan",
-        "site",
-        "specs",
-        "tools"
-      ],
-      "links": {
-        "repo": "https://github.com/imagine-os/linear-builder",
-        "live": "https://imagine-os.github.io/linear-builder/",
-        "demo": null,
-        "sales": null,
-        "docs": null,
-        "other": [
-          "https://linear.app/paperos/project/module-system-and-swap-tooling-8f81243eebfc",
-          "https://linear.app/paperos/document/paperos-module-system-8007373cc6bb",
-          "https://linear.app/paperos",
-          "https://claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h"
-        ]
-      },
-      "other_count": 4,
-      "readme_links": [
-        {
-          "text": "Module System & Swap Tooling",
-          "url": "https://linear.app/paperos/project/module-system-and-swap-tooling-8f81243eebfc"
-        },
-        {
-          "text": "PaperOS Module System",
-          "url": "https://linear.app/paperos/document/paperos-module-system-8007373cc6bb"
-        },
-        {
-          "text": "linear.app/paperos",
-          "url": "https://linear.app/paperos"
-        },
-        {
-          "text": "claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h",
-          "url": "https://claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h"
-        },
-        {
-          "text": "imagine-os.github.io/linear-builder/",
-          "url": "https://imagine-os.github.io/linear-builder/"
-        }
-      ],
-      "is_placeholder": false,
-      "topics": [],
-      "open_issues": 0,
-      "stargazers": 0,
-      "archived": false,
-      "has_readme": true,
-      "has_license": false,
-      "has_ci": true,
-      "workflow_files": [
-        ".github/workflows/pages.yml"
-      ],
-      "open_todos": 76,
-      "pages": {
-        "has_pages": true,
-        "url": "https://imagine-os.github.io/linear-builder/",
-        "live": true,
-        "http_status": 200,
-        "checked_at": "2026-09-18T20:58:56.184Z"
-      },
-      "screenshot": "screenshots/linear-builder.png",
-      "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-09-18 20:59 UTC",
-      "category": "Tooling",
-      "status": "live",
-      "tags": [],
-      "notes": "Created by Justin 2026-09-17. PaperOS planning repo plus ~100 Python scripts that drive Linear; site/ is a static plan viewer published via workflow.",
-      "display_name": "Linear Builder (PaperOS plan)",
-      "featured": false,
-      "hidden": false,
-      "source_channel": null,
-      "readme_lead": "PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience, business modules and a documented ten-minute path from a one-paragraph idea to a deployed app. It is built by parallel Claude Code sessions that pick issues from a Linear queue (team PAP) under nine agent characters, with Justin Massion (imagine-os) as the only human in the loop. This repository is the plan: every issue spec, the platform documents, the schedule, the pending backlog, the blueprint page and the scripts that put all of it into Linear."
     },
     {
       "name": "hoy",
@@ -520,11 +939,11 @@
         "url": "https://imagine-os.github.io/hoy/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T20:58:58.033Z"
+        "checked_at": "2026-09-19T04:44:48.187Z"
       },
       "screenshot": "screenshots/hoy.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-09-18 20:59 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-09-19 04:45 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -707,11 +1126,11 @@
         "url": "https://imagine-os.github.io/circle-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T20:59:01.995Z"
+        "checked_at": "2026-09-19T04:44:51.594Z"
       },
       "screenshot": "screenshots/circle-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-09-18 20:59 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-09-19 04:45 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -792,7 +1211,7 @@
         "url": "https://imagine-os.github.io/sendr-rebuild/",
         "live": false,
         "http_status": 404,
-        "checked_at": "2026-09-18T20:59:03.939Z"
+        "checked_at": "2026-09-19T04:44:53.524Z"
       },
       "screenshot": null,
       "screenshot_source": "none",
@@ -902,11 +1321,11 @@
         "url": "https://imagine-os.github.io/file-manager-designs/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T20:59:05.655Z"
+        "checked_at": "2026-09-19T04:44:54.937Z"
       },
       "screenshot": "screenshots/file-manager-designs.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-09-18 20:59 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-09-19 04:45 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -1005,11 +1424,11 @@
         "url": "https://imagine-os.github.io/graph-gallery/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T20:59:07.937Z"
+        "checked_at": "2026-09-19T04:44:56.985Z"
       },
       "screenshot": "screenshots/graph-gallery.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-09-18 20:59 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-09-19 04:45 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -1229,144 +1648,6 @@
       "source_channel": null
     },
     {
-      "name": "empty12",
-      "full_name": "imagine-os/empty12",
-      "html_url": "https://github.com/imagine-os/empty12",
-      "description": null,
-      "readme_title": null,
-      "readme_excerpt": "",
-      "default_branch": "main",
-      "branches": [],
-      "has_gh_pages_branch": false,
-      "has_pages_workflow": false,
-      "created_at": "2026-09-17T13:18:15Z",
-      "updated_at": "2026-09-17T13:18:16Z",
-      "pushed_at": "2026-09-17T13:18:16Z",
-      "last_commit": {
-        "sha": null,
-        "date": null,
-        "message": null,
-        "author": null
-      },
-      "commit_count": 0,
-      "contributors": [],
-      "language": null,
-      "languages": {},
-      "stack": [],
-      "size_kb": 0,
-      "entry_point": null,
-      "builds_with": null,
-      "deps": [],
-      "root_files": [],
-      "links": {
-        "repo": "https://github.com/imagine-os/empty12",
-        "live": null,
-        "demo": null,
-        "sales": null,
-        "docs": null,
-        "other": []
-      },
-      "other_count": 0,
-      "readme_links": [],
-      "is_placeholder": true,
-      "topics": [],
-      "open_issues": 0,
-      "stargazers": 0,
-      "archived": false,
-      "has_readme": false,
-      "has_license": false,
-      "has_ci": false,
-      "workflow_files": [],
-      "open_todos": 0,
-      "pages": {
-        "has_pages": false,
-        "url": null,
-        "live": null,
-        "http_status": null,
-        "checked_at": null
-      },
-      "screenshot": null,
-      "screenshot_source": "none",
-      "screenshot_note": "No live URL; nothing to capture",
-      "category": "Placeholder",
-      "status": "placeholder",
-      "tags": [],
-      "notes": "",
-      "display_name": "empty12",
-      "featured": false,
-      "hidden": false,
-      "source_channel": null
-    },
-    {
-      "name": "empty-11",
-      "full_name": "imagine-os/empty-11",
-      "html_url": "https://github.com/imagine-os/empty-11",
-      "description": null,
-      "readme_title": null,
-      "readme_excerpt": "",
-      "default_branch": "main",
-      "branches": [],
-      "has_gh_pages_branch": false,
-      "has_pages_workflow": false,
-      "created_at": "2026-09-17T13:17:59Z",
-      "updated_at": "2026-09-17T13:18:00Z",
-      "pushed_at": "2026-09-17T13:18:00Z",
-      "last_commit": {
-        "sha": null,
-        "date": null,
-        "message": null,
-        "author": null
-      },
-      "commit_count": 0,
-      "contributors": [],
-      "language": null,
-      "languages": {},
-      "stack": [],
-      "size_kb": 0,
-      "entry_point": null,
-      "builds_with": null,
-      "deps": [],
-      "root_files": [],
-      "links": {
-        "repo": "https://github.com/imagine-os/empty-11",
-        "live": null,
-        "demo": null,
-        "sales": null,
-        "docs": null,
-        "other": []
-      },
-      "other_count": 0,
-      "readme_links": [],
-      "is_placeholder": true,
-      "topics": [],
-      "open_issues": 0,
-      "stargazers": 0,
-      "archived": false,
-      "has_readme": false,
-      "has_license": false,
-      "has_ci": false,
-      "workflow_files": [],
-      "open_todos": 0,
-      "pages": {
-        "has_pages": false,
-        "url": null,
-        "live": null,
-        "http_status": null,
-        "checked_at": null
-      },
-      "screenshot": null,
-      "screenshot_source": "none",
-      "screenshot_note": "No live URL; nothing to capture",
-      "category": "Placeholder",
-      "status": "placeholder",
-      "tags": [],
-      "notes": "",
-      "display_name": "empty-11",
-      "featured": false,
-      "hidden": false,
-      "source_channel": null
-    },
-    {
       "name": "paperos",
       "full_name": "imagine-os/paperos",
       "html_url": "https://github.com/imagine-os/paperos",
@@ -1544,11 +1825,11 @@
         "url": "https://imagine-os.github.io/paperos/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T20:59:17.769Z"
+        "checked_at": "2026-09-19T04:45:03.004Z"
       },
       "screenshot": "screenshots/paperos.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-09-18 20:59 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-09-19 04:45 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1675,11 +1956,11 @@
         "url": "https://imagine-os.github.io/slack-game-engine/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T20:59:20.198Z"
+        "checked_at": "2026-09-19T04:45:05.316Z"
       },
       "screenshot": "screenshots/slack-game-engine.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-09-18 20:59 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-09-19 04:45 UTC",
       "category": "Game",
       "status": "live",
       "tags": [],
@@ -1764,11 +2045,11 @@
         "url": "https://imagine-os.github.io/vercel-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T20:59:22.212Z"
+        "checked_at": "2026-09-19T04:45:06.945Z"
       },
       "screenshot": "screenshots/vercel-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-09-18 20:59 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-09-19 04:45 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -1868,11 +2149,11 @@
         "url": "https://imagine-os.github.io/dorum-lifestyle/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T20:59:24.414Z"
+        "checked_at": "2026-09-19T04:45:08.820Z"
       },
       "screenshot": "screenshots/dorum-lifestyle.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-09-18 20:59 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-09-19 04:45 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1954,11 +2235,11 @@
         "url": "https://imagine-os.github.io/gamma-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T20:59:26.278Z"
+        "checked_at": "2026-09-19T04:45:10.468Z"
       },
       "screenshot": "screenshots/gamma-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-09-18 20:59 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-09-19 04:45 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -2037,11 +2318,11 @@
         "url": "https://imagine-os.github.io/webflow-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T20:59:28.154Z"
+        "checked_at": "2026-09-19T04:45:12.021Z"
       },
       "screenshot": "screenshots/webflow-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-09-18 20:59 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-09-19 04:45 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -2138,11 +2419,11 @@
         "url": "https://imagine-os.github.io/rebuild-slack-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T20:59:30.218Z"
+        "checked_at": "2026-09-19T04:45:13.826Z"
       },
       "screenshot": "screenshots/rebuild-slack-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-09-18 20:59 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-09-19 04:45 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -2230,11 +2511,11 @@
         "url": "https://imagine-os.github.io/OS-Folder-Structure/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-18T20:59:32.123Z"
+        "checked_at": "2026-09-19T04:45:15.577Z"
       },
       "screenshot": "screenshots/OS-Folder-Structure.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-09-18 20:59 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-09-19 04:45 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
