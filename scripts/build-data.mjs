@@ -8,6 +8,7 @@
 //   PORTFOLIO_ORG                    default "imagine-os"
 //   PORTFOLIO_USERS                  optional comma list of extra users whose repos to include
 //   PORTFOLIO_EXTRA_REPOS            optional comma list of owner/repo to include
+//   data/sources.json                committed { extra_repos: [owner/repo], users: [] }, merged (union) with the two vars above
 //   GITHUB_REPOSITORY                the portfolio repo itself, excluded from the catalogue (or --self owner/repo)
 //   PORTFOLIO_SKIP_LIVE=1            skip HTTP live checks (faster local runs)
 //   PORTFOLIO_SKIP_TODOS=1           skip the tarball TODO scan
@@ -19,7 +20,7 @@
 // so a flaky run never loses data. The derivation helpers are exported for scripts/merge-gathered.mjs.
 
 import { readFile, writeFile, mkdir, access, rename, unlink } from 'node:fs/promises';
-import { existsSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { gunzipSync } from 'node:zlib';
@@ -28,12 +29,14 @@ import { checkLive } from './check-live.mjs';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_FILE = path.join(ROOT, 'data', 'projects.json');
 const OVERRIDES_FILE = path.join(ROOT, 'data', 'overrides.json');
+const SOURCES_FILE = path.join(ROOT, 'data', 'sources.json');
 const SCREENSHOT_DIR = path.join(ROOT, 'screenshots');
 
 const ARGS = parseArgs(process.argv.slice(2));
 const ORG = process.env.PORTFOLIO_ORG || 'imagine-os';
-const USERS = (process.env.PORTFOLIO_USERS || '').split(',').map(s => s.trim()).filter(Boolean);
-const EXTRA = (process.env.PORTFOLIO_EXTRA_REPOS || '').split(',').map(s => s.trim()).filter(Boolean);
+const FILE_SOURCES = readSources(SOURCES_FILE);   // committed list; the env vars below are unioned with it
+const USERS = uniqList([...envList('PORTFOLIO_USERS'), ...FILE_SOURCES.users]);
+const EXTRA = uniqList([...envList('PORTFOLIO_EXTRA_REPOS'), ...FILE_SOURCES.extra_repos]);
 const SELF = String(ARGS.self || process.env.GITHUB_REPOSITORY || 'imagine-os/claude-tag-portfolio').toLowerCase();
 const TOKEN = process.env.PORTFOLIO_TOKEN || process.env.GITHUB_TOKEN || '';
 const SKIP_LIVE = process.env.PORTFOLIO_SKIP_LIVE === '1';
@@ -45,6 +48,19 @@ const CATEGORIES = ['Product', 'Prototype / Shell rebuild', 'Audit / Report', 'T
 const ENTRY_CANDIDATES = ['index.html', 'dist/index.html', 'out/index.html', 'build/index.html', 'site/index.html', 'public/index.html', 'docs/index.html', 'app/index.html', 'src/index.html', 'www/index.html'];
 const TRIVIAL_FILE = /^(readme(\.[a-z]+)?|\.gitignore|\.gitattributes|licen[sc]e(\.[a-z]+)?|\.nojekyll)$/i;
 const OTHER_CAP = 25;
+
+function envList(name) { return (process.env[name] || '').split(',').map(s => s.trim()).filter(Boolean); }
+/** De-duplicate case-insensitively, keeping the first spelling. */
+function uniqList(list) { const seen = new Set(); return list.filter(x => { const k = x.toLowerCase(); return seen.has(k) ? false : seen.add(k); }); }
+/** data/sources.json: { extra_repos: ["owner/repo"], users: ["login"] }; missing or unreadable -> empty lists. Keys starting with _ are ignored. */
+function readSources(file) {
+  const out = { extra_repos: [], users: [] };
+  try {
+    const json = JSON.parse(readFileSync(file, 'utf8'));
+    for (const k of Object.keys(out)) out[k] = Array.isArray(json[k]) ? json[k].map(s => String(s).trim()).filter(Boolean) : [];
+  } catch (err) { if (err.code !== 'ENOENT') console.warn(`! ${path.relative(ROOT, file)}: ${err.message}`); }
+  return out;
+}
 
 // ---------------------------------------------------------------- GitHub client
 let rateWaited = false;
@@ -131,7 +147,7 @@ async function discoverRepos() {
 }
 
 // ---------------------------------------------------------------- enrichment
-async function enrich(repo, prev) {
+async function enrich(repo, prev, override) {
   const o = repo.owner.login, r = repo.name, base = `/repos/${o}/${r}`;
   const p = {
     name: r, full_name: repo.full_name, html_url: repo.html_url, description: repo.description || null,
@@ -263,6 +279,7 @@ async function enrich(repo, prev) {
   if (p.pages.url) p.links.live = p.pages.url;
   else if (p.pages.has_pages || p.has_gh_pages_branch || p.has_pages_workflow) p.links.live = guessPagesUrl(o, r);
   else if (/github\.io/i.test(home)) p.links.live = home;
+  else if (override?.links?.live) p.links.live = override.links.live;   // an override's live link is still live-checked
   if (home && !/github\.io/i.test(home)) p.links.sales = home;
   if (!p.pages.url && p.links.live) p.pages.url = p.links.live;
   classifyLinks(p);
@@ -496,9 +513,11 @@ export function deriveStatus(p) {
   if (p.entry_point || p.builds_with) return 'built-not-deployed';
   return 'in-progress';
 }
-/** overrides[name], or the entry for the name this repo was renamed from, or an entry that declares renamed_from = this name. */
+/** overrides[full_name] (owner/repo, wins so cross-owner name collisions cannot mis-apply), else overrides[name],
+ *  or the entry for the name this repo was renamed from, or an entry that declares renamed_from = this name. */
 export function findOverride(overrides, p) {
   if (!overrides) return null;
+  if (p.full_name && overrides[p.full_name]) return overrides[p.full_name];
   if (overrides[p.name]) return overrides[p.name];
   if (p.renamed_from && overrides[p.renamed_from]) return overrides[p.renamed_from];
   for (const [k, v] of Object.entries(overrides)) if (!k.startsWith('_') && v && v.renamed_from === p.name) return v;
@@ -517,6 +536,11 @@ export function applyOverrides(p, o) {
   if (out.category && !CATEGORIES.includes(out.category)) console.warn(`! override for ${p.name}: category "${out.category}" is not one of the standard categories`);
   return out;
 }
+/** Screenshot file stem: the bare repo name for ORG repos, owner--repo for a repo from another owner (no cross-owner collisions). */
+export function screenshotName(p, org = ORG) {
+  const owner = String(p.full_name || '').split('/')[0];
+  return owner && owner.toLowerCase() !== String(org).toLowerCase() ? `${owner}--${p.name}` : p.name;
+}
 /** Derive placeholder/category/status, resolve the screenshot on disk, then apply overrides. Shared with merge-gathered.mjs. */
 export function finalizeProject(p, prev, override, { screenshotDir = SCREENSHOT_DIR } = {}) {
   p.stack = normalizeStack(p.stack);
@@ -524,9 +548,10 @@ export function finalizeProject(p, prev, override, { screenshotDir = SCREENSHOT_
   p.category = deriveCategory(p);
   p.status = deriveStatus(p);
   p.display_name = p.display_name || p.name;
-  const file = path.join(screenshotDir, `${p.name}.png`);
+  const shot = screenshotName(p);
+  const file = path.join(screenshotDir, `${shot}.png`);
   if (existsSync(file)) {
-    p.screenshot = `screenshots/${p.name}.png`;
+    p.screenshot = `screenshots/${shot}.png`;
     const own = p.screenshot_source && p.screenshot_source !== 'none' ? p.screenshot_source : null;
     p.screenshot_source = own || (prev?.screenshot_source && prev.screenshot_source !== 'none' ? prev.screenshot_source : 'live');
     p.screenshot_note = (own && p.screenshot_note) || prev?.screenshot_note || 'Existing screenshot kept';
@@ -545,7 +570,7 @@ async function detectRename(p, previousProjects, currentNames) {
   if (!old) return;
   p.renamed_from = old.renamed_from && old.renamed_from !== p.name ? old.renamed_from : old.name;
   for (const sub of ['', 'thumbs/']) {
-    const from = path.join(SCREENSHOT_DIR, sub, `${old.name}.png`), to = path.join(SCREENSHOT_DIR, sub, `${p.name}.png`);
+    const from = path.join(SCREENSHOT_DIR, sub, `${screenshotName(old)}.png`), to = path.join(SCREENSHOT_DIR, sub, `${screenshotName(p)}.png`);
     if (!existsSync(from)) continue;
     try { if (existsSync(to)) await unlink(from); else await rename(from, to); } catch (err) { errors.push({ scope: `repo:${p.full_name}`, error: `screenshot rename: ${err.message}` }); }
   }
@@ -572,7 +597,7 @@ async function main() {
     let p;
     const prev = prevByName.get(repo.name) || prevProjects.find(q => q.last_commit?.sha && !currentNames.has(q.name) && q.html_url && q.html_url.split('/').pop().toLowerCase() === repo.name.toLowerCase());
     try {
-      p = await enrich(repo, prev);
+      p = await enrich(repo, prev, findOverride(overrides, repo));
       console.log(`ok (${p.commit_count} commits${p.links.live ? ', live=' + (p.pages.live ? 'yes' : 'no') : ''})`);
     } catch (err) {
       errors.push({ scope: `repo:${repo.full_name}`, error: err.message, kept_previous: !!prev });
@@ -595,7 +620,7 @@ async function main() {
     }
   }
 
-  await writeData({ generated_at: new Date().toISOString(), org: ORG, api_reachable: apiReachable, sources: { org: ORG, users: USERS, extra_repos: EXTRA, excluded: [SELF] }, errors, projects });
+  await writeData({ generated_at: new Date().toISOString(), org: ORG, api_reachable: apiReachable, sources: { org: ORG, users: USERS, extra_repos: EXTRA, file: { path: 'data/sources.json', ...FILE_SOURCES }, excluded: [SELF] }, errors, projects });
   console.log(`\nwrote ${path.relative(ROOT, DATA_FILE)} · ${projects.length} projects · ${errors.length} warnings · ${((Date.now() - started) / 1000).toFixed(1)}s`);
   if (!apiReachable && !projects.length) process.exitCode = 1;
 }
@@ -627,7 +652,7 @@ async function recompute() {
   }
   data.projects = projects;
   data.recomputed_at = new Date().toISOString();
-  if (data.sources) data.sources.excluded = [SELF];
+  if (data.sources) { data.sources.excluded = [SELF]; data.sources.file = { path: 'data/sources.json', ...FILE_SOURCES }; }
   await writeData(data);
   console.log('\nchanges:');
   for (const p of projects) { const after = `${p.status}/${p.category}/${p.is_placeholder}`; if (before[p.name] !== after) console.log(`  ${p.name}: ${before[p.name]} -> ${after}`); }
@@ -676,6 +701,7 @@ $GITHUB_REPOSITORY, default imagine-os/claude-tag-portfolio) is excluded.
 
 env: PORTFOLIO_TOKEN | GITHUB_TOKEN, PORTFOLIO_ORG, PORTFOLIO_USERS, PORTFOLIO_EXTRA_REPOS,
      PORTFOLIO_SKIP_LIVE=1, PORTFOLIO_SKIP_TODOS=1
+file: data/sources.json { extra_repos: [owner/repo], users: [login] } is unioned with PORTFOLIO_EXTRA_REPOS / PORTFOLIO_USERS
 see also: node scripts/merge-gathered.mjs --from <gathered.json>   (offline first-run path)`;
 
 if (import.meta.url === `file://${process.argv[1]}`) {

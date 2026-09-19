@@ -36,6 +36,8 @@ assets/app.js              rendering, filtering, URL-hash state, GitHub refresh
 assets/styles.css          design tokens (dark-first) and components
 data/projects.json         GENERATED dataset – do not edit by hand
 data/overrides.json        hand-maintained per-repo overrides (edit this one)
+data/sources.json          committed extra repos / users outside the org (unioned with the Actions variables)
+docs/                      working memory: rules, prompt log, changelog, decisions, kanban, page docs, surfaces (start at docs/README.md)
 screenshots/<name>.png     1440x900 captures of live sites
 screenshots/thumbs/<name>.png  640x400 thumbnails
 scripts/build-data.mjs     queries the GitHub REST API, enriches, merges overrides, writes data/projects.json
@@ -65,7 +67,7 @@ scripts/merge-gathered.mjs first-run path: turns a locally gathered JSON (git cl
 }
 ```
 
-Supported keys: `display_name`, `category`, `status`, `tags`, `notes`, `hidden`, `featured`, `source_channel`, `links` (partial: `live`, `demo`, `sales`, `docs`) and `renamed_from` (the repo's previous name, so an override keyed either way keeps applying after a rename; the build also detects renames by matching the last commit sha and carries screenshots over). Keys beginning with `_` are ignored. Edit the file directly on GitHub (the detail panel has a shortcut); the push triggers a rebuild and redeploy within a couple of minutes.
+Keys are bare repo names, or `owner/repo` for a repo outside the org (a full-name key wins over a bare one, so a name that exists in two orgs cannot mis-apply). Supported keys: `display_name`, `category`, `status`, `tags`, `notes`, `hidden`, `featured`, `source_channel`, `links` (partial: `live`, `demo`, `sales`, `docs`) and `renamed_from` (the repo's previous name, so an override keyed either way keeps applying after a rename; the build also detects renames by matching the last commit sha and carries screenshots over). Keys beginning with `_` are ignored. Edit the file directly on GitHub (the detail panel has a shortcut); the push triggers a rebuild and redeploy within a couple of minutes.
 
 ## How it updates
 
@@ -88,6 +90,16 @@ The site reads its own repo name from the Pages URL (falling back to `data-repo`
 
 The default `GITHUB_TOKEN` can read public repos in the org and has a generous rate limit, but it cannot see **private** repos or the Pages settings of repos it does not own. To include those, create a fine-grained personal access token with *Contents: read*, *Metadata: read* and *Pages: read* on the org's repositories, add it as a repository secret named `PORTFOLIO_TOKEN`, and the build prefers it automatically.
 
+### Adding repos outside the org: `data/sources.json`
+
+Commit the repo to `data/sources.json` and push; the workflow picks it up on that push:
+
+```json
+{ "extra_repos": ["arthovis-org/empty1"], "users": [] }
+```
+
+`extra_repos` are `owner/repo` entries, `users` are extra GitHub accounts whose public repos to include. The file is unioned (de-duplicated) with the `PORTFOLIO_EXTRA_REPOS` / `PORTFOLIO_USERS` variables below, and its contribution is recorded under `sources.file` in `data/projects.json`. Override such a repo in `data/overrides.json` under its `owner/repo` key; its screenshot is stored as `screenshots/<owner>--<repo>.png`. The Pages API answers 404 for repos the token cannot administer, so the live URL is derived from the repo's `has_pages` flag (`https://<owner>.github.io/<repo>/`) or from the override's `links.live`, and live-checked as usual.
+
 ### Pointing it at more orgs or users
 
 Set repository **variables** on `imagine-os/claude-tag-portfolio` (Settings → Secrets and variables → Actions → Variables):
@@ -109,6 +121,10 @@ npm run serve                          # http://127.0.0.1:8765/
 ```
 
 Useful env flags for `npm run data`: `PORTFOLIO_SKIP_LIVE=1` (no HTTP checks), `PORTFOLIO_SKIP_TODOS=1` (no tarball scan). `node scripts/build-data.mjs --recompute` re-derives status, category, stack, placeholder flag and overrides from the existing `data/projects.json` without any API call (handy to test a rule or an override offline); `--self owner/repo` names the portfolio repo to exclude (default `$GITHUB_REPOSITORY` or `imagine-os/claude-tag-portfolio`). For `npm run shots`: `PORTFOLIO_SHOT_ONLY=hoy,paperos`, `PORTFOLIO_SHOT_CONCURRENCY=2`, `PORTFOLIO_CHROMIUM_PATH=/path/to/chrome`.
+
+## Docs and rules
+
+`docs/README.md` is the start-here map (rules, prompt log, changelog, decisions, kanban, page doc, surfaces); `CLAUDE.md` is the short rule sheet for anyone editing the repo.
 
 ## Notes
 

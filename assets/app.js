@@ -69,6 +69,8 @@
     }
     projects = (data.projects || []).filter(p => !p.hidden);
     for (const p of projects) normalize(p);
+    const external = projects.filter(p => p.owner && p.owner.toLowerCase() !== ORG.toLowerCase()).length;
+    if (external) $('#sub-org').textContent = `Every repository in the ${ORG} organization, plus ${external} from other owners`;
     el.fixture.hidden = !data.fixture;
     renderGenTime();
     renderAll();
@@ -100,6 +102,7 @@
     p.category = p.category || 'Other';
     p.isLive = p.status === 'live' && !!(p.links.live || p.pages.url);
     p.liveUrl = p.links.live || p.pages.url || null;
+    p.owner = (p.full_name || '').split('/')[0] || ORG;
   }
 
   // ---------- hash state ----------
@@ -183,7 +186,7 @@
       if (state.sales && !p.links.sales) return false;
       if (state.demo && !p.links.demo) return false;
       if (q) {
-        const hay = [p.name, p.display_name, p.renamed_from, p.description, p.readme_title, p.readme_excerpt, p.notes, p.category, p.status, p.source_channel, ...p.stack, ...p.tags, ...(p.topics || [])].filter(Boolean).join(' ').toLowerCase();
+        const hay = [p.name, p.full_name, p.display_name, p.renamed_from, p.description, p.readme_title, p.readme_excerpt, p.notes, p.category, p.status, p.source_channel, ...p.stack, ...p.tags, ...(p.topics || [])].filter(Boolean).join(' ').toLowerCase();
         if (!hay.includes(q)) return false;
       }
       return true;
@@ -323,6 +326,7 @@
         </div>
         <div class="pills">
           <span class="pill cat">${esc(p.category)}</span>
+          ${p.owner && p.owner.toLowerCase() !== ORG.toLowerCase() ? `<span class="pill cat" title="Repository owner: ${esc(p.full_name)}">${esc(p.owner)}</span>` : ''}
           ${p.featured ? '<span class="pill featured">Featured</span>' : ''}
           ${p._changed ? '<span class="pill changed" title="pushed_at is newer than the last data build">changed since last build</span>' : ''}
           ${p._new ? '<span class="pill changed" title="Repo exists on GitHub but is not in data/projects.json yet">new since last build</span>' : ''}

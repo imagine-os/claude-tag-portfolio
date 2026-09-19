@@ -1,0 +1,5 @@
+{
+  "_help": "Committed repo sources for scripts/build-data.mjs, merged (union, de-duplicated) with the Actions variables PORTFOLIO_EXTRA_REPOS and PORTFOLIO_USERS. extra_repos: owner/repo entries outside the catalogued org. users: extra GitHub accounts whose public repos to include. Keys starting with an underscore are ignored. Override such a repo in data/overrides.json under its full_name key (owner/repo).",
+  "extra_repos": ["arthovis-org/empty1"],
+  "users": []
+}
