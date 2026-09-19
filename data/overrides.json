@@ -1,25 +1,61 @@
 {
-  "_help": "Hand-maintained per-repo overrides. Keys are repo names. Any field set here wins over what scripts/build-data.mjs derives. Supported: display_name, category, status, tags, notes, hidden, featured, source_channel, links (partial: live, demo, sales, docs). Keys starting with an underscore are ignored.",
+  "_help": "Hand-maintained per-repo overrides. Keys are repo names, or full names (owner/repo) for repos outside the catalogued org; a full-name key wins over a bare-name key. Any field set here wins over what scripts/build-data.mjs derives. Supported: display_name, category, status, tags, notes, hidden, featured, source_channel, links (partial: live, demo, sales, docs), renamed_from. Keys starting with an underscore are ignored.",
   "OS-Folder-Structure": {
     "display_name": "NovaOS Explorer",
     "category": "Design exploration",
     "source_channel": "#operating-system-folder-structure",
     "notes": "Started life as placeholder repo empty2; renamed by Justin. Pages: gh-pages branch."
   },
+  "arthovis-org/empty1": {
+    "display_name": "Proto3D",
+    "category": "Product",
+    "featured": false,
+    "source_channel": "#claute-tag-portfolio",
+    "tags": [
+      "3D",
+      "project management",
+      "dataflow",
+      "Three.js"
+    ],
+    "notes": "Proto3D — browser-based 3D project-management workspace (Three.js, no build step): components are blocks wired by typed animated cables; a dataflow engine runs the graph every frame. Default scene: 3D Kanban, executable flow shapes, 3D Gantt, people/milestones/checklists/dashboard. Repo in arthovis-org still carries its placeholder name; rename pending. Added 2026-09-19 from Slack #claute-tag-portfolio.",
+    "links": {
+      "live": "https://arthovis-org.github.io/empty1/",
+      "demo": "https://arthovis-org.github.io/empty1/addons/gateway-credits/",
+      "docs": "https://arthovis-org.github.io/empty1/docs/ARCHITECTURE.md"
+    }
+  },
+  "cal-tenant-law": {
+    "display_name": "CTL OS",
+    "category": "Product",
+    "featured": true,
+    "notes": "CTL OS — operations system for California Tenant Law: public site, tenant app, staff/attorney dashboards, eviction game board, docs, dev tools. Category was misderived as Game from 'game board'."
+  },
   "circle-shell": {
     "display_name": "Circle Shell (Circle.so rebuild)",
     "category": "Prototype / Shell rebuild",
     "source_channel": "#rebuild-circle",
-    "notes": "Was empty8. WARNING: a second branch (claude/exciting-gauss-fnw1v2) builds HOY OS and force-publishes gh-pages on every push, so the live URL currently shows HOY OS, not the Circle shell. Fix: delete that branch or move HOY OS to the hoy repo, then re-run the pages workflow."
+    "notes": "Was empty8. Static front-end recreation of the Circle.so community app shell with mock data; the live page shows the Circle shell ('Maker Circle') as of 2026-09-19."
   },
   "dorum-lifestyle": {
+    "display_name": "Llave OS (Dorum Lifestyle)",
     "category": "Product",
     "source_channel": "#dorum-lifestyle",
-    "notes": "39-file marketing site; main + gh-pages via Actions workflow."
+    "notes": "39-file marketing site for Llave OS (real-estate agency OS; Dorum Lifestyle as first customer); main + gh-pages via Actions workflow."
+  },
+  "empty-11": {
+    "display_name": "paperos-template",
+    "category": "Tooling",
+    "notes": "PaperOS monorepo template (pnpm, Turborepo, TS, Biome, Vitest, Vite + React shell). Repo still has its placeholder name; rename when ready."
+  },
+  "empty12": {
+    "display_name": "paperos-orchestrator",
+    "category": "Tooling",
+    "notes": "Linear workspace-as-code build loop; spawns a builder session per issue. Tooling, no Pages site expected. Placeholder repo name; rename when ready."
   },
   "empty6": {
-    "category": "Placeholder",
-    "notes": "Only truly empty repo left. Claimed for the Google Drive profile page (#google-drive thread) — Justin was asked to upload index.html himself because the page holds personal data.",
+    "display_name": "Hook Testers",
+    "category": "Other",
+    "notes": "Hook Testers docs repo: plan, tooling notes, lead pipeline, demos and the prompt/reply log for the tester-acquisition project. No Pages site. Placeholder repo name; rename when ready.",
     "hidden": false
   },
   "graph-gallery": {
@@ -28,11 +64,6 @@
     "source_channel": "#build-website",
     "renamed_from": "empty7",
     "notes": "Renamed from empty7 by Justin on 2026-09-17; live on Pages."
-  },
-  "empty10": {
-    "display_name": "HOY OS (in placeholder repo)",
-    "category": "Product",
-    "notes": "Full HOY OS operations system pushed into placeholder empty10 on 2026-09-17 with a pages.yml that force-pushes gh-pages. Duplicates/overlaps the hoy repo — decide which is canonical, rename or archive this one."
   },
   "file-manager-designs": {
     "category": "Design exploration",
@@ -48,7 +79,12 @@
     "display_name": "HOY OS",
     "category": "Product",
     "featured": true,
-    "notes": "Vite + React + Supabase ops system for HOY Human Club (Bogotá). Canonical HOY repo."
+    "notes": "Vite + React + Supabase ops system for HOY Wellness Center (Medellín). Canonical HOY repo."
+  },
+  "lead-magnet": {
+    "display_name": "Lead Magnet",
+    "category": "Product",
+    "notes": "Hyper-personalized landing pages whose lead magnet is a pre-built ops system for one prospect."
   },
   "linear-builder": {
     "display_name": "Linear Builder (PaperOS plan)",
@@ -61,13 +97,22 @@
     "featured": true,
     "notes": "Flagship. Next.js static export with basePath /paperos; tldraw + Yjs + Liveblocks. Oldest repo (first commit 2025-06-14)."
   },
+  "petrock": {
+    "display_name": "Petrock",
+    "category": "Product",
+    "featured": true,
+    "notes": "All-in-one software for Petrock Hotel (dog hotel & spa, Encino + Westwood LA). Vite/React/Supabase hub."
+  },
   "rebuild-slack-shell": {
     "display_name": "Slack Shell rebuild",
     "category": "Prototype / Shell rebuild",
     "source_channel": "#rebuild-slack"
   },
+  "sendr-rebuild": {
+    "notes": "Static Sendr (sendr.ai) shell rebuild. Has a Pages workflow but the site 404s as of 2026-09-19 — Pages source or workflow needs fixing in that repo."
+  },
   "slack-game-engine": {
-    "display_name": "Slack Game Engine",
+    "display_name": "Forge Engine (Slack Game Engine)",
     "category": "Game",
     "source_channel": "#game-engine",
     "notes": "Created by Justin by hand 2026-09-16. Vite + TypeScript, CodeMirror editor, PeerJS multiplayer."
@@ -82,6 +127,6 @@
     "display_name": "Webflow Portfolio Audit",
     "category": "Audit / Report",
     "source_channel": "#webflow",
-    "notes": "Was empty-4. README says served from main root; Pages not confirmed."
+    "notes": "Was empty-4. Served from the main branch root; live on Pages."
   }
 }

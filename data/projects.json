@@ -8,7 +8,14 @@
     "extra_repos": [],
     "excluded": [
       "imagine-os/claude-tag-portfolio"
-    ]
+    ],
+    "file": {
+      "path": "data/sources.json",
+      "extra_repos": [
+        "arthovis-org/empty1"
+      ],
+      "users": []
+    }
   },
   "errors": [],
   "projects": [
@@ -122,11 +129,11 @@
       "screenshot": null,
       "screenshot_source": "none",
       "screenshot_note": "No live URL; nothing to capture",
-      "category": "Product",
+      "category": "Tooling",
       "status": "in-progress",
       "tags": [],
-      "notes": "",
-      "display_name": "empty12",
+      "notes": "Linear workspace-as-code build loop; spawns a builder session per issue. Tooling, no Pages site expected. Placeholder repo name; rename when ready.",
+      "display_name": "paperos-orchestrator",
       "featured": false,
       "hidden": false,
       "source_channel": null,
@@ -293,11 +300,11 @@
       "screenshot": "screenshots/empty-11.png",
       "screenshot_source": "live",
       "screenshot_note": "Captured from https://imagine-os.github.io/empty-11/ at 1440x900 on 2026-09-19 15:58 UTC",
-      "category": "Prototype / Shell rebuild",
+      "category": "Tooling",
       "status": "live",
       "tags": [],
-      "notes": "",
-      "display_name": "empty-11",
+      "notes": "PaperOS monorepo template (pnpm, Turborepo, TS, Biome, Vitest, Vite + React shell). Repo still has its placeholder name; rename when ready.",
+      "display_name": "paperos-template",
       "featured": false,
       "hidden": false,
       "source_channel": null,
@@ -422,8 +429,8 @@
       "category": "Product",
       "status": "live",
       "tags": [],
-      "notes": "",
-      "display_name": "lead-magnet",
+      "notes": "Hyper-personalized landing pages whose lead magnet is a pre-built ops system for one prospect.",
+      "display_name": "Lead Magnet",
       "featured": false,
       "hidden": false,
       "source_channel": null,
@@ -681,12 +688,12 @@
       "screenshot": "screenshots/cal-tenant-law.png",
       "screenshot_source": "live",
       "screenshot_note": "Captured from https://imagine-os.github.io/cal-tenant-law/ at 1440x900 on 2026-09-19 15:58 UTC",
-      "category": "Game",
+      "category": "Product",
       "status": "live",
       "tags": [],
-      "notes": "",
-      "display_name": "cal-tenant-law",
-      "featured": false,
+      "notes": "CTL OS — operations system for California Tenant Law: public site, tenant app, staff/attorney dashboards, eviction game board, docs, dev tools. Category was misderived as Game from 'game board'.",
+      "display_name": "CTL OS",
+      "featured": true,
       "hidden": false,
       "source_channel": null,
       "readme_lead": "CTL OS is the operations system for California Tenant Law (caltenantlaw.com): public website, tenant app, staff and attorney dashboards, the eviction game board, ops manual, docs and dev tools in one codebase, live at https://imagine-os.github.io/cal-tenant-law/."
@@ -816,9 +823,9 @@
       "category": "Product",
       "status": "live",
       "tags": [],
-      "notes": "",
-      "display_name": "petrock",
-      "featured": false,
+      "notes": "All-in-one software for Petrock Hotel (dog hotel & spa, Encino + Westwood LA). Vite/React/Supabase hub.",
+      "display_name": "Petrock",
+      "featured": true,
       "hidden": false,
       "source_channel": null,
       "readme_lead": "Software for Petrock Hotel (dog hotel and spa, two locations: Encino and Westwood, Los Angeles; petrockhotel.com)."
@@ -948,7 +955,7 @@
       "category": "Product",
       "status": "live",
       "tags": [],
-      "notes": "Vite + React + Supabase ops system for HOY Human Club (Bogotá). Canonical HOY repo.",
+      "notes": "Vite + React + Supabase ops system for HOY Wellness Center (Medellín). Canonical HOY repo.",
       "display_name": "HOY OS",
       "featured": true,
       "hidden": false,
@@ -1034,11 +1041,11 @@
       "screenshot": null,
       "screenshot_source": "none",
       "screenshot_note": "No live URL; nothing to capture",
-      "category": "Placeholder",
+      "category": "Other",
       "status": "in-progress",
       "tags": [],
-      "notes": "Only truly empty repo left. Claimed for the Google Drive profile page (#google-drive thread) — Justin was asked to upload index.html himself because the page holds personal data.",
-      "display_name": "empty6",
+      "notes": "Hook Testers docs repo: plan, tooling notes, lead pipeline, demos and the prompt/reply log for the tester-acquisition project. No Pages site. Placeholder repo name; rename when ready.",
+      "display_name": "Hook Testers",
       "featured": false,
       "hidden": false,
       "source_channel": null,
@@ -1135,7 +1142,7 @@
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
-      "notes": "Was empty8. WARNING: a second branch (claude/exciting-gauss-fnw1v2) builds HOY OS and force-publishes gh-pages on every push, so the live URL currently shows HOY OS, not the Circle shell. Fix: delete that branch or move HOY OS to the hoy repo, then re-run the pages workflow.",
+      "notes": "Was empty8. Static front-end recreation of the Circle.so community app shell with mock data; the live page shows the Circle shell ('Maker Circle') as of 2026-09-19.",
       "display_name": "Circle Shell (Circle.so rebuild)",
       "featured": false,
       "hidden": false,
@@ -1216,11 +1223,11 @@
       },
       "screenshot": null,
       "screenshot_source": "none",
-      "screenshot_note": "URL not live (404)",
+      "screenshot_note": "Live check failed; nothing captured",
       "category": "Prototype / Shell rebuild",
       "status": "deployed-unverified",
       "tags": [],
-      "notes": "",
+      "notes": "Static Sendr (sendr.ai) shell rebuild. Has a Pages workflow but the site 404s as of 2026-09-19 — Pages source or workflow needs fixing in that repo.",
       "display_name": "sendr-rebuild",
       "featured": false,
       "hidden": false,
@@ -1508,7 +1515,8 @@
       "display_name": "empty15",
       "featured": false,
       "hidden": false,
-      "source_channel": null
+      "source_channel": null,
+      "readme_lead": ""
     },
     {
       "name": "empty14",
@@ -1577,7 +1585,8 @@
       "display_name": "empty14",
       "featured": false,
       "hidden": false,
-      "source_channel": null
+      "source_channel": null,
+      "readme_lead": ""
     },
     {
       "name": "empty13",
@@ -1646,7 +1655,8 @@
       "display_name": "empty13",
       "featured": false,
       "hidden": false,
-      "source_channel": null
+      "source_channel": null,
+      "readme_lead": ""
     },
     {
       "name": "paperos",
@@ -1966,7 +1976,7 @@
       "status": "live",
       "tags": [],
       "notes": "Created by Justin by hand 2026-09-16. Vite + TypeScript, CodeMirror editor, PeerJS multiplayer.",
-      "display_name": "Slack Game Engine",
+      "display_name": "Forge Engine (Slack Game Engine)",
       "featured": false,
       "hidden": false,
       "source_channel": "#game-engine",
@@ -2158,8 +2168,8 @@
       "category": "Product",
       "status": "live",
       "tags": [],
-      "notes": "39-file marketing site; main + gh-pages via Actions workflow.",
-      "display_name": "dorum-lifestyle",
+      "notes": "39-file marketing site for Llave OS (real-estate agency OS; Dorum Lifestyle as first customer); main + gh-pages via Actions workflow.",
+      "display_name": "Llave OS (Dorum Lifestyle)",
       "featured": false,
       "hidden": false,
       "source_channel": "#dorum-lifestyle",
@@ -2327,7 +2337,7 @@
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
-      "notes": "Was empty-4. README says served from main root; Pages not confirmed.",
+      "notes": "Was empty-4. Served from the main branch root; live on Pages.",
       "display_name": "Webflow Portfolio Audit",
       "featured": false,
       "hidden": false,
@@ -2527,5 +2537,6 @@
       "source_channel": "#operating-system-folder-structure",
       "readme_lead": "NovaOS Explorer: a kid-friendly interactive blueprint for a new operating system, internet protocol, banking protocol, 3D multiplayer world and AI harness."
     }
-  ]
+  ],
+  "recomputed_at": "2026-09-19T19:30:35.693Z"
 }
