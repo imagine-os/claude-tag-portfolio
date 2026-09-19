@@ -53,3 +53,13 @@ Message 2 (2026-09-19 19:15 UTC):
 - Renames (`arthovis-org/empty1` → proto3d, `imagine-os/empty-11`, `empty12`) are Justin's call.
 
 Model: Fable 5.1 (research, shared-code change, docs); worker sub-tasks also Fable 5.1.
+
+### Slack reply (verbatim, 2026-09-19)
+
+Done. Proto3D is live in the portfolio and the stale entries are cleaned up: https://imagine-os.github.io/claude-tag-portfolio/
+
+arthovis-org has two public repos. `empty1` is the only live site, Proto3D, a browser 3D project-management workspace, plus a Gateway Credits add-on demo (https://arthovis-org.github.io/empty1/addons/gateway-credits/). `empty2` has no Pages site. Both links are on the Proto3D card.
+
+Two things outside this repo: sendr-rebuild's Pages site 404s and needs its Pages source fixed in that repo, and once you rename arthovis-org/empty1 to proto3d the portfolio will follow automatically.
+
+Model: Fable 5.1.
