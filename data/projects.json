@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-30T12:46:53.209Z",
+  "generated_at": "2026-09-30T22:23:31.183Z",
   "org": "imagine-os",
   "api_reachable": true,
   "sources": {
@@ -22,6 +22,125 @@
   "errors": [],
   "projects": [
     {
+      "name": "aluzina",
+      "full_name": "imagine-os/aluzina",
+      "html_url": "https://github.com/imagine-os/aluzina",
+      "description": "Monorepo for Aluzina, an interior design studio in Medellín (neurointeriorism and emotional lighting; public site aluzinaa.com, built by the owner in Lovable).",
+      "readme_title": "Aluzina",
+      "readme_excerpt": "Monorepo for Aluzina, an interior design studio in Medellín (neurointeriorism and emotional lighting; public site aluzinaa.com, built by the owner in Lovable). This repo holds the Aluzina Business OS: the hub, the Claude Design prototype once it lands, the surfaces that grow out of it, and every document about them. Live: https://imagine-os.github.io/aluzina/ (GitHub Pages, deployed from main by .github/workflows/pages.yml; Pages source must be GitHub Actions). The hub at // opens every surface. Status: 0.18.1 (2026-09-28, changelog 0030): the whole Hub bundle is live at…",
+      "default_branch": "main",
+      "branches": [
+        "main"
+      ],
+      "has_gh_pages_branch": false,
+      "has_pages_workflow": true,
+      "created_at": "2026-09-20T22:10:09Z",
+      "updated_at": "2026-09-30T20:29:38Z",
+      "pushed_at": "2026-09-30T20:29:33Z",
+      "last_commit": {
+        "sha": "f2fa7ef1a639c465e963f29e282cadaff97c1d28",
+        "date": "2026-09-30T20:29:30Z",
+        "message": "docs: prompt 0032 response (paper objects redesign posted in Slack)",
+        "author": "Claude"
+      },
+      "commit_count": 117,
+      "contributors": [
+        "claude"
+      ],
+      "language": "TypeScript",
+      "languages": {
+        "TypeScript": 3180864,
+        "HTML": 504161,
+        "JavaScript": 457776,
+        "CSS": 322598,
+        "Python": 81851
+      },
+      "stack": [
+        "Playwright",
+        "TypeScript",
+        "Python",
+        "Static HTML",
+        "CSS",
+        "GitHub Pages"
+      ],
+      "size_kb": 321352,
+      "entry_point": null,
+      "builds_with": "npm run build",
+      "deps": [
+        "playwright"
+      ],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        ".nvmrc",
+        "README.md",
+        "apps",
+        "docs",
+        "package-lock.json",
+        "package.json",
+        "scripts",
+        "tenant.json",
+        "tenant.schema.json"
+      ],
+      "links": {
+        "repo": "https://github.com/imagine-os/aluzina",
+        "live": "https://imagine-os.github.io/aluzina/",
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": [
+          "https://aluzinaa.com"
+        ]
+      },
+      "other_count": 1,
+      "readme_links": [
+        {
+          "text": "aluzinaa.com",
+          "url": "https://aluzinaa.com"
+        },
+        {
+          "text": "imagine-os.github.io/aluzina/",
+          "url": "https://imagine-os.github.io/aluzina/"
+        },
+        {
+          "text": "imagine-os.github.io/aluzina/business-os/",
+          "url": "https://imagine-os.github.io/aluzina/business-os/"
+        }
+      ],
+      "is_placeholder": false,
+      "topics": [],
+      "open_issues": 0,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": true,
+      "has_license": false,
+      "has_ci": true,
+      "workflow_files": [
+        ".github/workflows/ci.yml",
+        ".github/workflows/pages.yml"
+      ],
+      "open_todos": 0,
+      "pages": {
+        "has_pages": true,
+        "url": "https://imagine-os.github.io/aluzina/",
+        "live": true,
+        "http_status": 200,
+        "checked_at": "2026-09-30T22:22:27.548Z"
+      },
+      "screenshot": "screenshots/aluzina.png",
+      "screenshot_source": "live",
+      "screenshot_note": "Captured from https://imagine-os.github.io/aluzina/ at 1440x900 on 2026-09-30 22:23 UTC",
+      "category": "Product",
+      "status": "live",
+      "tags": [],
+      "notes": "",
+      "display_name": "aluzina",
+      "featured": false,
+      "hidden": false,
+      "source_channel": null,
+      "readme_lead": "Monorepo for Aluzina, an interior design studio in Medellín (neurointeriorism and emotional lighting; public site aluzinaa.com, built by the owner in Lovable). This repo holds the Aluzina Business OS: the hub, the Claude Design prototype once it lands, the surfaces that grow out of it, and every document about them."
+    },
+    {
       "name": "hoy",
       "full_name": "imagine-os/hoy",
       "html_url": "https://github.com/imagine-os/hoy",
@@ -35,9 +154,11 @@
         "claude/responsive-app-shell",
         "docs/developer-brief",
         "docs/hub-map-groups",
+        "feat/contact-routing",
         "feat/hours-google-keys",
         "feat/hub-map",
         "feat/hub-map-sample-routes",
+        "feat/hub-transactional-messages",
         "feat/icons",
         "feat/manual-content",
         "feat/manual-lms",
@@ -50,6 +171,8 @@
         "feat/surfaces-actions-manifest",
         "feat/tables-calendar-timeline",
         "feat/tables-views",
+        "fix/checkin-row-actions",
+        "fix/manual-read-edit-figures",
         "fix/round-theme-toggle",
         "fix/site-no-feel-today",
         "fix/streak-badge-tone",
@@ -63,15 +186,15 @@
       "has_gh_pages_branch": false,
       "has_pages_workflow": true,
       "created_at": "2026-09-17T02:34:14Z",
-      "updated_at": "2026-09-29T23:34:02Z",
-      "pushed_at": "2026-09-29T23:33:56Z",
+      "updated_at": "2026-09-30T15:35:09Z",
+      "pushed_at": "2026-09-30T15:35:04Z",
       "last_commit": {
-        "sha": "02e844a320de3c35758a8d6fb53061908b5f1ba3",
-        "date": "2026-09-29T23:33:56Z",
-        "message": "Merge pull request #23 from imagine-os/feat/tables-calendar-timeline",
+        "sha": "46beed7274b65fa0d1a500242f4aa76d439afbec",
+        "date": "2026-09-30T15:35:04Z",
+        "message": "Merge pull request #27 from imagine-os/fix/manual-read-edit-figures",
         "author": "claude[bot]"
       },
-      "commit_count": 228,
+      "commit_count": 240,
       "contributors": [
         "claude",
         "claude[bot]",
@@ -79,10 +202,10 @@
       ],
       "language": "TypeScript",
       "languages": {
-        "TypeScript": 2954593,
+        "TypeScript": 3013419,
         "HTML": 609942,
-        "CSS": 258923,
-        "JavaScript": 252515,
+        "CSS": 267436,
+        "JavaScript": 260936,
         "PLpgSQL": 248114
       },
       "stack": [
@@ -95,7 +218,7 @@
         "Supabase",
         "GitHub Pages"
       ],
-      "size_kb": 546439,
+      "size_kb": 559456,
       "entry_point": "index.html",
       "builds_with": "npm run build",
       "deps": [
@@ -165,11 +288,11 @@
         "url": "https://imagine-os.github.io/hoy/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:45:37.173Z"
+        "checked_at": "2026-09-30T22:22:29.587Z"
       },
       "screenshot": "screenshots/hoy.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-09-30 12:46 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-09-30 22:23 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -179,125 +302,6 @@
       "hidden": false,
       "source_channel": null,
       "readme_lead": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Medellín, Colombia, built to become a multi-tenant platform for other studios later. One codebase serves the public website, the customer app, the teacher app, the staff and admin desktop, the club's operations manual, the in-app documentation and the developer tooling."
-    },
-    {
-      "name": "aluzina",
-      "full_name": "imagine-os/aluzina",
-      "html_url": "https://github.com/imagine-os/aluzina",
-      "description": "Monorepo for Aluzina, an interior design studio in Medellín (neurointeriorism and emotional lighting; public site aluzinaa.com, built by the owner in Lovable).",
-      "readme_title": "Aluzina",
-      "readme_excerpt": "Monorepo for Aluzina, an interior design studio in Medellín (neurointeriorism and emotional lighting; public site aluzinaa.com, built by the owner in Lovable). This repo holds the Aluzina Business OS: the hub, the Claude Design prototype once it lands, the surfaces that grow out of it, and every document about them. Live: https://imagine-os.github.io/aluzina/ (GitHub Pages, deployed from main by .github/workflows/pages.yml; Pages source must be GitHub Actions). The hub at // opens every surface. Status: 0.18.1 (2026-09-28, changelog 0030): the whole Hub bundle is live at…",
-      "default_branch": "main",
-      "branches": [
-        "main"
-      ],
-      "has_gh_pages_branch": false,
-      "has_pages_workflow": true,
-      "created_at": "2026-09-20T22:10:09Z",
-      "updated_at": "2026-09-29T13:15:49Z",
-      "pushed_at": "2026-09-29T13:15:37Z",
-      "last_commit": {
-        "sha": "76a898874c6126a9bd55b3247d2dcce04faaf538",
-        "date": "2026-09-29T13:15:34Z",
-        "message": "docs(tenant): Between Gigs is a host, not a tenant — corrected recipe and consumer guide (changelog 0044, D-116)",
-        "author": "Claude"
-      },
-      "commit_count": 115,
-      "contributors": [
-        "claude"
-      ],
-      "language": "TypeScript",
-      "languages": {
-        "TypeScript": 3157416,
-        "HTML": 504161,
-        "JavaScript": 457274,
-        "CSS": 303875,
-        "Python": 81851
-      },
-      "stack": [
-        "Playwright",
-        "TypeScript",
-        "Python",
-        "Static HTML",
-        "CSS",
-        "GitHub Pages"
-      ],
-      "size_kb": 319957,
-      "entry_point": null,
-      "builds_with": "npm run build",
-      "deps": [
-        "playwright"
-      ],
-      "root_files": [
-        ".github",
-        ".gitignore",
-        ".nvmrc",
-        "README.md",
-        "apps",
-        "docs",
-        "package-lock.json",
-        "package.json",
-        "scripts",
-        "tenant.json",
-        "tenant.schema.json"
-      ],
-      "links": {
-        "repo": "https://github.com/imagine-os/aluzina",
-        "live": "https://imagine-os.github.io/aluzina/",
-        "demo": null,
-        "sales": null,
-        "docs": null,
-        "other": [
-          "https://aluzinaa.com"
-        ]
-      },
-      "other_count": 1,
-      "readme_links": [
-        {
-          "text": "aluzinaa.com",
-          "url": "https://aluzinaa.com"
-        },
-        {
-          "text": "imagine-os.github.io/aluzina/",
-          "url": "https://imagine-os.github.io/aluzina/"
-        },
-        {
-          "text": "imagine-os.github.io/aluzina/business-os/",
-          "url": "https://imagine-os.github.io/aluzina/business-os/"
-        }
-      ],
-      "is_placeholder": false,
-      "topics": [],
-      "open_issues": 0,
-      "stargazers": 0,
-      "archived": false,
-      "has_readme": true,
-      "has_license": false,
-      "has_ci": true,
-      "workflow_files": [
-        ".github/workflows/ci.yml",
-        ".github/workflows/pages.yml"
-      ],
-      "open_todos": 0,
-      "pages": {
-        "has_pages": true,
-        "url": "https://imagine-os.github.io/aluzina/",
-        "live": true,
-        "http_status": 200,
-        "checked_at": "2026-09-30T12:45:39.963Z"
-      },
-      "screenshot": "screenshots/aluzina.png",
-      "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/aluzina/ at 1440x900 on 2026-09-30 12:46 UTC",
-      "category": "Product",
-      "status": "live",
-      "tags": [],
-      "notes": "",
-      "display_name": "aluzina",
-      "featured": false,
-      "hidden": false,
-      "source_channel": null,
-      "readme_lead": "Monorepo for Aluzina, an interior design studio in Medellín (neurointeriorism and emotional lighting; public site aluzinaa.com, built by the owner in Lovable). This repo holds the Aluzina Business OS: the hub, the Claude Design prototype once it lands, the surfaces that grow out of it, and every document about them."
     },
     {
       "name": "fresh-terminal",
@@ -410,11 +414,11 @@
         "url": "https://imagine-os.github.io/fresh-terminal/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:45:44.535Z"
+        "checked_at": "2026-09-30T22:22:33.135Z"
       },
       "screenshot": "screenshots/fresh-terminal.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/fresh-terminal/ at 1440x900 on 2026-09-30 12:46 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/fresh-terminal/ at 1440x900 on 2026-09-30 22:23 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -566,11 +570,11 @@
         "url": "https://imagine-os.github.io/astral-travel/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:45:47.936Z"
+        "checked_at": "2026-09-30T22:22:35.853Z"
       },
       "screenshot": "screenshots/astral-travel.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/astral-travel/ at 1440x900 on 2026-09-30 12:46 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/astral-travel/ at 1440x900 on 2026-09-30 22:23 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -677,11 +681,11 @@
         "url": "https://arthovis-org.github.io/Proto3D/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:46:53.030Z"
+        "checked_at": "2026-09-30T22:23:31.069Z"
       },
       "screenshot": "screenshots/arthovis-org--Proto3D.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://arthovis-org.github.io/Proto3D/ at 1440x900 on 2026-09-30 12:46 UTC",
+      "screenshot_note": "Captured from https://arthovis-org.github.io/Proto3D/ at 1440x900 on 2026-09-30 22:23 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -810,11 +814,11 @@
         "url": "https://imagine-os.github.io/petrock/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:45:51.318Z"
+        "checked_at": "2026-09-30T22:22:37.880Z"
       },
       "screenshot": "screenshots/petrock.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/petrock/ at 1440x900 on 2026-09-30 12:47 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/petrock/ at 1440x900 on 2026-09-30 22:23 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -947,11 +951,11 @@
         "url": "https://imagine-os.github.io/cal-tenant-law/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:45:54.497Z"
+        "checked_at": "2026-09-30T22:22:39.691Z"
       },
       "screenshot": "screenshots/cal-tenant-law.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/cal-tenant-law/ at 1440x900 on 2026-09-30 12:47 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/cal-tenant-law/ at 1440x900 on 2026-09-30 22:23 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1073,11 +1077,11 @@
         "url": "https://imagine-os.github.io/lead-magnet/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:45:56.646Z"
+        "checked_at": "2026-09-30T22:22:41.570Z"
       },
       "screenshot": "screenshots/lead-magnet.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/lead-magnet/ at 1440x900 on 2026-09-30 12:47 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/lead-magnet/ at 1440x900 on 2026-09-30 22:23 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1243,11 +1247,11 @@
         "url": "https://imagine-os.github.io/linear-os-test/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:46:02.098Z"
+        "checked_at": "2026-09-30T22:22:46.510Z"
       },
       "screenshot": "screenshots/linear-os-test.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/linear-os-test/ at 1440x900 on 2026-09-30 12:47 UTC",
+      "screenshot_note": "Kept previous screenshot; capture failed: page.screenshot: Protocol error (Page.captureScreenshot): Unable to capture screenshot",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1368,11 +1372,11 @@
         "url": "https://imagine-os.github.io/linear-builder/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:46:06.568Z"
+        "checked_at": "2026-09-30T22:22:50.751Z"
       },
       "screenshot": "screenshots/linear-builder.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-09-30 12:47 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-09-30 22:23 UTC",
       "category": "Tooling",
       "status": "live",
       "tags": [],
@@ -1540,11 +1544,11 @@
         "url": "https://imagine-os.github.io/empty-11/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:46:09.947Z"
+        "checked_at": "2026-09-30T22:22:53.857Z"
       },
       "screenshot": "screenshots/empty-11.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/empty-11/ at 1440x900 on 2026-09-30 12:47 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/empty-11/ at 1440x900 on 2026-09-30 22:23 UTC",
       "category": "Tooling",
       "status": "live",
       "tags": [],
@@ -1847,11 +1851,11 @@
         "url": "https://imagine-os.github.io/circle-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:46:17.367Z"
+        "checked_at": "2026-09-30T22:23:00.241Z"
       },
       "screenshot": "screenshots/circle-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-09-30 12:47 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-09-30 22:23 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -1932,7 +1936,7 @@
         "url": "https://imagine-os.github.io/sendr-rebuild/",
         "live": false,
         "http_status": 404,
-        "checked_at": "2026-09-30T12:46:20.105Z"
+        "checked_at": "2026-09-30T22:23:02.435Z"
       },
       "screenshot": null,
       "screenshot_source": "none",
@@ -2042,11 +2046,11 @@
         "url": "https://imagine-os.github.io/file-manager-designs/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:46:22.170Z"
+        "checked_at": "2026-09-30T22:23:04.132Z"
       },
       "screenshot": "screenshots/file-manager-designs.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-09-30 12:47 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-09-30 22:23 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -2145,11 +2149,11 @@
         "url": "https://imagine-os.github.io/graph-gallery/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:46:25.087Z"
+        "checked_at": "2026-09-30T22:23:06.477Z"
       },
       "screenshot": "screenshots/graph-gallery.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-09-30 12:47 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-09-30 22:23 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -2546,11 +2550,11 @@
         "url": "https://imagine-os.github.io/paperos/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:46:33.271Z"
+        "checked_at": "2026-09-30T22:23:13.565Z"
       },
       "screenshot": "screenshots/paperos.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-09-30 12:47 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-09-30 22:23 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -2677,11 +2681,11 @@
         "url": "https://imagine-os.github.io/slack-game-engine/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:46:36.061Z"
+        "checked_at": "2026-09-30T22:23:16.182Z"
       },
       "screenshot": "screenshots/slack-game-engine.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-09-30 12:47 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-09-30 22:24 UTC",
       "category": "Game",
       "status": "live",
       "tags": [],
@@ -2766,11 +2770,11 @@
         "url": "https://imagine-os.github.io/vercel-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:46:38.172Z"
+        "checked_at": "2026-09-30T22:23:18.279Z"
       },
       "screenshot": "screenshots/vercel-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-09-30 12:47 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-09-30 22:24 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -2870,11 +2874,11 @@
         "url": "https://imagine-os.github.io/dorum-lifestyle/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:46:40.447Z"
+        "checked_at": "2026-09-30T22:23:20.272Z"
       },
       "screenshot": "screenshots/dorum-lifestyle.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-09-30 12:47 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-09-30 22:24 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -2956,11 +2960,11 @@
         "url": "https://imagine-os.github.io/gamma-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:46:42.771Z"
+        "checked_at": "2026-09-30T22:23:22.385Z"
       },
       "screenshot": "screenshots/gamma-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-09-30 12:47 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-09-30 22:24 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -3039,11 +3043,11 @@
         "url": "https://imagine-os.github.io/webflow-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:46:44.951Z"
+        "checked_at": "2026-09-30T22:23:24.298Z"
       },
       "screenshot": "screenshots/webflow-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-09-30 12:47 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-09-30 22:24 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -3140,11 +3144,11 @@
         "url": "https://imagine-os.github.io/rebuild-slack-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:46:47.353Z"
+        "checked_at": "2026-09-30T22:23:26.377Z"
       },
       "screenshot": "screenshots/rebuild-slack-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-09-30 12:47 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-09-30 22:24 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -3232,11 +3236,11 @@
         "url": "https://imagine-os.github.io/OS-Folder-Structure/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-09-30T12:46:49.514Z"
+        "checked_at": "2026-09-30T22:23:28.308Z"
       },
       "screenshot": "screenshots/OS-Folder-Structure.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-09-30 12:47 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-09-30 22:24 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
