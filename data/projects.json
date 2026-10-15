@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T17:10:04.449Z",
+  "generated_at": "2026-10-15T21:31:56.317Z",
   "org": "imagine-os",
   "api_reachable": true,
   "sources": {
@@ -40,6 +40,8 @@
         "claude/calendar-teacher-mats",
         "claude/optimistic-curie-ofyg1v",
         "claude/responsive-app-shell",
+        "codex/coming-soon-studio-photo",
+        "codex/regular-studio-hero",
         "docs/developer-brief",
         "docs/hub-map-groups",
         "feat/admin-class-management",
@@ -85,26 +87,26 @@
       "has_gh_pages_branch": false,
       "has_pages_workflow": true,
       "created_at": "2026-09-17T02:34:14Z",
-      "updated_at": "2026-10-15T06:27:01Z",
-      "pushed_at": "2026-10-15T16:19:51Z",
+      "updated_at": "2026-10-15T19:58:47Z",
+      "pushed_at": "2026-10-15T20:20:09Z",
       "last_commit": {
-        "sha": "997ac0c58689598ae751b50af761dee85e1d7f4a",
-        "date": "2026-10-15T06:26:56Z",
-        "message": "Apply provisional fixed weekly timetable (#35)",
+        "sha": "e9a33f1661b3cca51cff87395597fd1d1d5df6b4",
+        "date": "2026-10-15T19:58:42Z",
+        "message": "fix: update Coming Soon with approved studio photo (#41)",
         "author": "Justin Massion"
       },
-      "commit_count": 262,
+      "commit_count": 265,
       "contributors": [
         "claude",
-        "claude[bot]",
-        "jmassion"
+        "jmassion",
+        "claude[bot]"
       ],
       "language": "TypeScript",
       "languages": {
-        "TypeScript": 3365889,
+        "TypeScript": 3389924,
         "HTML": 610582,
-        "JavaScript": 304325,
-        "CSS": 285304,
+        "JavaScript": 332852,
+        "CSS": 288067,
         "PLpgSQL": 254818
       },
       "stack": [
@@ -117,7 +119,7 @@
         "Supabase",
         "GitHub Pages"
       ],
-      "size_kb": 629210,
+      "size_kb": 638101,
       "entry_point": "index.html",
       "builds_with": "npm run build",
       "deps": [
@@ -172,14 +174,16 @@
       ],
       "is_placeholder": false,
       "topics": [],
-      "open_issues": 6,
+      "open_issues": 5,
       "stargazers": 0,
       "archived": false,
       "has_readme": true,
       "has_license": false,
       "has_ci": true,
       "workflow_files": [
+        ".github/workflows/media-library-qa.yml",
         ".github/workflows/pages.yml",
+        ".github/workflows/photography-qa.yml",
         ".github/workflows/timetable-qa.yml",
         ".github/workflows/voucher-qa.yml",
         ".github/workflows/website-preview-qa.yml"
@@ -190,11 +194,11 @@
         "url": "https://imagine-os.github.io/hoy/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:08:53.717Z"
+        "checked_at": "2026-10-15T21:30:45.597Z"
       },
       "screenshot": "screenshots/hoy.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-10-15 21:31 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -307,11 +311,11 @@
         "url": "https://imagine-os.github.io/visual-workbench/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:08:56.447Z"
+        "checked_at": "2026-10-15T21:30:48.557Z"
       },
       "screenshot": "screenshots/visual-workbench.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/visual-workbench/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/visual-workbench/ at 1440x900 on 2026-10-15 21:31 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -436,11 +440,11 @@
         "url": "https://imagine-os.github.io/fresh-terminal/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:08:59.987Z"
+        "checked_at": "2026-10-15T21:30:52.044Z"
       },
       "screenshot": "screenshots/fresh-terminal.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/fresh-terminal/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/fresh-terminal/ at 1440x900 on 2026-10-15 21:31 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -555,11 +559,11 @@
         "url": "https://imagine-os.github.io/aluzina/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:09:02.722Z"
+        "checked_at": "2026-10-15T21:30:54.586Z"
       },
       "screenshot": "screenshots/aluzina.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/aluzina/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/aluzina/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -711,11 +715,11 @@
         "url": "https://imagine-os.github.io/astral-travel/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:09:05.745Z"
+        "checked_at": "2026-10-15T21:30:58.008Z"
       },
       "screenshot": "screenshots/astral-travel.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/astral-travel/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/astral-travel/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -844,11 +848,11 @@
         "url": "https://imagine-os.github.io/petrock/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:09:07.815Z"
+        "checked_at": "2026-10-15T21:31:00.186Z"
       },
       "screenshot": "screenshots/petrock.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/petrock/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/petrock/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -981,11 +985,11 @@
         "url": "https://imagine-os.github.io/cal-tenant-law/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:09:09.749Z"
+        "checked_at": "2026-10-15T21:31:02.309Z"
       },
       "screenshot": "screenshots/cal-tenant-law.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/cal-tenant-law/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/cal-tenant-law/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1107,11 +1111,11 @@
         "url": "https://imagine-os.github.io/lead-magnet/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:09:12.982Z"
+        "checked_at": "2026-10-15T21:31:04.481Z"
       },
       "screenshot": "screenshots/lead-magnet.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/lead-magnet/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/lead-magnet/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1277,11 +1281,11 @@
         "url": "https://imagine-os.github.io/linear-os-test/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:09:18.104Z"
+        "checked_at": "2026-10-15T21:31:09.571Z"
       },
       "screenshot": "screenshots/linear-os-test.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/linear-os-test/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/linear-os-test/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1402,11 +1406,11 @@
         "url": "https://imagine-os.github.io/linear-builder/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:09:22.730Z"
+        "checked_at": "2026-10-15T21:31:14.103Z"
       },
       "screenshot": "screenshots/linear-builder.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Tooling",
       "status": "live",
       "tags": [],
@@ -1574,11 +1578,11 @@
         "url": "https://imagine-os.github.io/empty-11/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:09:25.991Z"
+        "checked_at": "2026-10-15T21:31:17.561Z"
       },
       "screenshot": "screenshots/empty-11.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/empty-11/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/empty-11/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Tooling",
       "status": "live",
       "tags": [],
@@ -1881,11 +1885,11 @@
         "url": "https://imagine-os.github.io/circle-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:09:33.277Z"
+        "checked_at": "2026-10-15T21:31:24.538Z"
       },
       "screenshot": "screenshots/circle-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -1966,7 +1970,7 @@
         "url": "https://imagine-os.github.io/sendr-rebuild/",
         "live": false,
         "http_status": 404,
-        "checked_at": "2026-10-15T17:09:35.348Z"
+        "checked_at": "2026-10-15T21:31:26.832Z"
       },
       "screenshot": null,
       "screenshot_source": "none",
@@ -2076,11 +2080,11 @@
         "url": "https://imagine-os.github.io/file-manager-designs/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:09:37.217Z"
+        "checked_at": "2026-10-15T21:31:28.788Z"
       },
       "screenshot": "screenshots/file-manager-designs.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -2179,11 +2183,11 @@
         "url": "https://imagine-os.github.io/graph-gallery/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:09:39.483Z"
+        "checked_at": "2026-10-15T21:31:31.522Z"
       },
       "screenshot": "screenshots/graph-gallery.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -2580,11 +2584,11 @@
         "url": "https://imagine-os.github.io/paperos/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:09:47.812Z"
+        "checked_at": "2026-10-15T21:31:39.870Z"
       },
       "screenshot": "screenshots/paperos.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -2711,11 +2715,11 @@
         "url": "https://imagine-os.github.io/slack-game-engine/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:09:50.550Z"
+        "checked_at": "2026-10-15T21:31:42.690Z"
       },
       "screenshot": "screenshots/slack-game-engine.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Game",
       "status": "live",
       "tags": [],
@@ -2800,11 +2804,11 @@
         "url": "https://imagine-os.github.io/vercel-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:09:53.537Z"
+        "checked_at": "2026-10-15T21:31:44.777Z"
       },
       "screenshot": "screenshots/vercel-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -2904,11 +2908,11 @@
         "url": "https://imagine-os.github.io/dorum-lifestyle/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:09:55.784Z"
+        "checked_at": "2026-10-15T21:31:47.109Z"
       },
       "screenshot": "screenshots/dorum-lifestyle.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -2990,11 +2994,11 @@
         "url": "https://imagine-os.github.io/gamma-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:09:58.002Z"
+        "checked_at": "2026-10-15T21:31:49.268Z"
       },
       "screenshot": "screenshots/gamma-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -3073,11 +3077,11 @@
         "url": "https://imagine-os.github.io/webflow-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:09:59.836Z"
+        "checked_at": "2026-10-15T21:31:51.486Z"
       },
       "screenshot": "screenshots/webflow-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -3174,11 +3178,11 @@
         "url": "https://imagine-os.github.io/rebuild-slack-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:10:02.065Z"
+        "checked_at": "2026-10-15T21:31:53.880Z"
       },
       "screenshot": "screenshots/rebuild-slack-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -3266,11 +3270,11 @@
         "url": "https://imagine-os.github.io/OS-Folder-Structure/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T17:10:04.365Z"
+        "checked_at": "2026-10-15T21:31:56.157Z"
       },
       "screenshot": "screenshots/OS-Folder-Structure.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-10-15 17:10 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-10-15 21:32 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
