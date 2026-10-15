@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T04:51:59.885Z",
+  "generated_at": "2026-10-15T11:42:39.099Z",
   "org": "imagine-os",
   "api_reachable": true,
   "sources": {
@@ -23,13 +23,184 @@
     {
       "scope": "repo:arthovis-org/empty1",
       "error": "HTTP 404 /repos/arthovis-org/empty1"
-    },
-    {
-      "scope": "repo:imagine-os/linear-builder",
-      "error": "workflow pages.yml: HTTP 404 /repos/imagine-os/linear-builder/contents/.github/workflows/pages.yml"
     }
   ],
   "projects": [
+    {
+      "name": "hoy",
+      "full_name": "imagine-os/hoy",
+      "html_url": "https://github.com/imagine-os/hoy",
+      "description": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Medellín, Colombia, built to become a multi-tenant platform for other studios later.",
+      "readme_title": "HoyOS",
+      "readme_excerpt": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Medellín, Colombia, built to become a multi-tenant platform for other studios later. One codebase serves the public website, the customer app, the teacher app, the staff and admin desktop, the club's operations manual, the in-app documentation and the developer tooling. The public root opens Coming Soon. The public testing hub remains at /hub (the same-site entry into //hub), with demo role switching and no new password gate. The complete website remains at //site, including Latest and its separate historical…",
+      "default_branch": "main",
+      "branches": [
+        "chore/manual-qa",
+        "claude/beautiful-allen-mrn88b",
+        "claude/calendar-teacher-mats",
+        "claude/optimistic-curie-ofyg1v",
+        "claude/responsive-app-shell",
+        "docs/developer-brief",
+        "docs/hub-map-groups",
+        "feat/contact-routing",
+        "feat/fixed-weekly-schedule",
+        "feat/hours-google-keys",
+        "feat/hub-map",
+        "feat/hub-map-sample-routes",
+        "feat/hub-transactional-messages",
+        "feat/icons",
+        "feat/invitation-vouchers",
+        "feat/manual-content",
+        "feat/manual-lms",
+        "feat/practice-analytics",
+        "feat/promotion-staff-demo",
+        "feat/public-landing-hub-modal",
+        "feat/real-contact",
+        "feat/real-studio-photography",
+        "feat/retire-movements",
+        "feat/site-cursor",
+        "feat/site-wordmark",
+        "feat/spacing-standard",
+        "feat/surfaces-actions-manifest",
+        "feat/tables-calendar-timeline",
+        "feat/tables-views",
+        "fix/checkin-row-actions",
+        "fix/manual-read-edit-figures",
+        "fix/restore-animated-archive",
+        "fix/round-theme-toggle",
+        "fix/site-no-feel-today",
+        "fix/streak-badge-tone",
+        "fix/voucher-guest-identities",
+        "main",
+        "work/appstore",
+        "work/especiales",
+        "work/expenses",
+        "work/polish",
+        "work/settings"
+      ],
+      "has_gh_pages_branch": false,
+      "has_pages_workflow": true,
+      "created_at": "2026-09-17T02:34:14Z",
+      "updated_at": "2026-10-15T06:27:01Z",
+      "pushed_at": "2026-10-15T06:54:37Z",
+      "last_commit": {
+        "sha": "997ac0c58689598ae751b50af761dee85e1d7f4a",
+        "date": "2026-10-15T06:26:56Z",
+        "message": "Apply provisional fixed weekly timetable (#35)",
+        "author": "Justin Massion"
+      },
+      "commit_count": 262,
+      "contributors": [
+        "claude",
+        "claude[bot]",
+        "jmassion"
+      ],
+      "language": "TypeScript",
+      "languages": {
+        "TypeScript": 3365889,
+        "HTML": 610582,
+        "JavaScript": 304325,
+        "CSS": 285304,
+        "PLpgSQL": 254818
+      },
+      "stack": [
+        "dnd-kit",
+        "React",
+        "React Router",
+        "TypeScript",
+        "Vite",
+        "CSS",
+        "Supabase",
+        "GitHub Pages"
+      ],
+      "size_kb": 629912,
+      "entry_point": "index.html",
+      "builds_with": "npm run build",
+      "deps": [
+        "@dnd-kit/core",
+        "@dnd-kit/sortable",
+        "@dnd-kit/utilities",
+        "@types/react",
+        "@types/react-dom",
+        "@vitejs/plugin-react",
+        "lucide-react",
+        "playwright-core",
+        "react",
+        "react-dom",
+        "react-markdown",
+        "react-router-dom",
+        "typescript",
+        "vite"
+      ],
+      "root_files": [
+        ".claude",
+        ".github",
+        ".gitignore",
+        "CLAUDE.md",
+        "README.md",
+        "ROADMAP.md",
+        "docs",
+        "index.html",
+        "package-lock.json",
+        "package.json",
+        "public",
+        "reference",
+        "scripts",
+        "src",
+        "supabase",
+        "tsconfig.json",
+        "vite.config.ts"
+      ],
+      "links": {
+        "repo": "https://github.com/imagine-os/hoy",
+        "live": "https://imagine-os.github.io/hoy/",
+        "demo": null,
+        "sales": null,
+        "docs": null,
+        "other": []
+      },
+      "other_count": 0,
+      "readme_links": [
+        {
+          "text": "imagine-os.github.io/hoy/",
+          "url": "https://imagine-os.github.io/hoy/"
+        }
+      ],
+      "is_placeholder": false,
+      "topics": [],
+      "open_issues": 2,
+      "stargazers": 0,
+      "archived": false,
+      "has_readme": true,
+      "has_license": false,
+      "has_ci": true,
+      "workflow_files": [
+        ".github/workflows/pages.yml",
+        ".github/workflows/timetable-qa.yml",
+        ".github/workflows/voucher-qa.yml",
+        ".github/workflows/website-preview-qa.yml"
+      ],
+      "open_todos": 0,
+      "pages": {
+        "has_pages": true,
+        "url": "https://imagine-os.github.io/hoy/",
+        "live": true,
+        "http_status": 200,
+        "checked_at": "2026-10-15T11:41:35.564Z"
+      },
+      "screenshot": "screenshots/hoy.png",
+      "screenshot_source": "live",
+      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-10-15 11:42 UTC",
+      "category": "Product",
+      "status": "live",
+      "tags": [],
+      "notes": "Vite + React + Supabase ops system for HOY Wellness Center (Medellín). Canonical HOY repo.",
+      "display_name": "HOY OS",
+      "featured": true,
+      "hidden": false,
+      "source_channel": null,
+      "readme_lead": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Medellín, Colombia, built to become a multi-tenant platform for other studios later. One codebase serves the public website, the customer app, the teacher app, the staff and admin desktop, the club's operations manual, the in-app documentation and the developer tooling."
+    },
     {
       "name": "visual-workbench",
       "full_name": "imagine-os/visual-workbench",
@@ -132,11 +303,11 @@
         "url": "https://imagine-os.github.io/visual-workbench/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:50:50.856Z"
+        "checked_at": "2026-10-15T11:41:37.756Z"
       },
       "screenshot": "screenshots/visual-workbench.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/visual-workbench/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/visual-workbench/ at 1440x900 on 2026-10-15 11:42 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -146,179 +317,6 @@
       "hidden": false,
       "source_channel": null,
       "readme_lead": "Character-led visual reports grounded in verified project work, with reusable character, location, and brand packs."
-    },
-    {
-      "name": "hoy",
-      "full_name": "imagine-os/hoy",
-      "html_url": "https://github.com/imagine-os/hoy",
-      "description": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Medellín, Colombia, built to become a multi-tenant platform for other studios later.",
-      "readme_title": "HoyOS",
-      "readme_excerpt": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Medellín, Colombia, built to become a multi-tenant platform for other studios later. One codebase serves the public website, the customer app, the teacher app, the staff and admin desktop, the club's operations manual, the in-app documentation and the developer tooling. The public root opens Coming Soon. The public testing hub remains at /hub (the same-site entry into //hub), with demo role switching and no new password gate. The complete website remains at //site, including Latest and its separate historical…",
-      "default_branch": "main",
-      "branches": [
-        "chore/manual-qa",
-        "claude/beautiful-allen-mrn88b",
-        "claude/calendar-teacher-mats",
-        "claude/optimistic-curie-ofyg1v",
-        "claude/responsive-app-shell",
-        "docs/developer-brief",
-        "docs/hub-map-groups",
-        "feat/contact-routing",
-        "feat/fixed-weekly-schedule",
-        "feat/hours-google-keys",
-        "feat/hub-map",
-        "feat/hub-map-sample-routes",
-        "feat/hub-transactional-messages",
-        "feat/icons",
-        "feat/invitation-vouchers",
-        "feat/manual-content",
-        "feat/manual-lms",
-        "feat/practice-analytics",
-        "feat/promotion-staff-demo",
-        "feat/public-landing-hub-modal",
-        "feat/real-contact",
-        "feat/retire-movements",
-        "feat/site-cursor",
-        "feat/site-wordmark",
-        "feat/spacing-standard",
-        "feat/surfaces-actions-manifest",
-        "feat/tables-calendar-timeline",
-        "feat/tables-views",
-        "fix/checkin-row-actions",
-        "fix/manual-read-edit-figures",
-        "fix/restore-animated-archive",
-        "fix/round-theme-toggle",
-        "fix/site-no-feel-today",
-        "fix/streak-badge-tone",
-        "fix/voucher-guest-identities",
-        "main",
-        "work/appstore",
-        "work/especiales",
-        "work/expenses",
-        "work/polish",
-        "work/settings"
-      ],
-      "has_gh_pages_branch": false,
-      "has_pages_workflow": true,
-      "created_at": "2026-09-17T02:34:14Z",
-      "updated_at": "2026-10-14T17:49:26Z",
-      "pushed_at": "2026-10-15T01:25:07Z",
-      "last_commit": {
-        "sha": "3b563d2f996c13f7c5825a6b835e5954c72f7b5e",
-        "date": "2026-10-14T17:49:20Z",
-        "message": "fix: allow distinct voucher guests with the same name (#33)",
-        "author": "Justin Massion"
-      },
-      "commit_count": 261,
-      "contributors": [
-        "claude",
-        "claude[bot]",
-        "jmassion"
-      ],
-      "language": "TypeScript",
-      "languages": {
-        "TypeScript": 3357770,
-        "HTML": 610582,
-        "JavaScript": 295135,
-        "CSS": 285304,
-        "PLpgSQL": 254818
-      },
-      "stack": [
-        "dnd-kit",
-        "React",
-        "React Router",
-        "TypeScript",
-        "Vite",
-        "CSS",
-        "Supabase",
-        "GitHub Pages"
-      ],
-      "size_kb": 625836,
-      "entry_point": "index.html",
-      "builds_with": "npm run build",
-      "deps": [
-        "@dnd-kit/core",
-        "@dnd-kit/sortable",
-        "@dnd-kit/utilities",
-        "@types/react",
-        "@types/react-dom",
-        "@vitejs/plugin-react",
-        "lucide-react",
-        "playwright-core",
-        "react",
-        "react-dom",
-        "react-markdown",
-        "react-router-dom",
-        "typescript",
-        "vite"
-      ],
-      "root_files": [
-        ".claude",
-        ".github",
-        ".gitignore",
-        "CLAUDE.md",
-        "README.md",
-        "ROADMAP.md",
-        "docs",
-        "index.html",
-        "package-lock.json",
-        "package.json",
-        "public",
-        "reference",
-        "scripts",
-        "src",
-        "supabase",
-        "tsconfig.json",
-        "vite.config.ts"
-      ],
-      "links": {
-        "repo": "https://github.com/imagine-os/hoy",
-        "live": "https://imagine-os.github.io/hoy/",
-        "demo": null,
-        "sales": null,
-        "docs": null,
-        "other": []
-      },
-      "other_count": 0,
-      "readme_links": [
-        {
-          "text": "imagine-os.github.io/hoy/",
-          "url": "https://imagine-os.github.io/hoy/"
-        }
-      ],
-      "is_placeholder": false,
-      "topics": [],
-      "open_issues": 2,
-      "stargazers": 0,
-      "archived": false,
-      "has_readme": true,
-      "has_license": false,
-      "has_ci": true,
-      "workflow_files": [
-        ".github/workflows/pages.yml",
-        ".github/workflows/voucher-qa.yml",
-        ".github/workflows/website-preview-qa.yml"
-      ],
-      "open_todos": 0,
-      "pages": {
-        "has_pages": true,
-        "url": "https://imagine-os.github.io/hoy/",
-        "live": true,
-        "http_status": 200,
-        "checked_at": "2026-10-15T04:50:53.179Z"
-      },
-      "screenshot": "screenshots/hoy.png",
-      "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/hoy/ at 1440x900 on 2026-10-15 04:52 UTC",
-      "category": "Product",
-      "status": "live",
-      "tags": [],
-      "notes": "Vite + React + Supabase ops system for HOY Wellness Center (Medellín). Canonical HOY repo.",
-      "display_name": "HOY OS",
-      "featured": true,
-      "hidden": false,
-      "source_channel": null,
-      "readme_lead": "HoyOS is the operations system for HOY Wellness Center, a wellness club in Medellín, Colombia, built to become a multi-tenant platform for other studios later. One codebase serves the public website, the customer app, the teacher app, the staff and admin desktop, the club's operations manual, the in-app documentation and the developer tooling."
     },
     {
       "name": "fresh-terminal",
@@ -434,11 +432,11 @@
         "url": "https://imagine-os.github.io/fresh-terminal/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:50:56.499Z"
+        "checked_at": "2026-10-15T11:41:41.777Z"
       },
       "screenshot": "screenshots/fresh-terminal.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/fresh-terminal/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/fresh-terminal/ at 1440x900 on 2026-10-15 11:42 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -553,11 +551,11 @@
         "url": "https://imagine-os.github.io/aluzina/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:50:59.050Z"
+        "checked_at": "2026-10-15T11:41:44.308Z"
       },
       "screenshot": "screenshots/aluzina.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/aluzina/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/aluzina/ at 1440x900 on 2026-10-15 11:42 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -709,11 +707,11 @@
         "url": "https://imagine-os.github.io/astral-travel/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:51:02.055Z"
+        "checked_at": "2026-10-15T11:41:46.967Z"
       },
       "screenshot": "screenshots/astral-travel.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/astral-travel/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/astral-travel/ at 1440x900 on 2026-10-15 11:42 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -842,11 +840,11 @@
         "url": "https://imagine-os.github.io/petrock/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:51:04.013Z"
+        "checked_at": "2026-10-15T11:41:49.422Z"
       },
       "screenshot": "screenshots/petrock.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/petrock/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/petrock/ at 1440x900 on 2026-10-15 11:42 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -979,11 +977,11 @@
         "url": "https://imagine-os.github.io/cal-tenant-law/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:51:06.071Z"
+        "checked_at": "2026-10-15T11:41:51.207Z"
       },
       "screenshot": "screenshots/cal-tenant-law.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/cal-tenant-law/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/cal-tenant-law/ at 1440x900 on 2026-10-15 11:42 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1105,11 +1103,11 @@
         "url": "https://imagine-os.github.io/lead-magnet/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:51:08.050Z"
+        "checked_at": "2026-10-15T11:41:53.040Z"
       },
       "screenshot": "screenshots/lead-magnet.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/lead-magnet/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/lead-magnet/ at 1440x900 on 2026-10-15 11:42 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1275,11 +1273,11 @@
         "url": "https://imagine-os.github.io/linear-os-test/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:51:12.837Z"
+        "checked_at": "2026-10-15T11:41:57.716Z"
       },
       "screenshot": "screenshots/linear-os-test.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/linear-os-test/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/linear-os-test/ at 1440x900 on 2026-10-15 11:42 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -1294,26 +1292,26 @@
       "name": "linear-builder",
       "full_name": "imagine-os/linear-builder",
       "html_url": "https://github.com/imagine-os/linear-builder",
-      "description": null,
-      "readme_title": null,
-      "readme_excerpt": "",
+      "description": "PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience,…",
+      "readme_title": "PaperOS Core Platform plan",
+      "readme_excerpt": "PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience, business modules and a documented ten-minute path from a one-paragraph idea to a deployed app. It is built by parallel Claude Code sessions that pick issues from a Linear queue (team PAP) under nine agent characters, with Justin Massion (imagine-os) as the only human in the loop. This repository is the plan: every…",
       "default_branch": "main",
       "branches": [
         "gh-pages",
         "main"
       ],
       "has_gh_pages_branch": true,
-      "has_pages_workflow": false,
+      "has_pages_workflow": true,
       "created_at": "2026-09-17T12:49:15Z",
       "updated_at": "2026-09-19T19:54:00Z",
       "pushed_at": "2026-09-19T19:53:56Z",
       "last_commit": {
-        "sha": null,
-        "date": null,
-        "message": null,
-        "author": null
+        "sha": "2f9af7c43f82f0a1d57470c053413cf55c982518",
+        "date": "2026-09-19T19:53:53Z",
+        "message": "docs(build): prompts: replace the draft reply with the text posted at 19:59 UTC",
+        "author": "Claude"
       },
-      "commit_count": 0,
+      "commit_count": 33,
       "contributors": [
         "claude"
       ],
@@ -1332,50 +1330,88 @@
         "GitHub Pages"
       ],
       "size_kb": 14126,
-      "entry_point": null,
+      "entry_point": "site/index.html",
       "builds_with": null,
       "deps": [],
-      "root_files": [],
+      "root_files": [
+        ".github",
+        ".gitignore",
+        "CHANGELOG.md",
+        "CLAUDE.md",
+        "README.md",
+        "docs",
+        "plan",
+        "site",
+        "specs",
+        "tools"
+      ],
       "links": {
         "repo": "https://github.com/imagine-os/linear-builder",
         "live": "https://imagine-os.github.io/linear-builder/",
         "demo": null,
         "sales": null,
         "docs": null,
-        "other": []
+        "other": [
+          "https://linear.app/paperos/project/module-system-and-swap-tooling-8f81243eebfc",
+          "https://linear.app/paperos/document/paperos-module-system-8007373cc6bb",
+          "https://linear.app/paperos",
+          "https://claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h"
+        ]
       },
-      "other_count": 0,
-      "readme_links": [],
-      "is_placeholder": true,
+      "other_count": 4,
+      "readme_links": [
+        {
+          "text": "Module System & Swap Tooling",
+          "url": "https://linear.app/paperos/project/module-system-and-swap-tooling-8f81243eebfc"
+        },
+        {
+          "text": "PaperOS Module System",
+          "url": "https://linear.app/paperos/document/paperos-module-system-8007373cc6bb"
+        },
+        {
+          "text": "linear.app/paperos",
+          "url": "https://linear.app/paperos"
+        },
+        {
+          "text": "claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h",
+          "url": "https://claude.ai/artifact/RhSgtKN7k64GnVmKFrxf8h"
+        },
+        {
+          "text": "imagine-os.github.io/linear-builder/",
+          "url": "https://imagine-os.github.io/linear-builder/"
+        }
+      ],
+      "is_placeholder": false,
       "topics": [],
       "open_issues": 0,
       "stargazers": 0,
       "archived": false,
-      "has_readme": false,
+      "has_readme": true,
       "has_license": false,
       "has_ci": true,
       "workflow_files": [
         ".github/workflows/pages.yml"
       ],
-      "open_todos": 0,
+      "open_todos": 76,
       "pages": {
         "has_pages": true,
         "url": "https://imagine-os.github.io/linear-builder/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:51:19.432Z"
+        "checked_at": "2026-10-15T11:42:01.978Z"
       },
       "screenshot": "screenshots/linear-builder.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/linear-builder/ at 1440x900 on 2026-10-15 11:42 UTC",
       "category": "Tooling",
-      "status": "placeholder",
+      "status": "live",
       "tags": [],
       "notes": "Created by Justin 2026-09-17. PaperOS planning repo plus ~100 Python scripts that drive Linear; site/ is a static plan viewer published via workflow.",
       "display_name": "Linear Builder (PaperOS plan)",
       "featured": false,
       "hidden": false,
-      "source_channel": null
+      "source_channel": null,
+      "readme_lead": "PaperOS Core Platform is the reusable foundation every future PaperOS app is generated from: one spec-driven TypeScript monorepo template that ships to web, desktop and mobile with a shared data layer, design system, multiplayer, table/views engine, identity for every audience, business modules and a documented ten-minute path from a one-paragraph idea to a deployed app. It is built by parallel Claude Code sessions that pick issues from a Linear queue (team PAP) under nine agent characters, with Justin Massion (imagine-os) as the only human in the loop. This repository is the plan: every issue spec, the platform documents, the schedule, the pending backlog, the blueprint page and the scripts that put all of it into Linear."
     },
     {
       "name": "empty-11",
@@ -1534,11 +1570,11 @@
         "url": "https://imagine-os.github.io/empty-11/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:51:23.555Z"
+        "checked_at": "2026-10-15T11:42:04.946Z"
       },
       "screenshot": "screenshots/empty-11.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/empty-11/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/empty-11/ at 1440x900 on 2026-10-15 11:42 UTC",
       "category": "Tooling",
       "status": "live",
       "tags": [],
@@ -1841,11 +1877,11 @@
         "url": "https://imagine-os.github.io/circle-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:51:30.140Z"
+        "checked_at": "2026-10-15T11:42:11.979Z"
       },
       "screenshot": "screenshots/circle-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/circle-shell/ at 1440x900 on 2026-10-15 11:42 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -1926,7 +1962,7 @@
         "url": "https://imagine-os.github.io/sendr-rebuild/",
         "live": false,
         "http_status": 404,
-        "checked_at": "2026-10-15T04:51:32.244Z"
+        "checked_at": "2026-10-15T11:42:13.936Z"
       },
       "screenshot": null,
       "screenshot_source": "none",
@@ -2036,11 +2072,11 @@
         "url": "https://imagine-os.github.io/file-manager-designs/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:51:34.006Z"
+        "checked_at": "2026-10-15T11:42:15.539Z"
       },
       "screenshot": "screenshots/file-manager-designs.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/file-manager-designs/ at 1440x900 on 2026-10-15 11:43 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -2139,11 +2175,11 @@
         "url": "https://imagine-os.github.io/graph-gallery/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:51:36.341Z"
+        "checked_at": "2026-10-15T11:42:17.804Z"
       },
       "screenshot": "screenshots/graph-gallery.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/graph-gallery/ at 1440x900 on 2026-10-15 11:43 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
@@ -2540,11 +2576,11 @@
         "url": "https://imagine-os.github.io/paperos/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:51:43.804Z"
+        "checked_at": "2026-10-15T11:42:24.157Z"
       },
       "screenshot": "screenshots/paperos.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/paperos/ at 1440x900 on 2026-10-15 11:43 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -2671,11 +2707,11 @@
         "url": "https://imagine-os.github.io/slack-game-engine/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:51:46.303Z"
+        "checked_at": "2026-10-15T11:42:26.572Z"
       },
       "screenshot": "screenshots/slack-game-engine.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/slack-game-engine/ at 1440x900 on 2026-10-15 11:43 UTC",
       "category": "Game",
       "status": "live",
       "tags": [],
@@ -2760,11 +2796,11 @@
         "url": "https://imagine-os.github.io/vercel-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:51:48.331Z"
+        "checked_at": "2026-10-15T11:42:28.269Z"
       },
       "screenshot": "screenshots/vercel-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/vercel-audit/ at 1440x900 on 2026-10-15 11:43 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -2864,11 +2900,11 @@
         "url": "https://imagine-os.github.io/dorum-lifestyle/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:51:50.386Z"
+        "checked_at": "2026-10-15T11:42:30.294Z"
       },
       "screenshot": "screenshots/dorum-lifestyle.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/dorum-lifestyle/ at 1440x900 on 2026-10-15 11:43 UTC",
       "category": "Product",
       "status": "live",
       "tags": [],
@@ -2950,11 +2986,11 @@
         "url": "https://imagine-os.github.io/gamma-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:51:53.903Z"
+        "checked_at": "2026-10-15T11:42:32.472Z"
       },
       "screenshot": "screenshots/gamma-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/gamma-audit/ at 1440x900 on 2026-10-15 11:43 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -3033,11 +3069,11 @@
         "url": "https://imagine-os.github.io/webflow-audit/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:51:55.683Z"
+        "checked_at": "2026-10-15T11:42:35.295Z"
       },
       "screenshot": "screenshots/webflow-audit.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/webflow-audit/ at 1440x900 on 2026-10-15 11:43 UTC",
       "category": "Audit / Report",
       "status": "live",
       "tags": [],
@@ -3134,11 +3170,11 @@
         "url": "https://imagine-os.github.io/rebuild-slack-shell/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:51:57.936Z"
+        "checked_at": "2026-10-15T11:42:37.130Z"
       },
       "screenshot": "screenshots/rebuild-slack-shell.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/rebuild-slack-shell/ at 1440x900 on 2026-10-15 11:43 UTC",
       "category": "Prototype / Shell rebuild",
       "status": "live",
       "tags": [],
@@ -3226,11 +3262,11 @@
         "url": "https://imagine-os.github.io/OS-Folder-Structure/",
         "live": true,
         "http_status": 200,
-        "checked_at": "2026-10-15T04:51:59.824Z"
+        "checked_at": "2026-10-15T11:42:39.021Z"
       },
       "screenshot": "screenshots/OS-Folder-Structure.png",
       "screenshot_source": "live",
-      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-10-15 04:52 UTC",
+      "screenshot_note": "Captured from https://imagine-os.github.io/OS-Folder-Structure/ at 1440x900 on 2026-10-15 11:43 UTC",
       "category": "Design exploration",
       "status": "live",
       "tags": [],
